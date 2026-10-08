@@ -10,7 +10,7 @@ def selected_files(root):
     for p in sorted(root.rglob('*')):
         rel=p.relative_to(root)
         if not p.is_file() or any(x in {'.git','.venv','__pycache__','.pytest_cache','.cache'} or x.endswith('.egg-info') for x in rel.parts):continue
-        if p.suffix in {'.zip','.pyc'} or rel.as_posix() in {'artifact_manifest.json','data/processed/corpus.sqlite.gz'}:continue
+        if p.suffix in {'.zip','.pyc'} or p.name.startswith('quran-analysis-portable.zip.part-') or rel.as_posix() in {'artifact_manifest.json','data/processed/corpus.sqlite.gz','exports/quran-analysis-portable.sha256'}:continue
         yield p
 
 

@@ -12,8 +12,8 @@
     },
     {
       "path": ".github/workflows/pages.yml",
-      "bytes": 817,
-      "sha256": "dff44ae7117c5e5df595f8e9360249df1bbe402b19429c09ee20680910af3e68"
+      "bytes": 747,
+      "sha256": "b32f39b6346250d7bbf9b029fcb10f19df94d061d0b1dd85494f930488ae22a1"
     },
     {
       "path": ".gitignore",
@@ -32,8 +32,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 6004,
-      "sha256": "865f8a45d5a4db16f62487fa9a201676b684ce6c157c6e2e7b2d5de53c748659"
+      "bytes": 6737,
+      "sha256": "8fdfd45a0dddd4e0a473fe3ea4503ecf704a39cd838b4400766c9cd56391cf8b"
     },
     {
       "path": "Quran_text.txt",
@@ -42,8 +42,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7372,
-      "sha256": "489cb48298db9890e6084ee85553c7060be4a2581d2a2bcb8a2f047f7671a829"
+      "bytes": 7431,
+      "sha256": "28f9d09ee3d4b74d9b89838f1900cfb1071d2322d5baf9dd0aa814a01d2e401c"
     },
     {
       "path": "config/analysis.json",
@@ -52,8 +52,8 @@
     },
     {
       "path": "dashboard/index.html",
-      "bytes": 10049892,
-      "sha256": "522b8009565befcfcee045454c80ddce254fb8c4f4feb18a52bd4d808bfd2259"
+      "bytes": 10049845,
+      "sha256": "1c5785b84e675f1c52801d931dac935fdf98f5515b24002c41b17da36acfbcb3"
     },
     {
       "path": "data/external/QAC_COPYRIGHT_NOTICE.txt",
@@ -1161,6 +1161,11 @@
       "sha256": "4246b4fdc286bde5608160083036490aa605ead631d6c0a8d6c1140dada7e874"
     },
     {
+      "path": "scripts/assemble_archive.py",
+      "bytes": 1503,
+      "sha256": "2f77d089c725ff84c6343b3294205addebade30f0fb1062f446f1ac541285fb6"
+    },
+    {
       "path": "scripts/check_browser.py",
       "bytes": 8400,
       "sha256": "b19cdf0372e3ccf8c65a0998887d7f6a742a37312084736d256467ed942a37d5"
@@ -1187,8 +1192,8 @@
     },
     {
       "path": "src/quran_analysis/dashboard.html",
-      "bytes": 56989,
-      "sha256": "55e9922b67fa7d2ae442e6c69ab113f9931cba54afe0c341e1726cc5b9c59603"
+      "bytes": 56942,
+      "sha256": "595393cdeb1135cf433e2975598123cc3b41920338e0071879313c32d69ed3e3"
     },
     {
       "path": "src/quran_analysis/exploration.py",
@@ -1207,8 +1212,8 @@
     },
     {
       "path": "src/quran_analysis/package.py",
-      "bytes": 2225,
-      "sha256": "7deb289ae4dbd05a6ad93b7f50cb6ee1cff2c7f8222189076a2e4af81f4248c7"
+      "bytes": 2324,
+      "sha256": "c5c18a03afed31c36a4a1d7bb63943274b13b8cdd384b3e9e49c4f07edab429b"
     },
     {
       "path": "src/quran_analysis/pipeline.py",
@@ -1266,6 +1271,6 @@
       "sha256": "46741b9e6f00c674c55d39f16151cc45996aeaa6052e1dc53e0eacc1b212ae07"
     }
   ],
-  "file_count": 253,
-  "total_uncompressed_bytes": 240263569
+  "file_count": 254,
+  "total_uncompressed_bytes": 240265799
 }

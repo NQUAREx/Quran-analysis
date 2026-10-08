@@ -1,6 +1,6 @@
 # Исследование арабского текста Корана
 
-**Откройте [интерактивный отчёт на GitHub Pages](https://nquarex.github.io/Quran-analysis/dashboard/).** Он содержит корпус, поиск, контексты, фильтры, графики, гипотезы и карту покрытия. Просмотр файла `dashboard/index.html` внутри интерфейса GitHub не запускает JavaScript, поэтому вкладки там не работают. После скачивания [переносимого архива](https://github.com/NQUAREx/Quran-analysis/releases/latest/download/quran-analysis-portable.zip) отчёт также можно открыть в обычном браузере; для связанных полных таблиц сохраняйте структуру папок архива.
+**Начните с [интерактивного отчёта](dashboard/index.html).** Он содержит корпус, поиск, контексты, фильтры, графики, гипотезы и карту покрытия. Интерфейс GitHub показывает исходный HTML, но не запускает его JavaScript: для рабочих вкладок откройте файл из клонированного проекта в обычном браузере либо выполните `python -m http.server 8000` в корне проекта и перейдите на `http://localhost:8000/dashboard/`. Для связанных полных таблиц сохраняйте структуру папок. Сайт GitHub Pages пока не включён: доступный токен не имеет права создать его через API или Actions.
 
 - [Текстовый отчёт](report/REPORT.md)
 - [Книга Excel](exports/quran_analysis.xlsx)
@@ -8,7 +8,7 @@
 - [SVG/PNG-графики и исходные числа](results/figures/)
 - [Каталог гипотез](results/hypotheses/registry.json) и [карта покрытия](results/coverage.json)
 - [Проверки](results/validation_checks.json), [манифест запуска](run_manifest.json), [состояние проекта](PROJECT_STATE.md)
-- [Полный переносимый ZIP в релизе GitHub](https://github.com/NQUAREx/Quran-analysis/releases/latest/download/quran-analysis-portable.zip), [браузерная проверка](report/BROWSER_CHECKS.md)
+- [Полный переносимый ZIP по частям](exports/) (собрать командой `python scripts/assemble_archive.py`), [браузерная проверка](report/BROWSER_CHECKS.md)
 
 Единственный основной корпус — исходный `Quran_text.txt` этого репозитория. Он не редактировался и не заменялся внешним текстом. Неизменная копия и SHA-256 лежат в `data/raw/`. Происхождение, чтение и тождество внешней редакции по самому файлу не установлены. Все выводы относятся к этому файлу и определённым правилам.
 
