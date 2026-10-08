@@ -1,0 +1,842 @@
+[
+  {
+    "check_id": "source.sha256",
+    "status": "pass",
+    "method_ru": "SHA-256 сравнивается с хешем исходного файла, независимо зафиксированным перед обработкой.",
+    "observed": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a",
+    "expected": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a"
+  },
+  {
+    "check_id": "source.immutable_copy",
+    "status": "pass",
+    "method_ru": "Побайтовая идентичность оригинала и неизменной копии.",
+    "path": "data/raw/Quran_text.txt"
+  },
+  {
+    "check_id": "source.independent_parse",
+    "status": "pass",
+    "method_ru": "Независимый разбор каждой строки, включая числовые метаданные и служебные знаки.",
+    "issues": [],
+    "lines": 6236,
+    "verses": 6236
+  },
+  {
+    "check_id": "source.record_order",
+    "status": "pass",
+    "method_ru": "По данным файла: 114 последовательных сур, уникальные и последовательные номера аятов без пропусков; полнота внешней редакции этим не доказывается."
+  },
+  {
+    "check_id": "unicode.hamza_madda_preserved",
+    "status": "pass",
+    "method_ru": "Контроль спецификации: NFC может составить хамзу с алифом; U+0653..U+0655 не удаляются, ة и ى в plain различаются.",
+    "samples": 10,
+    "failures": [],
+    "limitation_ru": "Эти синтетические примеры проверяют независимый оракул; производственная нормализация дополнительно покрывается tests/test_core.py."
+  },
+  {
+    "check_id": "basmala.1:1",
+    "status": "pass",
+    "method_ru": "Нумерованная басмала 1:1 сохраняется в numbered."
+  },
+  {
+    "check_id": "basmala.9:1",
+    "status": "pass",
+    "method_ru": "В начале 9:1 нет басмалы и нет исключённых токенов."
+  },
+  {
+    "check_id": "basmala.27:30",
+    "status": "pass",
+    "method_ru": "Внутренняя басмала 27:30 сохраняется целиком."
+  },
+  {
+    "check_id": "basmala.prefixes",
+    "status": "pass",
+    "method_ru": "В данном файле 112 начальных префиксов по четыре токена; raw-варианты 95:1 и 97:1 не теряются.",
+    "excluded_tokens": 448,
+    "prefix_verses": 112,
+    "expected_prefixes": 112
+  },
+  {
+    "check_id": "basmala.orthographic_variants",
+    "status": "pass",
+    "method_ru": "Только 95:1 и 97:1 отличаются от 1:1 дополнительной шаддой первого токена; исходник не исправляется.",
+    "raw_variant_verses": [
+      "95:1",
+      "97:1"
+    ]
+  },
+  {
+    "check_id": "database.integrity",
+    "status": "pass",
+    "method_ru": "Встроенная проверка целостности SQLite.",
+    "observed": "ok"
+  },
+  {
+    "check_id": "verses.row_count",
+    "status": "pass",
+    "method_ru": "Независимый разбор исходных строк и лексических пробельных фрагментов.",
+    "observed": 6236,
+    "expected": 6236
+  },
+  {
+    "check_id": "verses.unique_ids",
+    "status": "pass",
+    "method_ru": "Уникальность идентификатора; одинаковый текст разрешён."
+  },
+  {
+    "check_id": "verses.raw_spans",
+    "status": "pass",
+    "method_ru": "Восстановление каждого raw-фрагмента по Unicode-смещению в неизменной строке файла.",
+    "mismatch_ids": []
+  },
+  {
+    "check_id": "verses.independent_values",
+    "status": "pass",
+    "method_ru": "Сопоставление всех адресов, последовательных индексов, профилей, длин и басмальных флагов с независимым разбором.",
+    "mismatches": [],
+    "missing_fields": []
+  },
+  {
+    "check_id": "tokens.row_count",
+    "status": "pass",
+    "method_ru": "Независимый разбор исходных строк и лексических пробельных фрагментов.",
+    "observed": 78248,
+    "expected": 78248
+  },
+  {
+    "check_id": "tokens.unique_ids",
+    "status": "pass",
+    "method_ru": "Уникальность идентификатора; одинаковый текст разрешён."
+  },
+  {
+    "check_id": "tokens.raw_spans",
+    "status": "pass",
+    "method_ru": "Восстановление каждого raw-фрагмента по Unicode-смещению в неизменной строке файла.",
+    "mismatch_ids": []
+  },
+  {
+    "check_id": "tokens.independent_values",
+    "status": "pass",
+    "method_ru": "Сопоставление всех адресов, последовательных индексов, профилей, длин и басмальных флагов с независимым разбором.",
+    "mismatches": [],
+    "missing_fields": []
+  },
+  {
+    "check_id": "aggregates.verse_token_letter",
+    "status": "pass",
+    "method_ru": "Суммы числа токенов и базовых букв по токенам равны значениям аятов.",
+    "mismatch_ids": []
+  },
+  {
+    "check_id": "aggregates.mark_conservation",
+    "status": "pass",
+    "method_ru": "Диакритики аятов сверены отдельно от токенов: самостоятельные редакторские знаки не входят в лексические токены.",
+    "conventions_observed": [
+      "all_verse_marks"
+    ],
+    "mismatch_ids": [],
+    "source_all_marks": 282824,
+    "source_token_marks": 278460
+  },
+  {
+    "check_id": "frequencies.file.raw",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 78248,
+    "types": 18243
+  },
+  {
+    "check_id": "frequencies.file.nfc",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 78248,
+    "types": 18243
+  },
+  {
+    "check_id": "frequencies.file.plain",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 78248,
+    "types": 14868
+  },
+  {
+    "check_id": "frequencies.file.search",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 78248,
+    "types": 14691
+  },
+  {
+    "check_id": "frequencies.numbered.raw",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 77800,
+    "types": 18242
+  },
+  {
+    "check_id": "frequencies.numbered.nfc",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 77800,
+    "types": 18242
+  },
+  {
+    "check_id": "frequencies.numbered.plain",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 77800,
+    "types": 14868
+  },
+  {
+    "check_id": "frequencies.numbered.search",
+    "status": "pass",
+    "method_ru": "Полный частотный словарь SQL сверяется с независимым Counter по исходным вхождениям.",
+    "total": 77800,
+    "types": 14691
+  },
+  {
+    "check_id": "database.complete_schema",
+    "status": "pass",
+    "method_ru": "Наличие вспомогательных таблиц сохранения исходника и полных индексов.",
+    "missing_tables": []
+  },
+  {
+    "check_id": "database.foreign_keys",
+    "status": "pass",
+    "method_ru": "SQLite foreign_key_check всех таблиц.",
+    "violations": []
+  },
+  {
+    "check_id": "source.spans_partition",
+    "status": "pass",
+    "method_ru": "Все spans без разрывов и перекрытий восстанавливают весь raw-текст каждого аята.",
+    "mismatches": [],
+    "unexpected_verses": []
+  },
+  {
+    "check_id": "source.records_partition",
+    "status": "pass",
+    "method_ru": "Координаты всех исходных записей включают метаданные и точные переводы строк.",
+    "mismatch_lines": []
+  },
+  {
+    "check_id": "aggregates.surahs",
+    "status": "pass",
+    "method_ru": "Все агрегаты сур сверены с независимыми исходными токенами и аятами.",
+    "surahs": 114
+  },
+  {
+    "check_id": "positions.file",
+    "status": "pass",
+    "method_ru": "Плотные индексы корпуса, аята и суры независимо пересчитаны после исключения префиксов.",
+    "mismatches": []
+  },
+  {
+    "check_id": "vocabulary.file.raw",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 18243
+  },
+  {
+    "check_id": "occurrences.file.raw",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 78248,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.file.nfc",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 18243
+  },
+  {
+    "check_id": "occurrences.file.nfc",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 78248,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.file.plain",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 14868
+  },
+  {
+    "check_id": "occurrences.file.plain",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 78248,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.file.search",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 14691
+  },
+  {
+    "check_id": "occurrences.file.search",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 78248,
+    "bad_links": 0
+  },
+  {
+    "check_id": "positions.numbered",
+    "status": "pass",
+    "method_ru": "Плотные индексы корпуса, аята и суры независимо пересчитаны после исключения префиксов.",
+    "mismatches": []
+  },
+  {
+    "check_id": "vocabulary.numbered.raw",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 18242
+  },
+  {
+    "check_id": "occurrences.numbered.raw",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 77800,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.numbered.nfc",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 18242
+  },
+  {
+    "check_id": "occurrences.numbered.nfc",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 77800,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.numbered.plain",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 14868
+  },
+  {
+    "check_id": "occurrences.numbered.plain",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 77800,
+    "bad_links": 0
+  },
+  {
+    "check_id": "vocabulary.numbered.search",
+    "status": "pass",
+    "method_ru": "Каждая словарная форма, частота, ранг, охват, крайние адреса и нормированная средняя позиция сверены с исходником.",
+    "mismatches": [],
+    "forms": 14691
+  },
+  {
+    "check_id": "occurrences.numbered.search",
+    "status": "pass",
+    "method_ru": "Полный индекс вхождений: форма каждого токена, область, позиция, частота каждой единицы и общий знаменатель.",
+    "occurrences": 77800,
+    "bad_links": 0
+  },
+  {
+    "check_id": "csv.vocabulary.file.raw",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 18243
+  },
+  {
+    "check_id": "csv.vocabulary.file.nfc",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 18243
+  },
+  {
+    "check_id": "csv.vocabulary.file.plain",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 14868
+  },
+  {
+    "check_id": "csv.vocabulary.file.search",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 14691
+  },
+  {
+    "check_id": "csv.vocabulary.numbered.raw",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 18242
+  },
+  {
+    "check_id": "csv.vocabulary.numbered.nfc",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 18242
+  },
+  {
+    "check_id": "csv.vocabulary.numbered.plain",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 14868
+  },
+  {
+    "check_id": "csv.vocabulary.numbered.search",
+    "status": "pass",
+    "method_ru": "Все частоты CSV.gz сверены с независимыми исходными вхождениями.",
+    "rows": 14691
+  },
+  {
+    "check_id": "csv.lengths.verse",
+    "status": "pass",
+    "method_ru": "Длины каждой структурной единицы по 4 профилям × 2 областям сверены с raw-токенами; графемы отдельно этим оракулом не проверяются.",
+    "rows": 49888,
+    "mismatches": []
+  },
+  {
+    "check_id": "csv.lengths.surah",
+    "status": "pass",
+    "method_ru": "Длины каждой структурной единицы по 4 профилям × 2 областям сверены с raw-токенами; графемы отдельно этим оракулом не проверяются.",
+    "rows": 912,
+    "mismatches": []
+  },
+  {
+    "check_id": "csv.scope_totals",
+    "status": "pass",
+    "method_ru": "Все профильные суммы токенов, букв, знаков, кодовых точек и явно удаляемых знаков.",
+    "mismatches": []
+  },
+  {
+    "check_id": "source.byte_offsets",
+    "status": "pass",
+    "method_ru": "Байтовые координаты каждого токена проверяются непосредственно на неизменных исходных байтах.",
+    "mismatches": []
+  },
+  {
+    "check_id": "statistics.saved_draws",
+    "status": "pass",
+    "method_ru": "По всем сохранённым симуляциям независимо пересчитаны p=(b+1)/(B+1), включение равенств, среднее, эффект и единая скалярная поправка Holm.",
+    "tests": 24,
+    "simulations": 23976,
+    "mismatches": [],
+    "duplicate_draws": []
+  },
+  {
+    "check_id": "discoveries.full_word_ngrams",
+    "status": "pass",
+    "method_ru": "Полный словарь всех заявленных словесных n-грамм заново получен из независимых исходных токенов с границами аятов.",
+    "types": 200945,
+    "occurrences": 251513
+  },
+  {
+    "check_id": "discoveries.ngram_all_coordinates",
+    "status": "pass",
+    "method_ru": "Каждое начало/окончание полного списка n-грамм восстановлено по исходным token_id; агрегаты вхождений сверены со словарём.",
+    "mismatches": []
+  },
+  {
+    "check_id": "discoveries.full_verse_repeats",
+    "status": "pass",
+    "method_ru": "Полный реестр повторённых аятов во всех 8 вариантах независимо пересчитан вместе со всеми адресами.",
+    "groups": 772
+  },
+  {
+    "check_id": "discoveries.long_repeat_source_contexts",
+    "status": "pass",
+    "method_ru": "Каждый найденный длинный повтор восстановлен по исходным адресам; это проверка кандидатов, не доказательство полноты эвристического поиска.",
+    "groups": 264,
+    "mismatches": []
+  },
+  {
+    "check_id": "morphology.join_conservation",
+    "status": "pass",
+    "method_ru": "Все перенесённые segment_id уникальны и присутствуют в неизменённом QAC; связанные токены существуют, в том же аяте и не являются вступительными префиксами.",
+    "segments": 116320,
+    "mismatches": []
+  },
+  {
+    "check_id": "morphology.frequency_conservation",
+    "status": "pass",
+    "method_ru": "Частоты всех лемм, корней, POS и форм сегментов независимо агрегированы; сегменты и связанные токены имеют отдельные счётчики.",
+    "mismatches": []
+  },
+  {
+    "check_id": "coverage.directions_A_J",
+    "status": "pass",
+    "method_ru": "Для каждого направления A–J существует строка результата либо конкретного ограничения.",
+    "directions": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "files": [
+      "results/core_coverage.json",
+      "results/exploration_coverage.json",
+      "results/extension_coverage.json",
+      "results/morphology_coverage.json",
+      "results/statistics_coverage.json"
+    ]
+  },
+  {
+    "check_id": "coverage.explicit_bounds",
+    "status": "pass",
+    "method_ru": "У каждой записи указаны статус, пространство поиска, фактическое покрытие и ограничения.",
+    "missing_fields": []
+  },
+  {
+    "check_id": "hypotheses.unique_ids",
+    "status": "pass",
+    "method_ru": "Идентификаторы гипотез уникальны во всех модулях.",
+    "hypotheses": 46
+  },
+  {
+    "check_id": "hypotheses.evidence_exists",
+    "status": "pass",
+    "method_ru": "Пути evidence_path разрешаются в реальные файлы результатов.",
+    "missing": []
+  },
+  {
+    "check_id": "export.xlsx_readable",
+    "status": "pass",
+    "method_ru": "XLSX читается; найденные числовые значения — числа, адреса — явный текст с форматом @.",
+    "path": "exports/quran_analysis.xlsx",
+    "sheets": [
+      {
+        "sheet": "Начать здесь",
+        "rows": 7,
+        "columns": 2
+      },
+      {
+        "sheet": "Корпус и профили",
+        "rows": 9,
+        "columns": 9
+      },
+      {
+        "sheet": "Суры",
+        "rows": 229,
+        "columns": 9
+      },
+      {
+        "sheet": "Длины аятов",
+        "rows": 147,
+        "columns": 4
+      },
+      {
+        "sheet": "Гипотезы",
+        "rows": 47,
+        "columns": 27
+      },
+      {
+        "sheet": "Карта покрытия",
+        "rows": 22,
+        "columns": 6
+      },
+      {
+        "sheet": "Паспорта модулей",
+        "rows": 308,
+        "columns": 3
+      },
+      {
+        "sheet": "База_basmala_locations",
+        "rows": 116,
+        "columns": 6
+      },
+      {
+        "sheet": "База_basmala_sensitivity",
+        "rows": 9,
+        "columns": 11
+      },
+      {
+        "sheet": "База_character_frequencies",
+        "rows": 321,
+        "columns": 15
+      },
+      {
+        "sheet": "База_frequency_of_frequencies",
+        "rows": 1353,
+        "columns": 5
+      },
+      {
+        "sheet": "База_length_summary",
+        "rows": 137,
+        "columns": 15
+      },
+      {
+        "sheet": "База_mark_sequences",
+        "rows": 17,
+        "columns": 5
+      },
+      {
+        "sheet": "Качество",
+        "rows": 4,
+        "columns": 5
+      },
+      {
+        "sheet": "База_surah_lengths",
+        "rows": 913,
+        "columns": 14
+      },
+      {
+        "sheet": "Unicode",
+        "rows": 69,
+        "columns": 11
+      },
+      {
+        "sheet": "База_unusual_mark_combinations",
+        "rows": 1,
+        "columns": 1
+      },
+      {
+        "sheet": "База_vocabulary_summary",
+        "rows": 9,
+        "columns": 9
+      },
+      {
+        "sheet": "coverage",
+        "rows": 22,
+        "columns": 6
+      },
+      {
+        "sheet": "Иссл_approximate_high_similarit",
+        "rows": 135,
+        "columns": 9
+      },
+      {
+        "sheet": "Иссл_compression_controls",
+        "rows": 21,
+        "columns": 6
+      },
+      {
+        "sheet": "Иссл_cooccurrence_vocabulary",
+        "rows": 121,
+        "columns": 3
+      },
+      {
+        "sheet": "Повторы аятов",
+        "rows": 773,
+        "columns": 6
+      },
+      {
+        "sheet": "Иссл_frequency_equivalence",
+        "rows": 172,
+        "columns": 6
+      },
+      {
+        "sheet": "Энтропия",
+        "rows": 116,
+        "columns": 9
+      },
+      {
+        "sheet": "Длинные повторы",
+        "rows": 265,
+        "columns": 8
+      },
+      {
+        "sheet": "Иссл_mirror_verse_pairs",
+        "rows": 3092,
+        "columns": 10
+      },
+      {
+        "sheet": "Иссл_position_windows",
+        "rows": 311,
+        "columns": 8
+      },
+      {
+        "sheet": "Иссл_surah_features",
+        "rows": 115,
+        "columns": 17
+      },
+      {
+        "sheet": "Сходство сур",
+        "rows": 6442,
+        "columns": 9
+      },
+      {
+        "sheet": "Иссл_verse_features",
+        "rows": 6237,
+        "columns": 13
+      },
+      {
+        "sheet": "Иссл_vocabulary_growth",
+        "rows": 784,
+        "columns": 5
+      },
+      {
+        "sheet": "Иссл_window_diversity",
+        "rows": 111,
+        "columns": 9
+      },
+      {
+        "sheet": "extension_refrain_ending_sensit",
+        "rows": 461,
+        "columns": 11
+      },
+      {
+        "sheet": "hypotheses",
+        "rows": 47,
+        "columns": 27
+      },
+      {
+        "sheet": "Морф_claim_forms",
+        "rows": 64,
+        "columns": 10
+      },
+      {
+        "sheet": "Морф_claims",
+        "rows": 6,
+        "columns": 13
+      },
+      {
+        "sheet": "Морф_coverage_by_surah",
+        "rows": 115,
+        "columns": 4
+      },
+      {
+        "sheet": "Морф_feature_frequencies",
+        "rows": 272,
+        "columns": 3
+      },
+      {
+        "sheet": "Леммы",
+        "rows": 4639,
+        "columns": 18
+      },
+      {
+        "sheet": "Морф_mismatches",
+        "rows": 7099,
+        "columns": 7
+      },
+      {
+        "sheet": "Части речи",
+        "rows": 46,
+        "columns": 18
+      },
+      {
+        "sheet": "Корни",
+        "rows": 1611,
+        "columns": 18
+      },
+      {
+        "sheet": "Морф_segment_frequencies",
+        "rows": 11246,
+        "columns": 18
+      },
+      {
+        "sheet": "Морф_verb_transitions",
+        "rows": 11289,
+        "columns": 10
+      },
+      {
+        "sheet": "statistical_lexical_positions",
+        "rows": 721,
+        "columns": 8
+      },
+      {
+        "sheet": "statistical_selected_forms",
+        "rows": 241,
+        "columns": 5
+      },
+      {
+        "sheet": "Статистические тесты",
+        "rows": 25,
+        "columns": 25
+      },
+      {
+        "sheet": "Полные внешние таблицы",
+        "rows": 39,
+        "columns": 2
+      },
+      {
+        "sheet": "Файлы",
+        "rows": 136,
+        "columns": 3
+      },
+      {
+        "sheet": "Словарь полей",
+        "rows": 10,
+        "columns": 3
+      },
+      {
+        "sheet": "Указатель листов",
+        "rows": 52,
+        "columns": 3
+      }
+    ],
+    "numeric_cells": 383429,
+    "address_text_cells": 68714,
+    "bad_addresses": []
+  },
+  {
+    "check_id": "export.xlsx_filters",
+    "status": "pass",
+    "method_ru": "На всех листах закреплён заголовок и установлен фильтр.",
+    "bad_sheets": []
+  },
+  {
+    "check_id": "export.xlsx_csv_consistency",
+    "status": "pass",
+    "method_ru": "Все листы с объявленным CSV-источником сопоставлены ячейка за ячейкой; адреса не преобразуются в числа. Для ячеек свыше лимита32767 проверено точное уведомление со ссылкой на полный исходник.",
+    "reconciled_tables": 44,
+    "oversized_cells_with_explicit_source": [
+      {
+        "source": "results/tables/exploration_frequency_equivalence.csv",
+        "column": "members_json",
+        "characters": 83435
+      }
+    ],
+    "mismatches": []
+  },
+  {
+    "check_id": "export.metrics_source",
+    "status": "pass",
+    "method_ru": "Сводные метрики отчёта и XLSX по всем профилям/областям сверены с независимым чтением исходника.",
+    "mismatches": []
+  },
+  {
+    "check_id": "export.html_payload",
+    "status": "pass",
+    "method_ru": "JSON-набор HTML извлекается из script#data-json."
+  },
+  {
+    "check_id": "export.html_source",
+    "status": "pass",
+    "method_ru": "Каждый встроенный токен, 4 поверхности, адрес, басмальный флаг и полный аят сверены непосредственно с независимым исходником.",
+    "tokens": 78248,
+    "verses": 6236,
+    "mismatches": []
+  },
+  {
+    "check_id": "export.html_metrics_csv",
+    "status": "pass",
+    "method_ru": "Встроенные сводные метрики HTML совпадают с CSV, проверенным по исходнику."
+  },
+  {
+    "check_id": "export.figure_sources",
+    "status": "pass",
+    "method_ru": "Для каждой опубликованной статической визуализации существуют PNG, SVG и CSV исходных чисел.",
+    "missing": []
+  },
+  {
+    "check_id": "export.report_metrics",
+    "status": "pass",
+    "method_ru": "Все четыре строки профильного паспорта текстового отчёта сверены с независимыми частотами."
+  }
+]

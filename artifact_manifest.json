@@ -1,0 +1,1271 @@
+{
+  "files": [
+    {
+      "path": ".agents/skills/caveman/README.md",
+      "bytes": 3009,
+      "sha256": "cbe0c714a696d95e8378858c812f3f3157fabf6929cc4cd28f3dcd48123b975b"
+    },
+    {
+      "path": ".agents/skills/caveman/SKILL.md",
+      "bytes": 4043,
+      "sha256": "34255a0215a7701eb83d508d03bc9560dc7bffbeb95a145ad2921ad2598a03bf"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 817,
+      "sha256": "dff44ae7117c5e5df595f8e9360249df1bbe402b19429c09ee20680910af3e68"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 218,
+      "sha256": "cf627b523395c788b8d411c1124219edd229297318e86c0515e100fba4fa7b84"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 76633,
+      "sha256": "550999cf33cd1599466beaece502f6469e931211ef1fb1b5c010eca36788ae11"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "bytes": 6004,
+      "sha256": "865f8a45d5a4db16f62487fa9a201676b684ce6c157c6e2e7b2d5de53c748659"
+    },
+    {
+      "path": "Quran_text.txt",
+      "bytes": 1352595,
+      "sha256": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7372,
+      "sha256": "489cb48298db9890e6084ee85553c7060be4a2581d2a2bcb8a2f047f7671a829"
+    },
+    {
+      "path": "config/analysis.json",
+      "bytes": 1112,
+      "sha256": "4627785860d623633f58b6e5ae0ec183fb94a73f8331280ebba1e860b8ffc596"
+    },
+    {
+      "path": "dashboard/index.html",
+      "bytes": 10049892,
+      "sha256": "522b8009565befcfcee045454c80ddce254fb8c4f4feb18a52bd4d808bfd2259"
+    },
+    {
+      "path": "data/external/QAC_COPYRIGHT_NOTICE.txt",
+      "bytes": 2223,
+      "sha256": "c2d32479b15633fb3738c81f93939d490f5df050ab8b4356b1aa66db371c9116"
+    },
+    {
+      "path": "data/external/published_claim_sources.json",
+      "bytes": 3720,
+      "sha256": "8e74f9c540b4b8a682708afe1c559c3e036d9c87a2a0b04690e66857686964d3"
+    },
+    {
+      "path": "data/external/qac_mirror_checks.json",
+      "bytes": 1822,
+      "sha256": "cbb4ef48d6f6627806297983cd88d870730908d6df03c46c2b55f3b93312c815"
+    },
+    {
+      "path": "data/external/qac_provenance.json",
+      "bytes": 1879,
+      "sha256": "f8fc9a636221a2344284ad2cc04075f2c89af8e072fbfc21009e5ec6bf802f17"
+    },
+    {
+      "path": "data/external/quranic-corpus-morphology-0.4.txt",
+      "bytes": 6309503,
+      "sha256": "a1d12923815341face765083805d2148ed2d9f5cc3f7d6665219d887675d8c46"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_bismillah.html",
+      "bytes": 236082,
+      "sha256": "40f4a45598d452224c83dc5fdd4b4888c69a182631d0eae5a02f9e565b4062d5"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_bismillah.txt",
+      "bytes": 21725,
+      "sha256": "fcc1957c1b2d5bb8cfb786c6f2ecb127a02cec8c8a5dbe7589823788cd4036a3"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar.html",
+      "bytes": 2253,
+      "sha256": "f335cd77d2c2509551280c538f29780ce583bd644b45d30b5b0c80cad5a05d62"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar.txt",
+      "bytes": 550,
+      "sha256": "a0ecd262fb4ca05dc63359827cab6f2b4204e6678a442ab282e28af1b60b9256"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_default.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_default.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_query.html",
+      "bytes": 2269,
+      "sha256": "59426980783468e1831893685b32280e0ce9575fc73c507653dd62c9eb2f0516"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_query.txt",
+      "bytes": 566,
+      "sha256": "529f1e0c6c81109b44902b0733001e835fffc4fc8f9e70ccdccd304811e9f168"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_root.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_calendar_root.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_default.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_default.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_http.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_http.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_query.html",
+      "bytes": 226,
+      "sha256": "80a265bed528211aa708dcd58f7a95db36eeb7f873c6fe4ddab0b3a1dc0973a4"
+    },
+    {
+      "path": "data/external/source_snapshots/claim_prime_query.txt",
+      "bytes": 164,
+      "sha256": "e0a6ddb5f777077ca55bc319f71c96bd03ee787af8541cccc5e8db981406fb14"
+    },
+    {
+      "path": "data/external/source_snapshots/manifest.json",
+      "bytes": 13868,
+      "sha256": "f36ff3439c0b74f9d08b3b149a5cc2177e9b49200bb52f4ac9ff53f8b59d8bc3"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_download.html",
+      "bytes": 7280,
+      "sha256": "eadaffde4a46882c7e8773799f33fcd707fe1a3f1eda5b49faafc29c0838da43"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_download.txt",
+      "bytes": 1806,
+      "sha256": "fbfb7be571063695318e7280a5e62a613933ec76894075744df338044b2365f4"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_license.html",
+      "bytes": 39603,
+      "sha256": "b265d6b394b10fe06c0e4e87e31fe605e3a1c2be4fa3910a2de63f1d1d63daa0"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_license.txt",
+      "bytes": 32303,
+      "sha256": "67e0c1a6043e57eefd722332c309b4721ff02174c023beefad2559a91fdad0c6"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_morphology.html",
+      "bytes": 30326,
+      "sha256": "232f92e94e4cbd6eba9b18bf1693f8cff3c1fb715ec5e1bec07e5314a19d15d6"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_morphology.txt",
+      "bytes": 12680,
+      "sha256": "8ebba2524493dcae0c2e0a035d3b4e0fa6127bd525abd383815da46dc27a8121"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_official_file.html",
+      "bytes": 9187,
+      "sha256": "75ea377d42d9a311bacc7398bfb2126ed93d9eb29a4b0531b6a7a044e3c009cd"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_official_file.txt",
+      "bytes": 3285,
+      "sha256": "bd0da17cdf44f616f4caaa027a63860b8f3fb175980d75e77d41975449a295d7"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_releases.html",
+      "bytes": 9182,
+      "sha256": "79b14adde23d30bc127d5fa93f58b25da1557f212de94ec02750b399cf298169"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_releases.txt",
+      "bytes": 3037,
+      "sha256": "6d8e66eb31ffc197362fecd3e10acb1f6ef5ce0cce2d9a434d62dfa752b1127b"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_tagset.html",
+      "bytes": 23235,
+      "sha256": "04424bd79b5a8c11080046ec2212695cdaa5fcd9150cf673e47bfb479640cd74"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_tagset.txt",
+      "bytes": 9172,
+      "sha256": "8fbb3489046ccaf87ad8adf6463d73da819a88d686dfdae6793bd3466bbcc9ab"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_transliteration.html",
+      "bytes": 24379,
+      "sha256": "25950b92c1179b2f4108091c10dcdb55d254a6896739e877ac3b065520c5b5e4"
+    },
+    {
+      "path": "data/external/source_snapshots/qac_transliteration.txt",
+      "bytes": 3789,
+      "sha256": "38bd748577c4017b952a8538b9f42c9fbec1be10b7a30ce9aeb181a38cf3ec74"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_basmala.html",
+      "bytes": 7015,
+      "sha256": "1309ff63a2fdf59a05a08dd4a46797227e4734691659c2c81dea1ed73ffbc70a"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_basmala.txt",
+      "bytes": 397,
+      "sha256": "f9c1634e402d34d32e9ad73a408d5f5d027dcfa9f580377dce298164eff25d9a"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_bismillah_note.html",
+      "bytes": 11157,
+      "sha256": "ce719443148d23a33cf49a2d019aae71fb8aece17bb38eca389ae974e0c9521b"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_bismillah_note.txt",
+      "bytes": 3393,
+      "sha256": "d6f690f25927e15be41616ad12207ecf4ae17131e4bd18b36c3e998b77314458"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_faq.html",
+      "bytes": 19081,
+      "sha256": "f1e0b0d0ed1012c297cca805800efb757c2cd02927ba92ee98a6858dc1ca43f8"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_faq.txt",
+      "bytes": 6177,
+      "sha256": "9fb230bf4dca925a5bab2546a8b06d5082b60aedce860c4bb853ad8e078f937c"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_formats.html",
+      "bytes": 7078,
+      "sha256": "c24d3a9d0726b2ab9c0fe1f76055ddb0b354cec8d89dffbbef2828b1a771d347"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_formats.txt",
+      "bytes": 397,
+      "sha256": "f9c1634e402d34d32e9ad73a408d5f5d027dcfa9f580377dce298164eff25d9a"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_search_bismillah.html",
+      "bytes": 7662,
+      "sha256": "8a8e2a16095d233d19c2c0d0881a3d31de7bd73f874768c084f3847feb11dde4"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_search_bismillah.txt",
+      "bytes": 780,
+      "sha256": "9cdd23fc980f90fdb101eadc3ebb3efd390233228748f6bf3ca15dc514c0819e"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_text_license.html",
+      "bytes": 7903,
+      "sha256": "05daf715ac083582f0c440526c645762459f5a57e40fede4234152cd29c641d8"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_text_license.txt",
+      "bytes": 1162,
+      "sha256": "d2a9d0f610c568ebeedd3dbdb8be3a0b09a9044366ba3b5cc8c7155e8f9e8c7f"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_types.html",
+      "bytes": 9095,
+      "sha256": "080f3c043ac9333d6a2108ee5b6ce84eed0e112131c62d60e5095b688fedb8d2"
+    },
+    {
+      "path": "data/external/source_snapshots/tanzil_types.txt",
+      "bytes": 1197,
+      "sha256": "40cbaa21519a6b25e138de5302adfa729dce11c244b065d11f03703c4bcf6a9b"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes.html",
+      "bytes": 141203,
+      "sha256": "60fb49ee640a154d9e40468306c6b283edcef73be3af5ede778107b4787bdec8"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes.txt",
+      "bytes": 86331,
+      "sha256": "56fa878b9e106d7c08aaeac5350afc30dfda4df966cb6453bec50fbf737382bf"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes_pinned.html",
+      "bytes": 141203,
+      "sha256": "60fb49ee640a154d9e40468306c6b283edcef73be3af5ede778107b4787bdec8"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes_pinned.txt",
+      "bytes": 86331,
+      "sha256": "56fa878b9e106d7c08aaeac5350afc30dfda4df966cb6453bec50fbf737382bf"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes_stable.html",
+      "bytes": 138801,
+      "sha256": "130d4e0d3f9da41bf9ad84bf580b3b92edc83886457cbc5a53b432761fd2c6ed"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_graphemes_stable.txt",
+      "bytes": 84827,
+      "sha256": "4ce48dd356128073b4e8d59272ce3f08b5a82a26258922deecdfe9a64a4db52d"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization.html",
+      "bytes": 141588,
+      "sha256": "efcf19da85342bd87fb93b590975ca422597243f2e19c6cb46e941d0d2d48d73"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization.txt",
+      "bytes": 84655,
+      "sha256": "a5edcac9d741f31570a0b116611fd60d5e75a039e4d9f99b7a4c656dac6f2548"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization_pinned.html",
+      "bytes": 141588,
+      "sha256": "efcf19da85342bd87fb93b590975ca422597243f2e19c6cb46e941d0d2d48d73"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization_pinned.txt",
+      "bytes": 84655,
+      "sha256": "a5edcac9d741f31570a0b116611fd60d5e75a039e4d9f99b7a4c656dac6f2548"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization_stable.html",
+      "bytes": 141627,
+      "sha256": "c0c05f91e1c4f9be3d987e27d76cf254b30003b6be41eb94977cc3fe148d4c4e"
+    },
+    {
+      "path": "data/external/source_snapshots/unicode_normalization_stable.txt",
+      "bytes": 84681,
+      "sha256": "79e685d5d14ce76119ca65dd0c40539e6fe761f2f856d745f13470b3cad9ae3a"
+    },
+    {
+      "path": "data/processed/corpus.sqlite",
+      "bytes": 161402880,
+      "sha256": "1bb0d7b9ab892f4917935492cc3d13d7d3f3fafaf63823080df1c997245ab453"
+    },
+    {
+      "path": "data/processed/nonlexical_spans.csv.gz",
+      "bytes": 679711,
+      "sha256": "95d939e4c7fc31e02a33a6db870299c5f8bbdb4f614f255969b4933dfe81814a"
+    },
+    {
+      "path": "data/processed/tokens.csv.gz",
+      "bytes": 2173404,
+      "sha256": "6e06dd086c3f394b1c7ac757f248e8f980d53b5e6872da41b017cfba6459687d"
+    },
+    {
+      "path": "data/processed/verses.csv.gz",
+      "bytes": 939884,
+      "sha256": "12096f9a909cba10ab26595d7a8287292dbc0fd656114b5ccaf2efe7b8eac95c"
+    },
+    {
+      "path": "data/raw/Quran_text.txt",
+      "bytes": 1352595,
+      "sha256": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a"
+    },
+    {
+      "path": "data/raw/SHA256SUMS",
+      "bytes": 81,
+      "sha256": "4e3a00409cef745b39d7c3e0c2afc7bd8ec3177f0257028ae82dffdf8913d3c5"
+    },
+    {
+      "path": "docs/COUNTING_RULES.md",
+      "bytes": 15996,
+      "sha256": "da950a884469802ed61686310b1e5ef4ff466b0d444f2d1280f5d55e9326b1a4"
+    },
+    {
+      "path": "docs/DATA_DICTIONARY.md",
+      "bytes": 6853,
+      "sha256": "06a06ba0c855ac30b85d294caaffb29f37e01d13e5bd5611b274253b1e5d6b2f"
+    },
+    {
+      "path": "docs/EXPLORATORY_PLAN.md",
+      "bytes": 4266,
+      "sha256": "97bda8d5ca6a929c5d869ad49c2804a1b921b90a1e1f6ba23bbe37884d4ab8ab"
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "bytes": 3352,
+      "sha256": "da9e678177050ae64d658ff29b34a99925ec0902851f6d0e2f663df320279ec7"
+    },
+    {
+      "path": "docs/QUERIES.sql",
+      "bytes": 1668,
+      "sha256": "39cfc9afad3ebc9de7fdc81e405962713ada3f072d8705e1d9c529e6cc25ff45"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "bytes": 5724,
+      "sha256": "be5f5780846f355af42083d8a6a2fc8da4195669d93a3d584eba39f78fa6783d"
+    },
+    {
+      "path": "docs/SEARCH_SPACE.md",
+      "bytes": 24496,
+      "sha256": "60f8d849d7cb595e3bac6db3447aeeba898f96a11a7f557828e50aa2b1659144"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 12871,
+      "sha256": "a24ad6f50e48e5dfbb87ece4fb71b3e40262eaf50cb0a489b70b71a6b43ca172"
+    },
+    {
+      "path": "docs/STATISTICAL_PLAN.md",
+      "bytes": 5895,
+      "sha256": "d0733c6acd9bef17e37eb05c6b70b2797557c64238571a0de46cab1557c5c6cf"
+    },
+    {
+      "path": "docs/USER_SPECIFICATION.md",
+      "bytes": 76032,
+      "sha256": "84c1ad6c22ab2476a4a6fb1274eb8192e206c21c2813377a59d7e9146446ab19"
+    },
+    {
+      "path": "exports/quran_analysis.xlsx",
+      "bytes": 3858823,
+      "sha256": "75a24ddd9f90f4a92be9c2f24ebf1406b2f657625840b801cf9103a2b11dede3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 381,
+      "sha256": "7741c91780c62d962402dee8773a3ca02e2b1b6d499b34af761e0e189295bd7c"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 731,
+      "sha256": "0904f1f1baacb226fedd6ddbd2a02372e0f3900a6e51843fdfb6aeb995d53235"
+    },
+    {
+      "path": "report/BROWSER_CHECKS.md",
+      "bytes": 3790,
+      "sha256": "e5d9382fceab10401ea8e8dbc02a4f4be9ff1a6793ca2bac35574fa0ebba9834"
+    },
+    {
+      "path": "report/REPORT.md",
+      "bytes": 52995,
+      "sha256": "c9f0a56cfa16f9e248c472e4cbb79957b74674a74628e129f35cfd8285deb109"
+    },
+    {
+      "path": "report/browser_arabic_contexts.png",
+      "bytes": 331270,
+      "sha256": "b78d844d6956e8f8f3105e8efa85ca7b7a77c089ab4f3a6e6f999e0a298e5dab"
+    },
+    {
+      "path": "report/browser_mobile.png",
+      "bytes": 119456,
+      "sha256": "4edf479cd9e6790edb1918f24611ef8bfc16b2f5fb3fa84b9d3ca9e77ef1f0fe"
+    },
+    {
+      "path": "report/browser_overview.png",
+      "bytes": 293161,
+      "sha256": "411a96b64181c4096a0a5c5727c4e4763fe7ffad7a3b01fa3eee0b724fa25676"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "bytes": 126,
+      "sha256": "8e273c974deefe9e0b68a9314c5fd560d1a773da645e33eacf9a16b4e6511eea"
+    },
+    {
+      "path": "results/browser_checks.json",
+      "bytes": 1940,
+      "sha256": "28ccb10affc285b78f5f53d4b8114766acad4463bfd69d03363dd2dea0d36bb3"
+    },
+    {
+      "path": "results/cache_resume_check.json",
+      "bytes": 503,
+      "sha256": "b064105fd8f840487df77f81779d999ad8ae5ad548510f175d84f2c524dbc4f9"
+    },
+    {
+      "path": "results/core_checks.json",
+      "bytes": 588,
+      "sha256": "acbcdd9a9932eacf155b6f3ec7639e1908f96f743dc267a38c0c78ad3409a3d5"
+    },
+    {
+      "path": "results/core_coverage.json",
+      "bytes": 1183,
+      "sha256": "acdd3e296d89b98efd446532c7e852746a7a6a9264ef02028ecae4575a19b530"
+    },
+    {
+      "path": "results/core_summary.json",
+      "bytes": 7299,
+      "sha256": "dec60711aac16bf524b492d7422ba30f238357f684504fe67f0604071d3aae57"
+    },
+    {
+      "path": "results/coverage.json",
+      "bytes": 14265,
+      "sha256": "171e5adbcd68446b063e3db92ff4725fc3f08fb25aab9989106201d67c0b3e9d"
+    },
+    {
+      "path": "results/exploration_checks.json",
+      "bytes": 3021,
+      "sha256": "52069d625d868ecf2e233df01eaae51745f01489a108b26f75a305a439f34fc1"
+    },
+    {
+      "path": "results/exploration_coverage.json",
+      "bytes": 8284,
+      "sha256": "589679fbfc16052c3d08f56ba36cb19928fb05c84f498e1e064d58c4b3bc77b3"
+    },
+    {
+      "path": "results/exploration_run.log",
+      "bytes": 38381,
+      "sha256": "801fdf37b828bf0a9c8e8f23763ead9407f37f3c61698e69855c2e7d25d947dd"
+    },
+    {
+      "path": "results/exploration_summary.json",
+      "bytes": 38381,
+      "sha256": "e7e3af778a0cbf2db49131631b1765aba27bec08abdac3d6c8453235e85ac9d3"
+    },
+    {
+      "path": "results/extension_coverage.json",
+      "bytes": 1401,
+      "sha256": "e27a20df6f9ca3a548decd7a5713385403676f649482a9dfc9b867e623c4a05e"
+    },
+    {
+      "path": "results/extension_summary.json",
+      "bytes": 2134,
+      "sha256": "82d83f159c6fc55a6c2fb1c022a965808310ef246a8f8103b79f5aaff052a61f"
+    },
+    {
+      "path": "results/figures/profile_sensitivity.csv",
+      "bytes": 492,
+      "sha256": "fa5c853aed7a3b904e6258a07158280c29b8b4a15dbcc2e8b40c5a3bec300cc7"
+    },
+    {
+      "path": "results/figures/profile_sensitivity.png",
+      "bytes": 85430,
+      "sha256": "96dc01d296ef822edc30ac144ceaeb63eb7dcc3c8bf2f853e148f260ea0149da"
+    },
+    {
+      "path": "results/figures/profile_sensitivity.svg",
+      "bytes": 10957,
+      "sha256": "8ee83c8c7f718561ea933b49ca370ad1a9c0394395bcd36d223c7556faf0aa15"
+    },
+    {
+      "path": "results/figures/rank_frequency.csv",
+      "bytes": 611064,
+      "sha256": "13c90b08adfe6d894c1e3dfb4b0c8d342094fec8947838cb2327862ccfd3ddd6"
+    },
+    {
+      "path": "results/figures/rank_frequency.png",
+      "bytes": 92405,
+      "sha256": "dccfd223d368ebee99f27b81adbcc999d1716b9e8f8673a103b16bb906eb5cc7"
+    },
+    {
+      "path": "results/figures/rank_frequency.svg",
+      "bytes": 28963,
+      "sha256": "7a830eb7cbba07a1cd418be8ccd9719f950229c03c9aabee8b456c58f69bc8b3"
+    },
+    {
+      "path": "results/figures/statistic_ending_2.csv",
+      "bytes": 109176,
+      "sha256": "b09493b7e19a8dfbe390ae59ead4b6f69f6ac0e5c4bad305277b615183eb7402"
+    },
+    {
+      "path": "results/figures/statistic_ending_2.png",
+      "bytes": 87877,
+      "sha256": "811e27a24a849666415005f77334bd24266a8f7a2a11c932b7d279cbc091d587"
+    },
+    {
+      "path": "results/figures/statistic_ending_2.svg",
+      "bytes": 16013,
+      "sha256": "dbc9c908bc683516d5c1ac77c9f7812cc19c5b4ad2a398dd57a97cf3bced750f"
+    },
+    {
+      "path": "results/figures/statistic_length_adjacency.csv",
+      "bytes": 113835,
+      "sha256": "d74ce8beafde39eea370764eb053ae137629aeb136f45b5f3f9c3a1a435497fa"
+    },
+    {
+      "path": "results/figures/statistic_length_adjacency.png",
+      "bytes": 82733,
+      "sha256": "42a254301a399fb2b7324274a92bacc26fb2a76e0abdb4acbcb12c0fc5011000"
+    },
+    {
+      "path": "results/figures/statistic_length_adjacency.svg",
+      "bytes": 16338,
+      "sha256": "3cc24f9ffdb295d81c51fd5b3a1e4b56a36605f2d58e0f5d430398b246c52088"
+    },
+    {
+      "path": "results/figures/surah_tokens.csv",
+      "bytes": 5972,
+      "sha256": "e21be3c2ca529e2da3a2c563b7aef7bc91f639ac9a7b08023a3259498fb0e440"
+    },
+    {
+      "path": "results/figures/surah_tokens.png",
+      "bytes": 65399,
+      "sha256": "dc756c692d56921910323bb70bc441812665a08f631c8c5f3ccb8f7856fbe2a0"
+    },
+    {
+      "path": "results/figures/surah_tokens.svg",
+      "bytes": 31326,
+      "sha256": "7ed95dfbdba4e690a2a6d52fdefbd7e79cc54c877674715c7fb1130c35d35257"
+    },
+    {
+      "path": "results/figures/verse_lengths.csv",
+      "bytes": 1565,
+      "sha256": "3420538b6e4edd3398ce2874640e63984b2436e4f0ba3240738774e9ab021026"
+    },
+    {
+      "path": "results/figures/verse_lengths.png",
+      "bytes": 69736,
+      "sha256": "d6837fcb0ec289dd31e788064d0286ae778f1ee92b2d995936185989d92564b4"
+    },
+    {
+      "path": "results/figures/verse_lengths.svg",
+      "bytes": 23029,
+      "sha256": "9dce63ec6f195102cf2eabd27c87b743e1ebe9cc2f916ca6827ebdd38616c3b9"
+    },
+    {
+      "path": "results/figures/vocabulary_growth.csv",
+      "bytes": 32980,
+      "sha256": "e3cf4e58b2bac275cb1f9874c486b596b9f9ae86df71d0a7ce19b67af00c223c"
+    },
+    {
+      "path": "results/figures/vocabulary_growth.png",
+      "bytes": 90665,
+      "sha256": "39ce226a1eb65a88de0333742d427dfe2cc32b010afb85f3da1661d1bdafe000"
+    },
+    {
+      "path": "results/figures/vocabulary_growth.svg",
+      "bytes": 17234,
+      "sha256": "43c5470979138ccd1acddf6de88d587b66b7ebca70afafe69b94de2b3f673a44"
+    },
+    {
+      "path": "results/hypotheses/core.json",
+      "bytes": 1935,
+      "sha256": "d89c75307f0e44666b3b1c157ef117a814422baafda2b7aa303eafd8b21ab4dd"
+    },
+    {
+      "path": "results/hypotheses/exploration.json",
+      "bytes": 7899,
+      "sha256": "47b5f084486d19924f576f4803924216c983d7f48449bb30c3ab9ba3d5855b25"
+    },
+    {
+      "path": "results/hypotheses/extension.json",
+      "bytes": 4941,
+      "sha256": "fb7834e7c3c7b78fa014485e596c12e08219019e958175a5895aac961929ddee"
+    },
+    {
+      "path": "results/hypotheses/morphology.json",
+      "bytes": 14128,
+      "sha256": "ee19a6510a9edb087d4f3bcfea17ca70cf9d62d80a35e546316a74c7e9f6adfa"
+    },
+    {
+      "path": "results/hypotheses/registry.json",
+      "bytes": 73126,
+      "sha256": "adf301438d61f7297a624c3bc4bbfbd9f55b99540bd44cc40ce415bf120da272"
+    },
+    {
+      "path": "results/hypotheses/statistics.json",
+      "bytes": 44234,
+      "sha256": "9457ed295069d206d85e693351d7806fe67f95bec79fd835e9e0bda8371e907f"
+    },
+    {
+      "path": "results/morphology_coverage.json",
+      "bytes": 2536,
+      "sha256": "eebc58e435487f22bd2118268b2821854f4e3f85aebd556d692c707c498e8684"
+    },
+    {
+      "path": "results/morphology_summary.json",
+      "bytes": 27191,
+      "sha256": "932957cb9a906d88d8c23a562be3ef27ce1c3d556ff0a4e460a654ddd7684773"
+    },
+    {
+      "path": "results/presentation_summary.json",
+      "bytes": 5010,
+      "sha256": "300942a2aa8d7748a78f5ab97a7969a610625c84ed64f1258bcb8fa0a681a4d4"
+    },
+    {
+      "path": "results/reproducibility_check.json",
+      "bytes": 755,
+      "sha256": "537ff7c41ba51182d6964ed9f5f2c4cd70b82ca8c9c20845bfe60143d51b9fd6"
+    },
+    {
+      "path": "results/statistics_coverage.json",
+      "bytes": 872,
+      "sha256": "d927d0f96214e0686411c0ef321ed11befb94d95adbb9a302f070e47c2e588cf"
+    },
+    {
+      "path": "results/statistics_summary.json",
+      "bytes": 47798,
+      "sha256": "b9505b558c3d6860683eaa47a83e6ecc61417953c0c66dc25f7fd207c39d8464"
+    },
+    {
+      "path": "results/tables/core_basmala_locations.csv",
+      "bytes": 24646,
+      "sha256": "b9ca1db5b626432c8a89ce64ef6b509d2210b952ae9ce15516ca148bfbc048c1"
+    },
+    {
+      "path": "results/tables/core_basmala_sensitivity.csv",
+      "bytes": 565,
+      "sha256": "4d5319269a642ce59ff09196a1f47c533b06726b1a944d7c6a8c1b92fcf968aa"
+    },
+    {
+      "path": "results/tables/core_character_frequencies.csv",
+      "bytes": 36093,
+      "sha256": "b24baa4239faf08281be62cdfaf6c64ed4556122410f895a65b8f5392390fb8e"
+    },
+    {
+      "path": "results/tables/core_frequency_of_frequencies.csv",
+      "bytes": 31051,
+      "sha256": "d02f50e63cf826b46b0e0ec5e5308254e8dff5412851c495389a7de3151ba544"
+    },
+    {
+      "path": "results/tables/core_length_distributions.csv.gz",
+      "bytes": 49694,
+      "sha256": "5c0f2d4ea3c7f63523a98e9ccbce7cab12c92452725858241d935ccde1c0f256"
+    },
+    {
+      "path": "results/tables/core_length_extrema_all_ties.csv.gz",
+      "bytes": 1795506,
+      "sha256": "1e31ce92f4be993db9a8089f3c61bd4aef307c80fab57cd03f3e2192c33ca4e6"
+    },
+    {
+      "path": "results/tables/core_length_summary.csv",
+      "bytes": 15225,
+      "sha256": "80c5898b05d6111e56420ea54a4fcd0092f74888d735a0dcf52f17233a044da1"
+    },
+    {
+      "path": "results/tables/core_mark_sequences.csv",
+      "bytes": 2747,
+      "sha256": "e39325c5ce7981176e3fbc72553f60e0ccf733427d26a77c3ad5e892e12e85c9"
+    },
+    {
+      "path": "results/tables/core_normalization_collisions.csv.gz",
+      "bytes": 210817,
+      "sha256": "cfab8500823058f5b9806262c2977cf7d18d9c8f530135e74d8afb618a675859"
+    },
+    {
+      "path": "results/tables/core_quality_issues.csv",
+      "bytes": 905,
+      "sha256": "1c06d8cd5e71bf95278ac4201a7e23a4dd0b95999fe13f856c55cb90118c3298"
+    },
+    {
+      "path": "results/tables/core_source_offsets_bytes.csv.gz",
+      "bytes": 989537,
+      "sha256": "97013b80466cdb4de8c75a057061756237c48f1424d2ab4207260a170a4358e4"
+    },
+    {
+      "path": "results/tables/core_surah_lengths.csv",
+      "bytes": 49287,
+      "sha256": "fd34103aaebadcca1d1f60d7fecfa703b987acc0b60f5bd09d30dd80e56d8656"
+    },
+    {
+      "path": "results/tables/core_surah_vocabulary.csv.gz",
+      "bytes": 4267108,
+      "sha256": "dc86402e40863945a13bdcd407ee7460de42135a6c12af18ca88d2159fd45a49"
+    },
+    {
+      "path": "results/tables/core_surface_text_lengths.csv.gz",
+      "bytes": 463503,
+      "sha256": "928c79ed2010e32ecb215449067fd8256638ed06a657987a3091f6557ceaa4f1"
+    },
+    {
+      "path": "results/tables/core_token_metrics.csv.gz",
+      "bytes": 1467482,
+      "sha256": "dc232e826ac3388e1bbb0ff8f4c749af88e3e0ba851b1e94c09ce834e38af5b5"
+    },
+    {
+      "path": "results/tables/core_unicode_inventory.csv",
+      "bytes": 10810,
+      "sha256": "bfbca9f983599974222c1ca01d8fb9945f6c18894810be8428ef9cf5dbc0983b"
+    },
+    {
+      "path": "results/tables/core_unusual_mark_combinations.csv",
+      "bytes": 41,
+      "sha256": "11abf3b35195c9822898aa409407238c0d615a1c099db429a2184a99ea3cc9e3"
+    },
+    {
+      "path": "results/tables/core_verse_lengths.csv.gz",
+      "bytes": 600003,
+      "sha256": "cce5c74731fde0b060eefdc0cc6f4d8b236d91d6e5ba4d1bfafd55e04198963e"
+    },
+    {
+      "path": "results/tables/core_vocabulary_nfc_file.csv.gz",
+      "bytes": 1095499,
+      "sha256": "3fa075726066c91fed3c1432dfa85039b873bbfc571dc4d665e2a627f506b5b9"
+    },
+    {
+      "path": "results/tables/core_vocabulary_nfc_numbered.csv.gz",
+      "bytes": 1039648,
+      "sha256": "20d43a095d68744ae13ad5e3895e076b42bfc9d008ddb98f32d3b5e7354592a9"
+    },
+    {
+      "path": "results/tables/core_vocabulary_plain_file.csv.gz",
+      "bytes": 867039,
+      "sha256": "5e48860eb2be5366665a6001d385873f06094b9c6cf29bf0a5707fdb0fe0bb5c"
+    },
+    {
+      "path": "results/tables/core_vocabulary_plain_numbered.csv.gz",
+      "bytes": 821124,
+      "sha256": "e86444c2d692fbed5454e2a04153050f78cdaa9c97e6c646f024e5b5a2060dee"
+    },
+    {
+      "path": "results/tables/core_vocabulary_raw_file.csv.gz",
+      "bytes": 1094709,
+      "sha256": "8bdd56302511798c6876ebd905d6f0041587190e4f16ac53ee1e51cef1a64bcb"
+    },
+    {
+      "path": "results/tables/core_vocabulary_raw_numbered.csv.gz",
+      "bytes": 1039040,
+      "sha256": "00078bb199f88347161d448c48b813f32a4ef271badead648ce921e31ae5e064"
+    },
+    {
+      "path": "results/tables/core_vocabulary_search_file.csv.gz",
+      "bytes": 856618,
+      "sha256": "068e3ed9564b99573c215410e87c5758fa95e69f2801a88f4f1cc95e3893fff8"
+    },
+    {
+      "path": "results/tables/core_vocabulary_search_numbered.csv.gz",
+      "bytes": 810873,
+      "sha256": "b9c7be3657dc5e206b6408e29906110ae9f374df5e7839944e2c7d89ea91cc1f"
+    },
+    {
+      "path": "results/tables/core_vocabulary_summary.csv",
+      "bytes": 623,
+      "sha256": "4e52915a0c563b284a5474b521ec5f254f2fcc6cc8c851c9e1e8eac087583318"
+    },
+    {
+      "path": "results/tables/coverage.csv",
+      "bytes": 11302,
+      "sha256": "c54832c8d1f278cdf9882f5aaac823c8499bf1fbedcf7e6b476b304b37345747"
+    },
+    {
+      "path": "results/tables/exploration_approximate_candidates.csv.gz",
+      "bytes": 192391,
+      "sha256": "6a22bb293e4811730751c1d69b932a12a435132247ac44f934b2ca72d6f370ea"
+    },
+    {
+      "path": "results/tables/exploration_approximate_high_similarity.csv",
+      "bytes": 39920,
+      "sha256": "c4fe5ae254837671af732bd0ccbb66106e3c1fbe89af6c56d5164693943fac87"
+    },
+    {
+      "path": "results/tables/exploration_compression_controls.csv",
+      "bytes": 1400,
+      "sha256": "e5c11c7cba0aa750e7ab732d7e5674568cdb8a4e2c6c1ea3bb8bd66f90d8cfb0"
+    },
+    {
+      "path": "results/tables/exploration_cooccurrence.csv.gz",
+      "bytes": 656139,
+      "sha256": "8ac30a72bd24db92768f58a373b73607270482c7e0fe0e0177fad8b885deb00e"
+    },
+    {
+      "path": "results/tables/exploration_cooccurrence_vocabulary.csv",
+      "bytes": 1959,
+      "sha256": "59e1268f3a7091eabd28c0e06fbcfb44d587988c4316e3291310316cf4ad813c"
+    },
+    {
+      "path": "results/tables/exploration_exact_verse_repeats.csv",
+      "bytes": 86335,
+      "sha256": "7a1af6818325d69363cb65aa9d0cfe2cea5eb30c4b9ff4e68f5489d630b1222d"
+    },
+    {
+      "path": "results/tables/exploration_frequency_equivalence.csv",
+      "bytes": 253371,
+      "sha256": "e2ff5610167343b39f382df5dee1363f229e5a3bfb52845e1dd13729279409bb"
+    },
+    {
+      "path": "results/tables/exploration_information.csv",
+      "bytes": 9628,
+      "sha256": "fec1792a0dead5b8b408c78c5efc39fd6358e4213a364a3b6c21c92706286027"
+    },
+    {
+      "path": "results/tables/exploration_letter_ngram_occurrences.csv.gz",
+      "bytes": 2836739,
+      "sha256": "c78dda8c7e15cc6d8e94510882fd5d321b07285b732e5cd0e57e997b806833cc"
+    },
+    {
+      "path": "results/tables/exploration_letter_ngrams.csv.gz",
+      "bytes": 284914,
+      "sha256": "b037379444709c82a97d3ae551e4f8d948d9e6e7889d945045c7d99554efdbec"
+    },
+    {
+      "path": "results/tables/exploration_long_repeat_pairs.csv.gz",
+      "bytes": 3738,
+      "sha256": "dd24d81c425174216151011260e83b00d373314d584d7371b143e26daa4b9171"
+    },
+    {
+      "path": "results/tables/exploration_long_repeats.csv",
+      "bytes": 37936,
+      "sha256": "96fe80155faee635a7622cf0316615c40345c9b636a6ce9671496a5195314d6c"
+    },
+    {
+      "path": "results/tables/exploration_mirror_verse_pairs.csv",
+      "bytes": 101092,
+      "sha256": "9e371e8567b2f60f449f78c4e0fdae842fc1c1c6564fca4c34037f6cd564da32"
+    },
+    {
+      "path": "results/tables/exploration_numeric_tests.csv.gz",
+      "bytes": 291569,
+      "sha256": "db35e07bcb7c76f0af1f14af14df43c18a979d49c8b93ab19c431703275eae83"
+    },
+    {
+      "path": "results/tables/exploration_position_windows.csv",
+      "bytes": 15161,
+      "sha256": "8dc8bb5cc3b3c1411309180a9f763a358f6ebf76b673ee2880e3e2bc1caae5cb"
+    },
+    {
+      "path": "results/tables/exploration_positions.csv.gz",
+      "bytes": 1227383,
+      "sha256": "97013b555a3ffcfcc7422cb522ca2a7efbd6f49374a8e15461b8e4ade76235e8"
+    },
+    {
+      "path": "results/tables/exploration_surah_features.csv",
+      "bytes": 14809,
+      "sha256": "d1857999052514e3bb0be9c404eb30504a55cf4cea7fdd14be29e41684a164bd"
+    },
+    {
+      "path": "results/tables/exploration_surah_similarity.csv",
+      "bytes": 327741,
+      "sha256": "f8f7a2bcc78abd94ea395365fb046313a37749655e2961e991b0f32b5132d72c"
+    },
+    {
+      "path": "results/tables/exploration_verse_boundaries.csv",
+      "bytes": 1551664,
+      "sha256": "cb1ddd21211fabb4efce566048b188b01b4769eaa99af38f7ec93307a863c622"
+    },
+    {
+      "path": "results/tables/exploration_verse_features.csv",
+      "bytes": 451864,
+      "sha256": "ae732d507bef5e257f7bfffbfd171719e80d09e70935d0e67e042678b802dffd"
+    },
+    {
+      "path": "results/tables/exploration_vocabulary_growth.csv",
+      "bytes": 32980,
+      "sha256": "e3cf4e58b2bac275cb1f9874c486b596b9f9ae86df71d0a7ce19b67af00c223c"
+    },
+    {
+      "path": "results/tables/exploration_window_diversity.csv",
+      "bytes": 6928,
+      "sha256": "e0a310a7b9231691dc2d6eb1bd887d6996bea888a444e621eb76b68b3daf36ae"
+    },
+    {
+      "path": "results/tables/exploration_word_ngram_occurrences.csv.gz",
+      "bytes": 2155139,
+      "sha256": "bb14026f37c0475fe17e8b99e0746a12116b9d97f09840daab1663dc550c369a"
+    },
+    {
+      "path": "results/tables/exploration_word_ngrams.csv.gz",
+      "bytes": 2325920,
+      "sha256": "77a646ccf9725bf548ef394e182570089fe8f833b7f872f3a84b2ea0f59d1057"
+    },
+    {
+      "path": "results/tables/exploration_word_occurrence_gaps.csv.gz",
+      "bytes": 1415814,
+      "sha256": "264e3e33ce9dfce4c199a62f2a8b0fd07a8cd2bfbf1310a28713cf7dc3422a90"
+    },
+    {
+      "path": "results/tables/extension_basmala_lexical_coverage.csv.gz",
+      "bytes": 363603,
+      "sha256": "6ac3410a0ed1c63998857d0510decd9904b15b7f2c8b5a0d170c0593b2764256"
+    },
+    {
+      "path": "results/tables/extension_frequency_equality_groups.csv.gz",
+      "bytes": 112869,
+      "sha256": "fffe628674c74a45a7c68d7919ef91d07060bce68ce7a7ffef7869e204f4b831"
+    },
+    {
+      "path": "results/tables/extension_refrain_adjacency_edges.csv.gz",
+      "bytes": 110488,
+      "sha256": "de9ce6502c5c58035beecb658563656c02df6a3719e93a9d97da92b1dbfe7f4e"
+    },
+    {
+      "path": "results/tables/extension_refrain_ending_sensitivity.csv",
+      "bytes": 29620,
+      "sha256": "f769b31a03f9c08b94900bd739799c23f0f8e6a8837760f4e95819a61a9b10af"
+    },
+    {
+      "path": "results/tables/hypotheses.csv",
+      "bytes": 55304,
+      "sha256": "f09559f63db5e150c1dbe18465cee5ee01ba8e9a08bebd575d870a1063612966"
+    },
+    {
+      "path": "results/tables/morphology_alignment.csv.gz",
+      "bytes": 970773,
+      "sha256": "e7e06a6db07ee89cc2758dd6634712fa98c6096a75db3d858eb851a6dfc1ffd2"
+    },
+    {
+      "path": "results/tables/morphology_claim_forms.csv",
+      "bytes": 7133,
+      "sha256": "1bde623f43c716730c3b847901a48ecd1f5f13c141075d7276455d2fbf706651"
+    },
+    {
+      "path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "bytes": 12431,
+      "sha256": "a102ce3db25c90202abf14e10db33069cc0015e12637976a02409398d944f886"
+    },
+    {
+      "path": "results/tables/morphology_claims.csv",
+      "bytes": 5755,
+      "sha256": "f787f6b1c7b1e480f46060f2dc69969ac5ed11615e5b51a9b98c5fcf1a1c63f2"
+    },
+    {
+      "path": "results/tables/morphology_cooccurrence.csv.gz",
+      "bytes": 271104,
+      "sha256": "0591aa2c39efc7e088c0a93979ffd77c18f60892b6812538f8fbc1922bb3d934"
+    },
+    {
+      "path": "results/tables/morphology_coverage_by_surah.csv",
+      "bytes": 3402,
+      "sha256": "58067455b6ea434b651544b1603d90f4ecd2d029fceca2cbe72aea76ff4c7b7b"
+    },
+    {
+      "path": "results/tables/morphology_feature_frequencies.csv",
+      "bytes": 3723,
+      "sha256": "e0693f7c740b20623aeaf5383100b35b7e20048e57a31e89269fe59911ab238c"
+    },
+    {
+      "path": "results/tables/morphology_form_families.csv",
+      "bytes": 2566198,
+      "sha256": "4528a3dfafd6a6b67ba853a5946420397cba0c4e589d8063d56d87502f5c417b"
+    },
+    {
+      "path": "results/tables/morphology_lemma_frequencies.csv",
+      "bytes": 830065,
+      "sha256": "a93783f90b07132912a0dc86a0c4b12efafc5c8784676f38c0ff8e8b10be61b7"
+    },
+    {
+      "path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "bytes": 235812,
+      "sha256": "fa63e075f518b93624a244f88f01195c98ac58bba9967e21bdd3b7efa075adec"
+    },
+    {
+      "path": "results/tables/morphology_mismatches.csv",
+      "bytes": 976963,
+      "sha256": "7ce1731ea5f0a57796a1633513459eaef48e0a0feb3eb75ad612f90b5c224d4d"
+    },
+    {
+      "path": "results/tables/morphology_pos_frequencies.csv",
+      "bytes": 7624,
+      "sha256": "c3165951c06a2a3ec66980d04a771869603620d95d5691dcd0c1e556cae8f505"
+    },
+    {
+      "path": "results/tables/morphology_root_frequencies.csv",
+      "bytes": 269544,
+      "sha256": "7360847e07dda29c9c7c63924ade1601ae794cc594e4d4116c4f91b672f98e53"
+    },
+    {
+      "path": "results/tables/morphology_segment_frequencies.csv",
+      "bytes": 1952152,
+      "sha256": "065c3af948cd7ce9a8105773317a592bcc22223a7be701536b76e247e837347a"
+    },
+    {
+      "path": "results/tables/morphology_segments.csv.gz",
+      "bytes": 3158760,
+      "sha256": "518474b0b68c833566bbb0d475d65b2690f24f9579a42855274b781281cd5c72"
+    },
+    {
+      "path": "results/tables/morphology_surah_lexicons.csv.gz",
+      "bytes": 375937,
+      "sha256": "ee5af814ed6b3b5c494ce0030dfdc83ad617d4dfc623868bf2bfd247f64fd0ca"
+    },
+    {
+      "path": "results/tables/morphology_verb_transitions.csv",
+      "bytes": 983378,
+      "sha256": "a386e196e22ffe46316ec4e093c64479f0c3aac855323b77db64f009a4d4b8e2"
+    },
+    {
+      "path": "results/tables/presentation_corpus_metrics.csv",
+      "bytes": 492,
+      "sha256": "fa5c853aed7a3b904e6258a07158280c29b8b4a15dbcc2e8b40c5a3bec300cc7"
+    },
+    {
+      "path": "results/tables/presentation_rank_frequency.csv",
+      "bytes": 1162603,
+      "sha256": "df9d86af32e6e79c9b0e90a799ae07808ec8780e45151383c0bb72c79c38d294"
+    },
+    {
+      "path": "results/tables/presentation_surah_metrics.csv",
+      "bytes": 11385,
+      "sha256": "866b3fed6cd9424ba4b73dfef95056e34734e74b135a76c4b0843de39bc0501b"
+    },
+    {
+      "path": "results/tables/presentation_verse_lengths.csv",
+      "bytes": 2785,
+      "sha256": "82af52022eaece3ee4db639291370ada8447d0a6d2d2fd85b67651235438f510"
+    },
+    {
+      "path": "results/tables/statistical_lexical_positions.csv",
+      "bytes": 51262,
+      "sha256": "e07dfe1428a6800178dac114b16f031e2990a8653c43822bed695da7f8d9304f"
+    },
+    {
+      "path": "results/tables/statistical_null_draws.csv.gz",
+      "bytes": 230211,
+      "sha256": "49f0c608a8ca6f345e863572b6b1c9f4cffac019bcb4284e833a7480ee5c68d4"
+    },
+    {
+      "path": "results/tables/statistical_selected_forms.csv",
+      "bytes": 10969,
+      "sha256": "7719b35b4d85b4db9be449133ee28f002258bb9ba9f9ab324d60ef4892f68f3b"
+    },
+    {
+      "path": "results/tables/statistical_tests.csv",
+      "bytes": 32925,
+      "sha256": "0f6f433c334455f1c3c140b51af1abd99587327e50a6bb98801f8d0952832c5d"
+    },
+    {
+      "path": "results/validation_checks.json",
+      "bytes": 30869,
+      "sha256": "3a2add9aa261c9734b2f8e3cef78ac8adfad933f2b5d5d3ae82bfa4b13b870aa"
+    },
+    {
+      "path": "results/validation_independent_counts.json",
+      "bytes": 959,
+      "sha256": "3b37af4471a3dd34b267d888a150b34a721028a1238caf1f00bcf1db90a94ef4"
+    },
+    {
+      "path": "results/validation_summary.json",
+      "bytes": 2104,
+      "sha256": "09357e58259f2fdbc3c5d61de3701daa19a31496a2c4ea17c083e473a8014452"
+    },
+    {
+      "path": "run_manifest.json",
+      "bytes": 29342,
+      "sha256": "4246b4fdc286bde5608160083036490aa605ead631d6c0a8d6c1140dada7e874"
+    },
+    {
+      "path": "scripts/check_browser.py",
+      "bytes": 8400,
+      "sha256": "b19cdf0372e3ccf8c65a0998887d7f6a742a37312084736d256467ed942a37d5"
+    },
+    {
+      "path": "skills-lock.json",
+      "bytes": 267,
+      "sha256": "0a06f01178e82ed9318925ebf2ff4d475a15e2f372bba9afe2372e8ba7bae1cc"
+    },
+    {
+      "path": "src/quran_analysis/__init__.py",
+      "bytes": 102,
+      "sha256": "b41f5d95873712f4120c152f109ef87204d64efab8789c5529d2ae3612fec597"
+    },
+    {
+      "path": "src/quran_analysis/__main__.py",
+      "bytes": 35,
+      "sha256": "75ffbfbfeccfd1ea336fb962ed3cc44afb714dec80e57587e016986cbbb09ef2"
+    },
+    {
+      "path": "src/quran_analysis/core.py",
+      "bytes": 41418,
+      "sha256": "dfab75f04d932cb974969773ce9d2acf34138ebe94020d82d37c46de1adeb20f"
+    },
+    {
+      "path": "src/quran_analysis/dashboard.html",
+      "bytes": 56989,
+      "sha256": "55e9922b67fa7d2ae442e6c69ab113f9931cba54afe0c341e1726cc5b9c59603"
+    },
+    {
+      "path": "src/quran_analysis/exploration.py",
+      "bytes": 56682,
+      "sha256": "26d59be4550720a247d841fbdfd5adcd18d790298ce0bc3c19685b39849374cd"
+    },
+    {
+      "path": "src/quran_analysis/extension.py",
+      "bytes": 10365,
+      "sha256": "4957194c3884afabe42d4721e73fbf5e8caf0b9061086aa12577220ac11f460c"
+    },
+    {
+      "path": "src/quran_analysis/morphology.py",
+      "bytes": 39840,
+      "sha256": "83a5bf4e63eb17c76bc33c27dfa8f12e2302f2a87badc4b70b1d698a952b9dc3"
+    },
+    {
+      "path": "src/quran_analysis/package.py",
+      "bytes": 2225,
+      "sha256": "7deb289ae4dbd05a6ad93b7f50cb6ee1cff2c7f8222189076a2e4af81f4248c7"
+    },
+    {
+      "path": "src/quran_analysis/pipeline.py",
+      "bytes": 8454,
+      "sha256": "7dcbbdda1bf2f37b6c4d770f29280ce6ab62d9bac5d855e185788d66490e9830"
+    },
+    {
+      "path": "src/quran_analysis/presentation.py",
+      "bytes": 43907,
+      "sha256": "64a34bb180282ae1a125a692f79405353eeb6488fdd1ebb71fb0379c7fef093c"
+    },
+    {
+      "path": "src/quran_analysis/query.py",
+      "bytes": 2840,
+      "sha256": "131c624169fedc470beb9830d6b33a178f6cefc573a5ee465c78609a0534ade2"
+    },
+    {
+      "path": "src/quran_analysis/statistics.py",
+      "bytes": 13356,
+      "sha256": "c91addf69695621b1bcbbda4d2886efe5e82da464fa548e5f6d5634bdbfdc374"
+    },
+    {
+      "path": "src/quran_analysis/validation.py",
+      "bytes": 54593,
+      "sha256": "52105ae9fb77585b21347dab637bcde63587e37d2f772d83e4095b4158350ec8"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 7511,
+      "sha256": "d4e2212c4b3751bcb260dd750b48a3aafa2075516acd8edb386dcd133d9405e0"
+    },
+    {
+      "path": "tests/test_exploration.py",
+      "bytes": 6470,
+      "sha256": "fd3d733dd00fdb9f2c8a0dc8de0be47407a5f50c3167fe81f46ff185a9d81cbe"
+    },
+    {
+      "path": "tests/test_extension.py",
+      "bytes": 270,
+      "sha256": "0cb3cda5df341d7bf5acf4483a00093fba8f12cfc839c4d0522bd24926387e54"
+    },
+    {
+      "path": "tests/test_morphology.py",
+      "bytes": 2786,
+      "sha256": "348af3446014890e320b2df313cf92a66a24416d0797c7b2fcb6ae91fa8bf7db"
+    },
+    {
+      "path": "tests/test_statistics.py",
+      "bytes": 546,
+      "sha256": "853f31162ac6d1ea834f13ecd346d6a524159a53709079444ddb36f8515f67f6"
+    },
+    {
+      "path": "tests/test_validation.py",
+      "bytes": 6762,
+      "sha256": "46741b9e6f00c674c55d39f16151cc45996aeaa6052e1dc53e0eacc1b212ae07"
+    }
+  ],
+  "file_count": 253,
+  "total_uncompressed_bytes": 240263569
+}

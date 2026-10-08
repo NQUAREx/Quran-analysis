@@ -1,0 +1,35 @@
+{
+  "access_date_utc": "2026-10-07",
+  "mirrors": [
+    {
+      "repository": "cltk/arabic_morphology_quranic-corpus",
+      "commit": "b5abd4d8fadd775f3329f34cbe10531fac71e391",
+      "path": "quranic-corpus-morphology-0.4.txt",
+      "url": "https://raw.githubusercontent.com/cltk/arabic_morphology_quranic-corpus/b5abd4d8fadd775f3329f34cbe10531fac71e391/quranic-corpus-morphology-0.4.txt",
+      "status": 200,
+      "bytes": 6309503,
+      "sha256": "a1d12923815341face765083805d2148ed2d9f5cc3f7d6665219d887675d8c46"
+    },
+    {
+      "repository": "lAvArt/Quranic-Linguistics-Observatory",
+      "commit": "f2e12a5e1ab0e2604afe024d9f8ec2e32849a7ae",
+      "path": "public/data/quranic-corpus-morphology-0.4.txt",
+      "url": "https://raw.githubusercontent.com/lAvArt/Quranic-Linguistics-Observatory/f2e12a5e1ab0e2604afe024d9f8ec2e32849a7ae/public/data/quranic-corpus-morphology-0.4.txt",
+      "status": 200,
+      "bytes": 6181227,
+      "sha256": "910b721a8f04f4334ac5d4c62b19e858f5d720c525bb975f2e750ea2c6bb532d",
+      "equals_local_after_crlf_to_lf_only": true,
+      "note": "Not used. Byte hash differs; comparison after CRLF-to-LF conversion only matches local artifact. Local artifact was not rewritten."
+    },
+    {
+      "repository": "abufawwaz/arabic_morphology_quranic-corpus",
+      "commit": "b5abd4d8fadd775f3329f34cbe10531fac71e391",
+      "path": "quranic-corpus-morphology-0.4.txt",
+      "url": "https://raw.githubusercontent.com/abufawwaz/arabic_morphology_quranic-corpus/b5abd4d8fadd775f3329f34cbe10531fac71e391/quranic-corpus-morphology-0.4.txt",
+      "status": 200,
+      "bytes": 6309503,
+      "sha256": "a1d12923815341face765083805d2148ed2d9f5cc3f7d6665219d887675d8c46",
+      "note": "Fork of cltk mirror at the same commit; byte agreement is not an independent edition."
+    }
+  ]
+}

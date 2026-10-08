@@ -1,0 +1,1401 @@
+{
+  "profile_id": "plain",
+  "scope": "file",
+  "config": {
+    "word_ngram_lengths": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "letter_ngram_lengths": [
+      2,
+      3,
+      4
+    ],
+    "long_repeat_seed_length": 5,
+    "long_repeat_seed_max_support": 40,
+    "long_repeat_min_length": 8,
+    "approximate_seed_length": 3,
+    "approximate_seed_max_verse_support": 25,
+    "approximate_min_verse_tokens": 5,
+    "approximate_jaccard_alignment_threshold": 0.4,
+    "cooccurrence_top_vocabulary": 120,
+    "cooccurrence_min_support": 5,
+    "cooccurrence_window_tokens": 50,
+    "diversity_window_tokens": 500,
+    "position_window_tokens": 1000,
+    "position_window_step": 250,
+    "compression_controls": 19,
+    "numeric_divisors": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      19
+    ],
+    "approximate_similarity_min": 0.8,
+    "max_formula_depth": 1
+  },
+  "seed": 20261007,
+  "tables": {
+    "word_ngram_occurrences": {
+      "path": "results/tables/exploration_word_ngram_occurrences.csv.gz",
+      "rows": 251513
+    },
+    "word_ngrams": {
+      "path": "results/tables/exploration_word_ngrams.csv.gz",
+      "rows": 200945
+    },
+    "letter_ngram_occurrences": {
+      "path": "results/tables/exploration_letter_ngram_occurrences.csv.gz",
+      "rows": 540963
+    },
+    "letter_ngrams": {
+      "path": "results/tables/exploration_letter_ngrams.csv.gz",
+      "rows": 23933
+    },
+    "exact_verse_repeats": {
+      "path": "results/tables/exploration_exact_verse_repeats.csv",
+      "rows": 772
+    },
+    "long_repeats": {
+      "path": "results/tables/exploration_long_repeats.csv",
+      "rows": 264
+    },
+    "long_repeat_pairs": {
+      "path": "results/tables/exploration_long_repeat_pairs.csv.gz",
+      "rows": 388
+    },
+    "approximate_candidates": {
+      "path": "results/tables/exploration_approximate_candidates.csv.gz",
+      "rows": 18086
+    },
+    "approximate_high_similarity": {
+      "path": "results/tables/exploration_approximate_high_similarity.csv",
+      "rows": 134
+    },
+    "position_windows": {
+      "path": "results/tables/exploration_position_windows.csv",
+      "rows": 310
+    },
+    "word_occurrence_gaps": {
+      "path": "results/tables/exploration_word_occurrence_gaps.csv.gz",
+      "rows": 78248
+    },
+    "positions": {
+      "path": "results/tables/exploration_positions.csv.gz",
+      "rows": 14868
+    },
+    "verse_boundaries": {
+      "path": "results/tables/exploration_verse_boundaries.csv",
+      "rows": 23712
+    },
+    "verse_features": {
+      "path": "results/tables/exploration_verse_features.csv",
+      "rows": 6236
+    },
+    "surah_features": {
+      "path": "results/tables/exploration_surah_features.csv",
+      "rows": 114
+    },
+    "mirror_verse_pairs": {
+      "path": "results/tables/exploration_mirror_verse_pairs.csv",
+      "rows": 3091
+    },
+    "surah_similarity": {
+      "path": "results/tables/exploration_surah_similarity.csv",
+      "rows": 6441
+    },
+    "numeric_tests": {
+      "path": "results/tables/exploration_numeric_tests.csv.gz",
+      "rows": 42408
+    },
+    "frequency_equivalence": {
+      "path": "results/tables/exploration_frequency_equivalence.csv",
+      "rows": 171
+    },
+    "cooccurrence": {
+      "path": "results/tables/exploration_cooccurrence.csv.gz",
+      "rows": 21420
+    },
+    "cooccurrence_vocabulary": {
+      "path": "results/tables/exploration_cooccurrence_vocabulary.csv",
+      "rows": 120
+    },
+    "information": {
+      "path": "results/tables/exploration_information.csv",
+      "rows": 115
+    },
+    "vocabulary_growth": {
+      "path": "results/tables/exploration_vocabulary_growth.csv",
+      "rows": 783
+    },
+    "window_diversity": {
+      "path": "results/tables/exploration_window_diversity.csv",
+      "rows": 110
+    },
+    "compression_controls": {
+      "path": "results/tables/exploration_compression_controls.csv",
+      "rows": 20
+    }
+  },
+  "word_ngram_occurrences": 251513,
+  "letter_ngram_occurrences": 540963,
+  "repeat_inventory": {
+    "raw/file": {
+      "repeated_groups": 92,
+      "verses_in_groups": 267
+    },
+    "raw/numbered": {
+      "repeated_groups": 96,
+      "verses_in_groups": 276
+    },
+    "nfc/file": {
+      "repeated_groups": 96,
+      "verses_in_groups": 275
+    },
+    "nfc/numbered": {
+      "repeated_groups": 96,
+      "verses_in_groups": 276
+    },
+    "plain/file": {
+      "repeated_groups": 98,
+      "verses_in_groups": 279
+    },
+    "plain/numbered": {
+      "repeated_groups": 98,
+      "verses_in_groups": 280
+    },
+    "search/file": {
+      "repeated_groups": 98,
+      "verses_in_groups": 279
+    },
+    "search/numbered": {
+      "repeated_groups": 98,
+      "verses_in_groups": 280
+    }
+  },
+  "long_repeat_groups": 264,
+  "long_repeat_seed_pairs": 7282,
+  "approximate_counts": {
+    "aligned": 804,
+    "skipped_below_jaccard": 17282,
+    "high_similarity_nonidentical": 134
+  },
+  "approximate_candidate_pairs": 18086,
+  "top_word_ngrams": [
+    {
+      "sequence": "إن الله",
+      "n": 2,
+      "frequency": 205,
+      "first_token_id": "2:20:20"
+    },
+    {
+      "sequence": "الذين آمنوا",
+      "n": 2,
+      "frequency": 184,
+      "first_token_id": "2:14:3"
+    },
+    {
+      "sequence": "في الأرض",
+      "n": 2,
+      "frequency": 176,
+      "first_token_id": "2:11:6"
+    },
+    {
+      "sequence": "يا أيها",
+      "n": 2,
+      "frequency": 142,
+      "first_token_id": "2:21:1"
+    },
+    {
+      "sequence": "الذين كفروا",
+      "n": 2,
+      "frequency": 134,
+      "first_token_id": "2:6:2"
+    },
+    {
+      "sequence": "السماوات والأرض",
+      "n": 2,
+      "frequency": 133,
+      "first_token_id": "2:33:16"
+    },
+    {
+      "sequence": "الرحمن الرحيم",
+      "n": 2,
+      "frequency": 118,
+      "first_token_id": "1:1:3"
+    },
+    {
+      "sequence": "بسم الله",
+      "n": 2,
+      "frequency": 115,
+      "first_token_id": "1:1:1"
+    },
+    {
+      "sequence": "بسم الله الرحمن الرحيم",
+      "n": 4,
+      "frequency": 114,
+      "first_token_id": "1:1:1"
+    },
+    {
+      "sequence": "الله الرحمن الرحيم",
+      "n": 3,
+      "frequency": 114,
+      "first_token_id": "1:1:2"
+    },
+    {
+      "sequence": "بسم الله الرحمن",
+      "n": 3,
+      "frequency": 114,
+      "first_token_id": "1:1:1"
+    },
+    {
+      "sequence": "الله الرحمن",
+      "n": 2,
+      "frequency": 114,
+      "first_token_id": "1:1:2"
+    },
+    {
+      "sequence": "يا أيها الذين",
+      "n": 3,
+      "frequency": 92,
+      "first_token_id": "2:104:1"
+    },
+    {
+      "sequence": "أيها الذين",
+      "n": 2,
+      "frequency": 92,
+      "first_token_id": "2:104:2"
+    },
+    {
+      "sequence": "من قبل",
+      "n": 2,
+      "frequency": 92,
+      "first_token_id": "2:25:23"
+    },
+    {
+      "sequence": "يا أيها الذين آمنوا",
+      "n": 4,
+      "frequency": 89,
+      "first_token_id": "2:104:1"
+    },
+    {
+      "sequence": "أيها الذين آمنوا",
+      "n": 3,
+      "frequency": 89,
+      "first_token_id": "2:104:2"
+    },
+    {
+      "sequence": "من الله",
+      "n": 2,
+      "frequency": 89,
+      "first_token_id": "2:61:44"
+    },
+    {
+      "sequence": "كل شيء",
+      "n": 2,
+      "frequency": 87,
+      "first_token_id": "2:20:23"
+    },
+    {
+      "sequence": "إن الذين",
+      "n": 2,
+      "frequency": 84,
+      "first_token_id": "2:6:1"
+    }
+  ],
+  "top_repeated_verses": [
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "فبأي آلاء ربكما تكذبان",
+      "frequency": 31,
+      "verse_ids": "55:13|55:16|55:18|55:21|55:23|55:25|55:28|55:30|55:32|55:34|55:36|55:38|55:40|55:42|55:45|55:47|55:49|55:51|55:53|55:55|55:57|55:59|55:61|55:63|55:65|55:67|55:69|55:71|55:73|55:75|55:77",
+      "token_count": 4
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "ويل يومئذ للمكذبين",
+      "frequency": 11,
+      "verse_ids": "77:15|77:19|77:24|77:28|77:34|77:37|77:40|77:45|77:47|77:49|83:10",
+      "token_count": 3
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "فاتقوا الله وأطيعون",
+      "frequency": 8,
+      "verse_ids": "26:108|26:110|26:126|26:131|26:144|26:150|26:163|26:179",
+      "token_count": 3
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "وإن ربك لهو العزيز الرحيم",
+      "frequency": 8,
+      "verse_ids": "26:9|26:68|26:104|26:122|26:140|26:159|26:175|26:191",
+      "token_count": 5
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "بسم الله الرحمن الرحيم حم",
+      "frequency": 7,
+      "verse_ids": "40:1|41:1|42:1|43:1|44:1|45:1|46:1",
+      "token_count": 5
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "إن في ذلك لآية وما كان أكثرهم مؤمنين",
+      "frequency": 6,
+      "verse_ids": "26:8|26:67|26:103|26:121|26:174|26:190",
+      "token_count": 8
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "بسم الله الرحمن الرحيم الم",
+      "frequency": 6,
+      "verse_ids": "2:1|3:1|29:1|30:1|31:1|32:1",
+      "token_count": 5
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "ويقولون متى هذا الوعد إن كنتم صادقين",
+      "frequency": 6,
+      "verse_ids": "10:48|21:38|27:71|34:29|36:48|67:25",
+      "token_count": 7
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "إني لكم رسول أمين",
+      "frequency": 5,
+      "verse_ids": "26:107|26:125|26:143|26:162|26:178",
+      "token_count": 4
+    },
+    {
+      "profile_id": "plain",
+      "scope": "file",
+      "sequence": "وما أسألكم عليه من أجر إن أجري إلا على رب العالمين",
+      "frequency": 5,
+      "verse_ids": "26:109|26:127|26:145|26:164|26:180",
+      "token_count": 11
+    }
+  ],
+  "top_long_repeats": [
+    {
+      "sequence": "وإن كنتم مرضى أو على سفر أو جاء أحد منكم من الغائط أو لامستم النساء فلم تجدوا ماء فتيمموا صعيدا طيبا فامسحوا بوجوهكم وأيديكم",
+      "token_length": 24,
+      "frequency": 2,
+      "start_token_ids": "4:43:21|5:6:23",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "4:43:44|5:6:46",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "ولقد آتينا موسى الكتاب فاختلف فيه ولولا كلمة سبقت من ربك لقضي بينهم وإنهم لفي شك منه مريب",
+      "token_length": 18,
+      "frequency": 2,
+      "start_token_ids": "11:110:1|41:45:1",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "11:110:18|41:45:18",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "إن الله لا يغفر أن يشرك به ويغفر ما دون ذلك لمن يشاء ومن يشرك بالله فقد",
+      "token_length": 17,
+      "frequency": 2,
+      "start_token_ids": "4:48:1|4:116:1",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "4:48:17|4:116:17",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "ينقضون عهد الله من بعد ميثاقه ويقطعون ما أمر الله به أن يوصل ويفسدون في الأرض أولئك",
+      "token_length": 17,
+      "frequency": 2,
+      "start_token_ids": "2:27:2|13:25:2",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "2:27:18|13:25:18",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "يعلم ما يلج في الأرض وما يخرج منها وما ينزل من السماء وما يعرج فيها وهو",
+      "token_length": 16,
+      "frequency": 2,
+      "start_token_ids": "34:2:1|57:4:13",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "34:2:16|57:4:28",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "بسم الله الرحمن الرحيم سبح لله ما في السماوات وما في الأرض وهو العزيز الحكيم",
+      "token_length": 15,
+      "frequency": 2,
+      "start_token_ids": "59:1:1|61:1:1",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "59:1:15|61:1:15",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "تلك أمة قد خلت لها ما كسبت ولكم ما كسبتم ولا تسألون عما كانوا يعملون",
+      "token_length": 15,
+      "frequency": 2,
+      "start_token_ids": "2:134:1|2:141:1",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "2:134:15|2:141:15",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "قال يا قوم اعبدوا الله ما لكم من إله غيره قد جاءتكم بينة من ربكم",
+      "token_length": 15,
+      "frequency": 2,
+      "start_token_ids": "7:73:5|7:85:5",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "7:73:19|7:85:19",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "هذه ناقة الله لكم آية فذروها تأكل في أرض الله ولا تمسوها بسوء فيأخذكم عذاب",
+      "token_length": 15,
+      "frequency": 2,
+      "start_token_ids": "7:73:20|11:64:3",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "7:73:34|11:64:17",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "sequence": "أرسلنا نوحا إلى قومه فقال يا قوم اعبدوا الله ما لكم من إله غيره",
+      "token_length": 14,
+      "frequency": 2,
+      "start_token_ids": "7:59:2|23:23:2",
+      "nonoverlapping_frequency": 2,
+      "end_token_ids": "7:59:15|23:23:15",
+      "profile_id": "plain",
+      "scope": "file"
+    }
+  ],
+  "top_approximate": [
+    {
+      "verse_a": "22:62",
+      "verse_b": "31:30",
+      "tokens_a": 17,
+      "tokens_b": 16,
+      "set_jaccard": 1.0,
+      "sequence_matcher_ratio": 0.9696969696969697,
+      "differences_json": "[{\"operation\": \"delete\", \"a\": \"هو\", \"b\": \"\", \"a_start_token_1based\": 11, \"a_end_exclusive_1based\": 12, \"b_start_token_1based\": 11, \"b_end_exclusive_1based\": 11}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "16:43",
+      "verse_b": "21:7",
+      "tokens_a": 15,
+      "tokens_b": 14,
+      "set_jaccard": 0.9333333333333333,
+      "sequence_matcher_ratio": 0.9655172413793104,
+      "differences_json": "[{\"operation\": \"delete\", \"a\": \"من\", \"b\": \"\", \"a_start_token_1based\": 3, \"a_end_exclusive_1based\": 4, \"b_start_token_1based\": 3, \"b_end_exclusive_1based\": 3}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "7:45",
+      "verse_b": "11:19",
+      "tokens_a": 10,
+      "tokens_b": 11,
+      "set_jaccard": 0.9090909090909091,
+      "sequence_matcher_ratio": 0.9523809523809523,
+      "differences_json": "[{\"operation\": \"insert\", \"a\": \"\", \"b\": \"هم\", \"a_start_token_1based\": 10, \"a_end_exclusive_1based\": 10, \"b_start_token_1based\": 10, \"b_end_exclusive_1based\": 11}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "12:22",
+      "verse_b": "28:14",
+      "tokens_a": 9,
+      "tokens_b": 10,
+      "set_jaccard": 0.9,
+      "sequence_matcher_ratio": 0.9473684210526315,
+      "differences_json": "[{\"operation\": \"insert\", \"a\": \"\", \"b\": \"واستوى\", \"a_start_token_1based\": 4, \"a_end_exclusive_1based\": 4, \"b_start_token_1based\": 4, \"b_end_exclusive_1based\": 5}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "3:51",
+      "verse_b": "43:64",
+      "tokens_a": 8,
+      "tokens_b": 9,
+      "set_jaccard": 0.8888888888888888,
+      "sequence_matcher_ratio": 0.9411764705882353,
+      "differences_json": "[{\"operation\": \"insert\", \"a\": \"\", \"b\": \"هو\", \"a_start_token_1based\": 3, \"a_end_exclusive_1based\": 3, \"b_start_token_1based\": 3, \"b_end_exclusive_1based\": 4}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "18:72",
+      "verse_b": "18:75",
+      "tokens_a": 8,
+      "tokens_b": 9,
+      "set_jaccard": 0.8888888888888888,
+      "sequence_matcher_ratio": 0.9411764705882353,
+      "differences_json": "[{\"operation\": \"insert\", \"a\": \"\", \"b\": \"لك\", \"a_start_token_1based\": 4, \"a_end_exclusive_1based\": 4, \"b_start_token_1based\": 4, \"b_end_exclusive_1based\": 5}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "26:24",
+      "verse_b": "44:7",
+      "tokens_a": 9,
+      "tokens_b": 8,
+      "set_jaccard": 0.8888888888888888,
+      "sequence_matcher_ratio": 0.9411764705882353,
+      "differences_json": "[{\"operation\": \"delete\", \"a\": \"قال\", \"b\": \"\", \"a_start_token_1based\": 1, \"a_end_exclusive_1based\": 2, \"b_start_token_1based\": 1, \"b_end_exclusive_1based\": 1}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "39:72",
+      "verse_b": "40:76",
+      "tokens_a": 9,
+      "tokens_b": 8,
+      "set_jaccard": 0.8888888888888888,
+      "sequence_matcher_ratio": 0.9411764705882353,
+      "differences_json": "[{\"operation\": \"delete\", \"a\": \"قيل\", \"b\": \"\", \"a_start_token_1based\": 1, \"a_end_exclusive_1based\": 2, \"b_start_token_1based\": 1, \"b_end_exclusive_1based\": 1}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "30:37",
+      "verse_b": "39:52",
+      "tokens_a": 15,
+      "tokens_b": 15,
+      "set_jaccard": 0.875,
+      "sequence_matcher_ratio": 0.9333333333333333,
+      "differences_json": "[{\"operation\": \"replace\", \"a\": \"يروا\", \"b\": \"يعلموا\", \"a_start_token_1based\": 2, \"a_end_exclusive_1based\": 3, \"b_start_token_1based\": 2, \"b_end_exclusive_1based\": 3}]",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "verse_a": "7:110",
+      "verse_b": "26:35",
+      "tokens_a": 7,
+      "tokens_b": 8,
+      "set_jaccard": 0.875,
+      "sequence_matcher_ratio": 0.9333333333333333,
+      "differences_json": "[{\"operation\": \"insert\", \"a\": \"\", \"b\": \"بسحره\", \"a_start_token_1based\": 6, \"a_end_exclusive_1based\": 6, \"b_start_token_1based\": 6, \"b_end_exclusive_1based\": 7}]",
+      "profile_id": "plain",
+      "scope": "file"
+    }
+  ],
+  "top_surah_similarity": [
+    {
+      "surah_a": 2,
+      "surah_b": 3,
+      "cosine": 0.7558569347146307,
+      "shared_types": 619,
+      "tokens_a": 6145,
+      "tokens_b": 3505,
+      "adjacent": 1,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 5,
+      "cosine": 0.7110621634442436,
+      "shared_types": 549,
+      "tokens_a": 6145,
+      "tokens_b": 2841,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 3,
+      "surah_b": 5,
+      "cosine": 0.6959432891396604,
+      "shared_types": 444,
+      "tokens_a": 3505,
+      "tokens_b": 2841,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 4,
+      "cosine": 0.6637904165969247,
+      "shared_types": 578,
+      "tokens_a": 6145,
+      "tokens_b": 3767,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 6,
+      "surah_b": 10,
+      "cosine": 0.651938798037004,
+      "shared_types": 381,
+      "tokens_a": 3060,
+      "tokens_b": 1843,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 10,
+      "cosine": 0.6498364109006085,
+      "shared_types": 385,
+      "tokens_a": 6145,
+      "tokens_b": 1843,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 16,
+      "cosine": 0.6458643384601875,
+      "shared_types": 409,
+      "tokens_a": 6145,
+      "tokens_b": 1848,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 9,
+      "cosine": 0.6416645603819834,
+      "shared_types": 413,
+      "tokens_a": 6145,
+      "tokens_b": 2505,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 3,
+      "surah_b": 9,
+      "cosine": 0.6404978013493502,
+      "shared_types": 358,
+      "tokens_a": 3505,
+      "tokens_b": 2505,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "surah_a": 2,
+      "surah_b": 7,
+      "cosine": 0.6387181626147725,
+      "shared_types": 554,
+      "tokens_a": 6145,
+      "tokens_b": 3345,
+      "adjacent": 0,
+      "profile_id": "plain",
+      "scope": "file"
+    }
+  ],
+  "top_cooccurrence": [
+    {
+      "context": "verse",
+      "word_a": "الرحيم",
+      "word_b": "بسم",
+      "n_contexts": 6236,
+      "count_a": 146,
+      "count_b": 115,
+      "count_ab": 114,
+      "pmi_bits": 5.403980617038134,
+      "lift": 42.340917212626564,
+      "support_pass": 1,
+      "example_context_ids": "1:1|2:1|3:1|4:1|5:1",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "الرحمن",
+      "word_b": "بسم",
+      "n_contexts": 6236,
+      "count_a": 156,
+      "count_b": 115,
+      "count_ab": 114,
+      "pmi_bits": 5.308402957055903,
+      "lift": 39.62675585284281,
+      "support_pass": 1,
+      "example_context_ids": "1:1|2:1|3:1|4:1|5:1",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "الرحمن",
+      "word_b": "الرحيم",
+      "n_contexts": 6236,
+      "count_a": 156,
+      "count_b": 146,
+      "count_ab": 118,
+      "pmi_bits": 5.0138214843173605,
+      "lift": 32.3080435546189,
+      "support_pass": 1,
+      "example_context_ids": "1:1|1:3|2:1|2:163|3:1",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "السماوات",
+      "word_b": "والأرض",
+      "n_contexts": 6236,
+      "count_a": 180,
+      "count_b": 156,
+      "count_ab": 134,
+      "pmi_bits": 4.895239087963634,
+      "lift": 29.75868945868946,
+      "support_pass": 1,
+      "example_context_ids": "2:33|2:107|2:116|2:117|2:164",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "ربنا",
+      "word_b": "لنا",
+      "n_contexts": 6236,
+      "count_a": 93,
+      "count_b": 73,
+      "count_ab": 23,
+      "pmi_bits": 4.400983798766749,
+      "lift": 21.126528207394315,
+      "support_pass": 1,
+      "example_context_ids": "2:286|3:8|3:16|3:147|3:193",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "والأرض",
+      "word_b": "خلق",
+      "n_contexts": 6236,
+      "count_a": 156,
+      "count_b": 80,
+      "count_ab": 34,
+      "pmi_bits": 4.086537740198513,
+      "lift": 16.989102564102563,
+      "support_pass": 1,
+      "example_context_ids": "2:164|3:190|3:191|5:18|6:1",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "يا",
+      "word_b": "أيها",
+      "n_contexts": 6236,
+      "count_a": 348,
+      "count_b": 150,
+      "count_ab": 142,
+      "pmi_bits": 4.084390145857857,
+      "lift": 16.963831417624522,
+      "support_pass": 1,
+      "example_context_ids": "2:21|2:104|2:153|2:168|2:172",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "بما",
+      "word_b": "تعملون",
+      "n_contexts": 6236,
+      "count_a": 282,
+      "count_b": 83,
+      "count_ab": 57,
+      "pmi_bits": 3.924704443116808,
+      "lift": 15.18636247116124,
+      "support_pass": 1,
+      "example_context_ids": "2:110|2:233|2:234|2:237|2:265",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "السماوات",
+      "word_b": "خلق",
+      "n_contexts": 6236,
+      "count_a": 180,
+      "count_b": 80,
+      "count_ab": 35,
+      "pmi_bits": 3.921907038425714,
+      "lift": 15.156944444444445,
+      "support_pass": 1,
+      "example_context_ids": "2:164|3:190|3:191|5:18|6:1",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "آمنوا",
+      "word_b": "أيها",
+      "n_contexts": 6236,
+      "count_a": 254,
+      "count_b": 150,
+      "count_ab": 90,
+      "pmi_bits": 3.8807549317594128,
+      "lift": 14.730708661417323,
+      "support_pass": 1,
+      "example_context_ids": "2:104|2:153|2:172|2:178|2:183",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "كل",
+      "word_b": "شيء",
+      "n_contexts": 6236,
+      "count_a": 236,
+      "count_b": 180,
+      "count_ab": 90,
+      "pmi_bits": 3.7237621633359432,
+      "lift": 13.211864406779661,
+      "support_pass": 1,
+      "example_context_ids": "2:20|2:106|2:109|2:148|2:259",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "يشاء",
+      "word_b": "لمن",
+      "n_contexts": 6236,
+      "count_a": 102,
+      "count_b": 93,
+      "count_ab": 20,
+      "pmi_bits": 3.71674915450562,
+      "lift": 13.147796753109846,
+      "support_pass": 1,
+      "example_context_ids": "2:261|2:284|3:73|3:129|4:48",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "كنتم",
+      "word_b": "تعملون",
+      "n_contexts": 6236,
+      "count_a": 182,
+      "count_b": 83,
+      "count_ab": 30,
+      "pmi_bits": 3.630461736760682,
+      "lift": 12.384482986892625,
+      "support_pass": 1,
+      "example_context_ids": "2:283|4:94|5:105|6:60|7:43",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "والله",
+      "word_b": "عليم",
+      "n_contexts": 6236,
+      "count_a": 230,
+      "count_b": 106,
+      "count_ab": 47,
+      "pmi_bits": 3.5875835588678475,
+      "lift": 12.021821164889253,
+      "support_pass": 1,
+      "example_context_ids": "2:95|2:224|2:246|2:247|2:256",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "عند",
+      "word_b": "ربهم",
+      "n_contexts": 6236,
+      "count_a": 114,
+      "count_b": 109,
+      "count_ab": 22,
+      "pmi_bits": 3.464762492393414,
+      "lift": 11.040721068726864,
+      "support_pass": 1,
+      "example_context_ids": "2:62|2:262|2:274|2:277|3:15",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "عن",
+      "word_b": "سبيل",
+      "n_contexts": 6236,
+      "count_a": 212,
+      "count_b": 81,
+      "count_ab": 28,
+      "pmi_bits": 3.345989677307565,
+      "lift": 10.168180759375728,
+      "support_pass": 1,
+      "example_context_ids": "2:217|3:99|4:160|4:167|5:54",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "إذا",
+      "word_b": "حتى",
+      "n_contexts": 6236,
+      "count_a": 210,
+      "count_b": 138,
+      "count_ab": 43,
+      "pmi_bits": 3.209899992955591,
+      "lift": 9.252864044168392,
+      "support_pass": 1,
+      "example_context_ids": "2:196|3:152|4:6|4:18|4:140",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "ربي",
+      "word_b": "وقال",
+      "n_contexts": 6236,
+      "count_a": 82,
+      "count_b": 84,
+      "count_ab": 10,
+      "pmi_bits": 3.178463880188303,
+      "lift": 9.053426248548199,
+      "support_pass": 1,
+      "example_context_ids": "5:72|7:79|7:93|11:41|12:50",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "الناس",
+      "word_b": "ولكن",
+      "n_contexts": 6236,
+      "count_a": 172,
+      "count_b": 110,
+      "count_ab": 27,
+      "pmi_bits": 3.1536682466344956,
+      "lift": 8.899154334038055,
+      "support_pass": 1,
+      "example_context_ids": "2:13|2:102|2:243|2:251|7:187",
+      "profile_id": "plain",
+      "scope": "file"
+    },
+    {
+      "context": "verse",
+      "word_a": "ولكن",
+      "word_b": "ولو",
+      "n_contexts": 6236,
+      "count_a": 110,
+      "count_b": 107,
+      "count_ab": 16,
+      "pmi_bits": 3.0835785127719784,
+      "lift": 8.47714528462192,
+      "support_pass": 1,
+      "example_context_ids": "2:253|4:46|5:48|5:81|6:111",
+      "profile_id": "plain",
+      "scope": "file"
+    }
+  ],
+  "numeric_counts": {
+    "equality_tested": 36024,
+    "equality_matched": 14,
+    "divisibility_tested": 5472,
+    "divisibility_matched": 1208,
+    "primality_tested": 912,
+    "primality_matched": 165
+  },
+  "numeric_examples": [
+    {
+      "unit_id": "1",
+      "family": "equality",
+      "expression": "cumulative_tokens",
+      "comparison": "tokens",
+      "lhs": 29,
+      "rhs": 29,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "1",
+      "family": "equality",
+      "expression": "first_global_ayah",
+      "comparison": "surah_id",
+      "lhs": 1,
+      "rhs": 1,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "1",
+      "family": "equality",
+      "expression": "last_global_ayah",
+      "comparison": "verses",
+      "lhs": 7,
+      "rhs": 7,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "30",
+      "family": "equality",
+      "expression": "surah_id+surah_id",
+      "comparison": "verses",
+      "lhs": 60,
+      "rhs": 60,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "54",
+      "family": "equality",
+      "expression": "first_global_ayah+surah_id",
+      "comparison": "last_global_ayah",
+      "lhs": 4901,
+      "rhs": 4901,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "75",
+      "family": "equality",
+      "expression": "types+verses",
+      "comparison": "tokens",
+      "lhs": 168,
+      "rhs": 168,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "94",
+      "family": "equality",
+      "expression": "surah_id+types",
+      "comparison": "letters",
+      "lhs": 121,
+      "rhs": 121,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "97",
+      "family": "equality",
+      "expression": "types+verses",
+      "comparison": "tokens",
+      "lhs": 34,
+      "rhs": 34,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "98",
+      "family": "equality",
+      "expression": "surah_id",
+      "comparison": "tokens",
+      "lhs": 98,
+      "rhs": 98,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "102",
+      "family": "equality",
+      "expression": "types+verses",
+      "comparison": "tokens",
+      "lhs": 32,
+      "rhs": 32,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "107",
+      "family": "equality",
+      "expression": "surah_id+types",
+      "comparison": "letters",
+      "lhs": 133,
+      "rhs": 133,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "108",
+      "family": "equality",
+      "expression": "tokens",
+      "comparison": "types",
+      "lhs": 14,
+      "rhs": 14,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "112",
+      "family": "equality",
+      "expression": "types+verses",
+      "comparison": "tokens",
+      "lhs": 19,
+      "rhs": 19,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    },
+    {
+      "unit_id": "113",
+      "family": "equality",
+      "expression": "letters+types",
+      "comparison": "surah_id",
+      "lhs": 113,
+      "rhs": 113,
+      "result": 1,
+      "residue": "",
+      "profile_id": "plain",
+      "scope": "file",
+      "status": "descriptive_no_significance"
+    }
+  ],
+  "information": {
+    "level": "corpus",
+    "unit_id": "file",
+    "tokens": 78248,
+    "types": 14868,
+    "entropy_bits": 11.050188491103137,
+    "perplexity": 2120.4995936050486,
+    "type_token_ratio": 0.19001124629383498,
+    "profile_id": "plain",
+    "scope": "file"
+  },
+  "compression": [
+    {
+      "control_id": 0,
+      "ordering": "observed",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 185366,
+      "compression_ratio": 0.2491743074869509,
+      "seed": 20261007
+    },
+    {
+      "control_id": 1,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214873,
+      "compression_ratio": 0.2888384653746836,
+      "seed": 20261007
+    },
+    {
+      "control_id": 2,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215020,
+      "compression_ratio": 0.28903606700173806,
+      "seed": 20261007
+    },
+    {
+      "control_id": 3,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214942,
+      "compression_ratio": 0.2889312171588112,
+      "seed": 20261007
+    },
+    {
+      "control_id": 4,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214777,
+      "compression_ratio": 0.28870941941415823,
+      "seed": 20261007
+    },
+    {
+      "control_id": 5,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215031,
+      "compression_ratio": 0.28905085351804827,
+      "seed": 20261007
+    },
+    {
+      "control_id": 6,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215212,
+      "compression_ratio": 0.28929415892278887,
+      "seed": 20261007
+    },
+    {
+      "control_id": 7,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214930,
+      "compression_ratio": 0.2889150864137455,
+      "seed": 20261007
+    },
+    {
+      "control_id": 8,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214835,
+      "compression_ratio": 0.2887873846819756,
+      "seed": 20261007
+    },
+    {
+      "control_id": 9,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214910,
+      "compression_ratio": 0.2888882018386361,
+      "seed": 20261007
+    },
+    {
+      "control_id": 10,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214728,
+      "compression_ratio": 0.28864355220514004,
+      "seed": 20261007
+    },
+    {
+      "control_id": 11,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214887,
+      "compression_ratio": 0.28885728457726023,
+      "seed": 20261007
+    },
+    {
+      "control_id": 12,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214849,
+      "compression_ratio": 0.28880620388455225,
+      "seed": 20261007
+    },
+    {
+      "control_id": 13,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215252,
+      "compression_ratio": 0.28934792807300774,
+      "seed": 20261007
+    },
+    {
+      "control_id": 14,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214901,
+      "compression_ratio": 0.28887610377983686,
+      "seed": 20261007
+    },
+    {
+      "control_id": 15,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214970,
+      "compression_ratio": 0.28896885556396446,
+      "seed": 20261007
+    },
+    {
+      "control_id": 16,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214823,
+      "compression_ratio": 0.28877125393690994,
+      "seed": 20261007
+    },
+    {
+      "control_id": 17,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215098,
+      "compression_ratio": 0.289140916844665,
+      "seed": 20261007
+    },
+    {
+      "control_id": 18,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 215019,
+      "compression_ratio": 0.2890347227729826,
+      "seed": 20261007
+    },
+    {
+      "control_id": 19,
+      "ordering": "global_token_shuffle",
+      "utf8_bytes": 743921,
+      "compressed_bytes": 214862,
+      "compression_ratio": 0.2888236788583734,
+      "seed": 20261007
+    }
+  ],
+  "within_ayah_thirds_denominators": [
+    28153,
+    26061,
+    24034
+  ],
+  "within_surah_thirds_denominators": [
+    26118,
+    26087,
+    26043
+  ],
+  "corpus_thirds_denominators": [
+    26083,
+    26083,
+    26082
+  ],
+  "duration_seconds": 36.54773776300135
+}

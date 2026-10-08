@@ -1,0 +1,64 @@
+claim_id,profile_id,scope,source_surface,lemma,rule_selected,included_in_source_count,reason,alignment_status,occurrences
+J-month-12,qac_v0.4_aligned,numbered_aligned,شَهْرُ,شَهْر,1,1,included_singular,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,الشَّهْرَ,شَهْر,1,1,included_singular,verified,2
+J-month-12,qac_v0.4_aligned,numbered_aligned,الشَّهْرُ,شَهْر,1,1,included_singular,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,بِالشَّهْرِ,شَهْر,1,1,included_singular,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,,شَهْر,0,0,excluded_dual_plural,unverified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,الشَّهْرِ,شَهْر,1,1,included_singular,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,أَشْهُرٍ,شَهْر,0,0,excluded_dual_plural,verified,4
+J-month-12,qac_v0.4_aligned,numbered_aligned,شَهْرَيْنِ,شَهْر,0,0,excluded_dual_plural,verified,2
+J-month-12,qac_v0.4_aligned,numbered_aligned,وَالشَّهْرَ,شَهْر,1,1,included_singular,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,الْأَشْهُرُ,شَهْر,0,0,excluded_dual_plural,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,الشُّهُورِ,شَهْر,0,0,excluded_dual_plural,verified,1
+J-month-12,qac_v0.4_aligned,numbered_aligned,شَهْرًا,شَهْر,1,1,included_singular,verified,2
+J-month-12,qac_v0.4_aligned,numbered_aligned,شَهْرٌ,شَهْر,1,1,included_singular,verified,2
+J-month-12,qac_v0.4_aligned,numbered_aligned,شَهْرٍ,شَهْر,1,1,included_singular,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمِ,يَوْم,1,1,included_singular,verified,31
+J-day-365,qac_v0.4_aligned,numbered_aligned,وَبِالْيَوْمِ,يَوْم,1,1,included_singular,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمًا,يَوْم,1,1,included_singular,verified,16
+J-day-365,qac_v0.4_aligned,numbered_aligned,وَالْيَوْمِ,يَوْم,1,1,included_singular,verified,21
+J-day-365,qac_v0.4_aligned,numbered_aligned,أَيَّامًا,يَوْم,0,0,excluded_dual_plural,verified,3
+J-day-365,qac_v0.4_aligned,numbered_aligned,وَيَوْمَ,يَوْم,1,1,included_singular,verified,43
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمَ,يَوْم,1,1,included_singular,verified,131
+J-day-365,qac_v0.4_aligned,numbered_aligned,أَيَّامٍ,يَوْم,0,0,excluded_dual_plural,verified,18
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمَيْنِ,يَوْم,0,0,excluded_dual_plural,verified,3
+J-day-365,qac_v0.4_aligned,numbered_aligned,الْيَوْمَ,يَوْم,1,1,included_singular,verified,38
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمٌ,يَوْم,1,1,included_singular,verified,9
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمٍ,يَوْم,1,1,included_singular,verified,28
+J-day-365,qac_v0.4_aligned,numbered_aligned,لِيَوْمٍ,يَوْم,1,1,included_singular,verified,4
+J-day-365,qac_v0.4_aligned,numbered_aligned,الْأَيَّامُ,يَوْم,0,0,excluded_dual_plural,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,بِالْيَوْمِ,يَوْم,1,1,included_singular,verified,2
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمُ,يَوْم,1,1,included_singular,verified,16
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمِكُمْ,يَوْم,0,0,excluded_possessive_suffix,verified,4
+J-day-365,qac_v0.4_aligned,numbered_aligned,فَالْيَوْمَ,يَوْم,1,1,included_singular,verified,8
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمِهِمْ,يَوْم,0,0,excluded_possessive_suffix,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,أَيَّامِ,يَوْم,0,0,excluded_dual_plural,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,,يَوْم,0,0,excluded_dual_plural,unverified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,لِيَوْمِ,يَوْم,1,1,included_singular,verified,4
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمُكُمُ,يَوْم,0,0,excluded_possessive_suffix,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,,يَوْم,1,0,included_singular,unverified,3
+J-day-365,qac_v0.4_aligned,numbered_aligned,وَالْيَوْمَ,يَوْم,1,1,included_singular,verified,2
+J-day-365,qac_v0.4_aligned,numbered_aligned,وَأَيَّامًا,يَوْم,0,0,excluded_dual_plural,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,بِيَوْمِ,يَوْم,1,1,included_singular,verified,5
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمَهُمُ,يَوْم,0,0,excluded_possessive_suffix,verified,3
+J-day-365,qac_v0.4_aligned,numbered_aligned,أَيَّامَ,يَوْم,0,0,excluded_dual_plural,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,يَوْمِهِمُ,يَوْم,0,0,excluded_possessive_suffix,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,الْأَيَّامِ,يَوْم,0,0,excluded_dual_plural,verified,1
+J-day-365,qac_v0.4_aligned,numbered_aligned,الْيَوْمُ,يَوْم,1,1,included_singular,verified,2
+J-day-365,qac_v0.4_aligned,numbered_aligned,الْيَوْمِ,يَوْم,1,1,included_singular,verified,1
+J-basmala-114,raw,file,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,112
+J-basmala-114,raw,numbered,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,numbered,source_exact,2
+J-basmala-114,nfc,file,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,112
+J-basmala-114,nfc,numbered,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,numbered,source_exact,2
+J-basmala-114,plain,file,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,112
+J-basmala-114,plain,file,بِّسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,2
+J-basmala-114,plain,numbered,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,numbered,source_exact,2
+J-basmala-114,search,file,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,112
+J-basmala-114,search,file,بِّسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,file,source_exact,2
+J-basmala-114,search,numbered,بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ,,1,1,numbered,source_exact,2
+J-basmala-19,written_letters_v1,file,بِسْمِ,,1,1,file,source_exact,1
+J-basmala-19,written_letters_v1,file,اللَّهِ,,1,1,file,source_exact,1
+J-basmala-19,written_letters_v1,file,الرَّحْمَـٰنِ,,1,1,file,source_exact,1
+J-basmala-19,written_letters_v1,file,الرَّحِيمِ,,1,1,file,source_exact,1
+J-world-hereafter,qac_v0.4_aligned,numbered_aligned,الدُّنْيَا,دُّنْيَا,1,1,fixed_lemma_all_contexts,verified,115
+J-world-hereafter,qac_v0.4_aligned,numbered_aligned,,آخِر,1,0,fixed_lemma_all_contexts,unverified,155

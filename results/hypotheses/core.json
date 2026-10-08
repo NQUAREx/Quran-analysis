@@ -1,0 +1,38 @@
+[
+  {
+    "hypothesis_id": "core_basmala_sensitivity",
+    "family": "corpus_audit",
+    "title_ru": "Вступительные басмалы меняют поверхностные частоты",
+    "status": "descriptive",
+    "profile_id": "raw",
+    "scope": "file vs numbered",
+    "observed": {
+      "file": 78248,
+      "numbered": 77800,
+      "difference_tokens": 448,
+      "opening_surahs": 112
+    },
+    "method_ru": "Распознавание только первых четырёх токенов, совпадающих с 1:1 в plain, у первых аятов сур, кроме 1 и 9; внутренний текст 27:30 сохранён. 95:1 и 97:1 имеют дополнительную шадду в raw.",
+    "limitation_ru": "Альтернативная область является документированным аналитическим соглашением; исходные номера аятов не меняются.",
+    "evidence_path": "results/tables/core_basmala_sensitivity.csv",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "core_normalization_changes_vocabulary",
+    "family": "normalization",
+    "title_ru": "Нормализация меняет число различаемых письменных форм",
+    "status": "descriptive",
+    "profile_id": "raw/nfc/plain/search",
+    "scope": "file",
+    "observed": {
+      "raw": 18243,
+      "nfc": 18243,
+      "plain": 14868,
+      "search": 14691
+    },
+    "method_ru": "Исчерпывающий словарь каждого профиля и полная таблица коллизий между профилями.",
+    "limitation_ru": "Объединённая форма не является доказательством совпадения леммы или значения.",
+    "evidence_path": "results/tables/core_normalization_collisions.csv.gz",
+    "p_value": null
+  }
+]

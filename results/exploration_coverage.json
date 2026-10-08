@@ -1,0 +1,189 @@
+[
+  {
+    "direction": "C",
+    "analysis": "Словесные n-граммы",
+    "status": "complete_within_scope",
+    "universe": {
+      "profile": "plain",
+      "scope": "file",
+      "n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "cross_verse": false,
+      "overlap": true,
+      "nonoverlap": "greedy earliest-start per verse, separately per n-gram"
+    },
+    "tested": 251513,
+    "limitations": "Полный перебор в объявленном диапазоне; другие профили и сквозные n-граммы не вычислялись."
+  },
+  {
+    "direction": "C",
+    "analysis": "Буквенные n-граммы",
+    "status": "complete_within_scope",
+    "universe": {
+      "n": [
+        2,
+        3,
+        4
+      ],
+      "boundary": "token",
+      "unit": "Unicode Letter",
+      "nonoverlap": "greedy earliest-start per token, separately per n-gram"
+    },
+    "tested": 540963,
+    "limitations": "Только письменные буквы plain; комбинируемые знаки пропускаются. Межсловные последовательности не исследованы."
+  },
+  {
+    "direction": "C",
+    "analysis": "Полностью повторяющиеся аяты",
+    "status": "complete_within_scope",
+    "universe": {
+      "profiles": [
+        "raw",
+        "nfc",
+        "plain",
+        "search"
+      ],
+      "scopes": [
+        "file",
+        "numbered"
+      ]
+    },
+    "tested": 49888,
+    "limitations": "raw/file сравнивает raw_text целиком, включая пробелы и редакторские знаки; остальные варианты сравнивают последовательности токенов профиля. Семантическое равенство не проверяется."
+  },
+  {
+    "direction": "C",
+    "analysis": "Длинные точные повторы",
+    "status": "partial_bounded_search",
+    "universe": {
+      "seed_length": 5,
+      "seed_max_support": 40,
+      "min_tokens": 8
+    },
+    "tested": 7282,
+    "limitations": "Все пары разрешённых затравок расширены в обе стороны до границ аята. Повторы без затравки допустимой частоты могут быть пропущены. Для каждой найденной фразы frequency и адреса исчерпывающие; long_repeat_pairs содержит только пары, полученные расширением."
+  },
+  {
+    "direction": "C",
+    "analysis": "Приблизительные совпадения аятов",
+    "status": "partial_bounded_search",
+    "universe": {
+      "approximate_seed_length": 3,
+      "approximate_seed_max_verse_support": 25,
+      "approximate_min_verse_tokens": 5,
+      "approximate_jaccard_alignment_threshold": 0.4,
+      "approximate_similarity_min": 0.8
+    },
+    "tested": 18086,
+    "limitations": "Кандидат должен иметь общую затравку допустимой поддержки; Jaccard множества форм для всех кандидатов, SequenceMatcher только при Jaccard≥порога. Это не полный перебор всех пар и не редакционное расстояние. Первый аргумент — более ранний аят; отношение SequenceMatcher может зависеть от порядка аргументов."
+  },
+  {
+    "direction": "D",
+    "analysis": "Интервалы, трети и концентрация всех словоформ",
+    "status": "complete_within_scope",
+    "universe": {
+      "types": 14868,
+      "profile": "plain",
+      "window": 1000,
+      "step": 250,
+      "windows": 310,
+      "thirds_units": [
+        "ayah",
+        "surah",
+        "corpus"
+      ],
+      "frequency_bands": [
+        "1",
+        "2-9",
+        "10-99",
+        "100+"
+      ]
+    },
+    "tested": 14868,
+    "limitations": "Описательные оценки без p-value; окна в глобальных токенах могут пересекать границы сур, последнее полное окно дополнительно привязано к концу корпуса. В сводке промежутки аятов/сур — между различными занятыми единицами; word_occurrence_gaps сохраняет интервалы последовательных вхождений, включая нулевые. Точки изменения и совпадения профилей всех пар не исследованы."
+  },
+  {
+    "direction": "E",
+    "analysis": "Границы, половины и формальные зеркальные пары",
+    "status": "complete_within_scope",
+    "universe": {
+      "boundaries_n": [
+        1,
+        2,
+        3
+      ],
+      "mirror": "a ↔ A+1−a",
+      "half_unit": "ayah"
+    },
+    "tested": 9327,
+    "limitations": "Нечётный центральный аят исключён из обеих половин. Равенство длин не означает смысловую симметрию; письменное окончание не трактуется как рифма."
+  },
+  {
+    "direction": "F",
+    "analysis": "Частотные классы и целочисленные равенства",
+    "status": "complete_within_scope",
+    "universe": {
+      "variables": [
+        "surah_id",
+        "verses",
+        "tokens",
+        "letters",
+        "types",
+        "first_global_ayah",
+        "last_global_ayah",
+        "cumulative_tokens"
+      ],
+      "expressions": "x; x+y (x≤y по имени)",
+      "comparison": "expression == atomic_variable",
+      "divisors": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        19
+      ],
+      "rounding": "нет",
+      "depth": 1,
+      "constants_in_equalities": []
+    },
+    "tested": 42408,
+    "limitations": "Сохранены совпадения и несовпадения; саморавенства и симметричные дубли атомарных равенств исключены заранее. Значимость не заявляется. Абджад, произвольные цифросклейки и числовые выражения языка в этот поиск не входят."
+  },
+  {
+    "direction": "G",
+    "analysis": "Совместное присутствие и сходство сур",
+    "status": "complete_within_scope",
+    "universe": {
+      "top_vocabulary": 120,
+      "pairs_per_context": 7140,
+      "contexts": {
+        "verse": 6236,
+        "surah": 114,
+        "nonoverlap_window": 1505
+      },
+      "min_support": 5
+    },
+    "tested": 27861,
+    "limitations": "PMI/lift описательные, зависят от длины контекста; нулевые пары сохранены, для поддержки <5 support_pass=0. Окна по 50 токенов внутри сур; хвосты короче окна исключены. Леммы и корни сюда не входят."
+  },
+  {
+    "direction": "H",
+    "analysis": "Энтропия, рост словаря, равные окна и сжатие",
+    "status": "complete_within_scope",
+    "universe": {
+      "representation": "plain tokens joined by one ASCII space, UTF-8",
+      "codec": "zlib level 9",
+      "window": 500,
+      "controls": 19,
+      "vocabulary_growth_stride": 100,
+      "include_final_growth_position": true
+    },
+    "tested": 1028,
+    "limitations": "Энтропия нулевого порядка без модели синтаксиса; сырое TTR не используется для ранжирования сур. Короткие суры и хвосты не входят в сравнение фиксированных окон. Контроль сжатия разрушает весь порядок и не доказывает специфичность корпуса. Степенной закон и периодичность не заявляются."
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "specification_version": "1.0.0",
+  "input": "Quran_text.txt",
+  "seed": 20261007,
+  "profiles": ["raw", "nfc", "plain", "search"],
+  "scopes": ["file", "numbered"],
+  "statistics": {
+    "simulations": 999,
+    "alpha": 0.05,
+    "correction": "Holm over all primary test rows, arbitrary dependence allowed",
+    "block_verses": 5,
+    "lexical_profiles": ["nfc", "plain"],
+    "lexical_top_n": 60,
+    "lexical_min_count": 100,
+    "suffix_lengths": [2, 3],
+    "registration": "Program specified before inferential calculations; no independent held-out corpus"
+  },
+  "exploration": {
+    "word_ngram_min": 2,
+    "word_ngram_max": 5,
+    "letter_ngram_min": 2,
+    "letter_ngram_max": 4,
+    "cooccurrence_top_n": 120,
+    "cooccurrence_min_support": 5,
+    "window_tokens": 500,
+    "approximate_similarity_min": 0.8,
+    "long_repeat_seed": 5,
+    "divisors": [2, 3, 5, 7, 11, 19],
+    "max_formula_depth": 1
+  },
+  "morphology": {"allow_network": false, "cooccurrence_top_n": 60, "cooccurrence_min_support": 5, "cooccurrence_window_tokens": 5},
+  "presentation": {"offline": true, "language": "ru"}
+}

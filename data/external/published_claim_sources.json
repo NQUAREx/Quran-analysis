@@ -1,0 +1,64 @@
+{
+  "access_date_utc": "2026-10-07",
+  "claims": [
+    {
+      "claim_ids": [
+        "J-month-12",
+        "J-day-365"
+      ],
+      "url": "https://www.masjidtucson.org/submission/youth/verifying_calendar_months_days.html",
+      "title": "In Quran: the word \"month\" occurs 12 times, and \"day\" 365 times",
+      "access_date_utc": "2026-10-07",
+      "verification": "Verified with web connector open; direct HTTP returned 406. Local HTTP snapshots contain the error response, not the article.",
+      "exact_quote": "In Quran: the word \"month\" occurs 12 times, and \"day\" 365 times",
+      "quote_location": "Article heading; web extraction line 8",
+      "methodology_specified": true,
+      "methodology_summary": "The month calculation starts from 21 shin-ha-ra root occurrences and removes 7 plural plus 2 dual occurrences. The day calculation starts from 405 ya-waw-mim root occurrences and removes 30 plural/dual and 10 possessive-suffix occurrences. Forms and verse addresses are provided; QAC is linked as the verification source. These are selective lexical definitions, not counts of every root occurrence.",
+      "methodology_locations": "Web extraction lines 15–26 and 29–95",
+      "full_article_snapshot_available": false
+    },
+    {
+      "claim_ids": [
+        "J-basmala-114",
+        "J-world-hereafter"
+      ],
+      "url": "https://19.org/blog/prime/",
+      "title": "The Prime Argument",
+      "publication_date": "2012-06-26",
+      "access_date_utc": "2026-10-07",
+      "verification": "Verified with web connector open; direct HTTP returned 406. Local HTTP snapshots contain the error response, not the article.",
+      "exact_quotes": [
+        "The Basmalah occurs 114 times",
+        "The words “this world” (dunya) and “hereafter” (ahirah), each occur 115 times."
+      ],
+      "quote_locations": [
+        "Numbered claim in article, web extraction line 169",
+        "Lexical symmetry bullet list, web extraction line 151"
+      ],
+      "methodology_specified": {
+        "basmala": "partial",
+        "world_hereafter": false
+      },
+      "methodology_summary": "The basmala assertion explicitly accounts for its absence in chapter 9 and duplicate occurrence in chapter 27 (extra occurrence at 27:30). No Unicode comparison profile is supplied. The dunya/hereafter assertion gives target counts and transliterations, but no reproducible inventory of inflections, senses, excluded contexts, source text version, or executable matching rules.",
+      "full_article_snapshot_available": false
+    },
+    {
+      "claim_ids": [
+        "J-basmala-19"
+      ],
+      "url": "https://qurantalkblog.com/2023/07/16/bismillah-word-count/",
+      "title": "Basmalah Word Count",
+      "publication_date": "2023-07-16",
+      "modified_date_visible": "2025-06-23",
+      "access_date_utc": "2026-10-07",
+      "verification": "Direct HTTP 200; full HTML snapshot and extracted text saved.",
+      "exact_quote": "This statement consists of exactly 19 letters",
+      "quote_location": "Opening paragraph",
+      "methodology_specified": "partial",
+      "methodology_summary": "The page illustrates the written basmala and letter separation, then discusses its gematrical value. It gives no formal Unicode normalization, combining-mark, tatweel, superscript-alif, or grapheme-boundary algorithm for the 19-letter claim. The operational letter definition used in this project must remain explicit rather than being attributed to this webpage.",
+      "snapshot": "data/external/source_snapshots/claim_bismillah.html",
+      "snapshot_sha256": "40f4a45598d452224c83dc5fdd4b4888c69a182631d0eae5a02f9e565b4062d5",
+      "full_article_snapshot_available": true
+    }
+  ]
+}

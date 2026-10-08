@@ -1,0 +1,81 @@
+{
+  "dashboard": "dashboard/index.html",
+  "dashboard_bytes": 10049892,
+  "report": "report/REPORT.md",
+  "workbook": {
+    "path": "exports/quran_analysis.xlsx",
+    "sheets": 52,
+    "external_tables": 38
+  },
+  "figures": [
+    {
+      "id": "surah_tokens",
+      "title_ru": "Объём сур",
+      "caption_ru": "Все суры; scope=numbered, профиль plain. Абсолютные количества; цвет обозначает объём.\nИз знаменателя исключены только начальные басмалы-префиксы.",
+      "svg": "results/figures/surah_tokens.svg",
+      "png": "results/figures/surah_tokens.png",
+      "data": "results/figures/surah_tokens.csv"
+    },
+    {
+      "id": "rank_frequency",
+      "title_ru": "Ранг и частота словоформ",
+      "caption_ru": "Все словоформы plain, scope=numbered; абсолютные частоты. Обе оси логарифмические.\nЛиния соединяет ранжированные наблюдения; модель степенного закона не подгонялась.",
+      "svg": "results/figures/rank_frequency.svg",
+      "png": "results/figures/rank_frequency.png",
+      "data": "results/figures/rank_frequency.csv"
+    },
+    {
+      "id": "verse_lengths",
+      "title_ru": "Распределение длины аятов",
+      "caption_ru": "Все нумерованные аяты; scope=numbered, профиль plain; шаг 1 токен. Абсолютные количества.\nДлины измерены после исключения начальных басмал-префиксов; внутренних басмал это не касается.",
+      "svg": "results/figures/verse_lengths.svg",
+      "png": "results/figures/verse_lengths.png",
+      "data": "results/figures/verse_lengths.csv"
+    },
+    {
+      "id": "profile_sensitivity",
+      "title_ru": "Чувствительность к профилю текста",
+      "caption_ru": "Весь корпус; показаны оба scope. Абсолютное число различных поверхностей орфографических токенов.\nУменьшение словаря означает объединение написаний; это не лемматизация.",
+      "svg": "results/figures/profile_sensitivity.svg",
+      "png": "results/figures/profile_sensitivity.png",
+      "data": "results/figures/profile_sensitivity.csv"
+    },
+    {
+      "id": "vocabulary_growth",
+      "title_ru": "Накопление словаря",
+      "caption_ru": "Профиль plain; scope=file. Порядок исходного файла; абсолютные количества.\nЛиния соединяет рассчитанные контрольные позиции без сглаживания.",
+      "svg": "results/figures/vocabulary_growth.svg",
+      "png": "results/figures/vocabulary_growth.png",
+      "data": "results/figures/vocabulary_growth.csv"
+    },
+    {
+      "id": "statistic_length_adjacency",
+      "title_ru": "Соседние аяты близки по числу токенов",
+      "caption_ru": "Профиль plain; scope=numbered; 6122 соседних пар внутри сур; 30 интервалов.\nЗелёный: перестановки целых аятов внутри сур; оранжевый: исходный порядок. Holm p=0.024.",
+      "svg": "results/figures/statistic_length_adjacency.svg",
+      "png": "results/figures/statistic_length_adjacency.png",
+      "data": "results/figures/statistic_length_adjacency.csv"
+    },
+    {
+      "id": "statistic_ending_2",
+      "title_ru": "Соседние аяты имеют одинаковые последние 2 письменные буквы",
+      "caption_ru": "Профиль plain; scope=numbered; 6122 соседних пар внутри сур; 30 интервалов.\nЗелёный: перестановки целых аятов внутри сур; оранжевый: исходный порядок. Holm p=0.024.",
+      "svg": "results/figures/statistic_ending_2.svg",
+      "png": "results/figures/statistic_ending_2.png",
+      "data": "results/figures/statistic_ending_2.csv"
+    }
+  ],
+  "tokens_embedded": 78248,
+  "verses_embedded": 6236,
+  "findings": 46,
+  "coverage_records": 21,
+  "morphology_units": {
+    "lemma": 4638,
+    "root": 1610
+  },
+  "limitations": [
+    "XLSX не дублирует CSV.gz и таблицы более 20 000 строк / 3 МБ; полные файлы перечислены явно.",
+    "HTML автономен; ссылки на отдельные файлы требуют сохранённой структуры проекта.",
+    "Визуальная проверка выполняется отдельным этапом и не подразумевается самим экспортом."
+  ]
+}

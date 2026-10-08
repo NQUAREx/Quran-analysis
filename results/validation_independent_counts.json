@@ -1,0 +1,47 @@
+{
+  "sha256": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a",
+  "bytes": 1352595,
+  "unicode_codepoints_file": 735781,
+  "surahs": 114,
+  "verses": 6236,
+  "tokens_file": 78248,
+  "tokens_numbered": 77800,
+  "base_letters_file": 332837,
+  "base_letters_numbered": 330709,
+  "marks_tokens_file": 278460,
+  "marks_verses_file": 282824,
+  "profile_counts": {
+    "file.raw": {
+      "tokens": 78248,
+      "types": 18243
+    },
+    "file.nfc": {
+      "tokens": 78248,
+      "types": 18243
+    },
+    "file.plain": {
+      "tokens": 78248,
+      "types": 14868
+    },
+    "file.search": {
+      "tokens": 78248,
+      "types": 14691
+    },
+    "numbered.raw": {
+      "tokens": 77800,
+      "types": 18242
+    },
+    "numbered.nfc": {
+      "tokens": 77800,
+      "types": 18242
+    },
+    "numbered.plain": {
+      "tokens": 77800,
+      "types": 14868
+    },
+    "numbered.search": {
+      "tokens": 77800,
+      "types": 14691
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "access_date_utc": "2026-10-07",
+  "path": "data/external/quranic-corpus-morphology-0.4.txt",
+  "bytes": 6309503,
+  "sha256": "a1d12923815341face765083805d2148ed2d9f5cc3f7d6665219d887675d8c46",
+  "source_version": "Quranic Arabic Corpus morphology 0.4",
+  "release_date": "2011-05-01",
+  "segment_rows": 128219,
+  "word_locations": 77429,
+  "verse_locations": 6236,
+  "surahs": 114,
+  "copyright": "Copyright (C) 2011 Kais Dukes",
+  "license_as_stated_in_file": "GNU General Public License (version not stated in file header)",
+  "linked_official_license": "GNU General Public License, Version 3, 29 June 2007",
+  "additional_terms": "File header grants verbatim distribution only, forbids changing this file, requires source attribution/link and preservation/reproduction of the notice. These terms are retained verbatim; no legal reconciliation of GPL/no-change wording is asserted.",
+  "embedded_text": {
+    "version": "Tanzil Quran Text (Uthmani, version 1.0.2)",
+    "copyright": "Copyright (C) 2008-2009 Tanzil.info",
+    "license": "Creative Commons BY-ND 3.0 Unported",
+    "official_source": "http://tanzil.info",
+    "updates": "http://tanzil.info/updates/"
+  },
+  "official_download_page": "https://corpus.quran.com/download/",
+  "official_license_page": "https://corpus.quran.com/license.jsp",
+  "official_release_notes": "https://corpus.quran.com/releasenotes.jsp",
+  "acquisition_note": "The original task download URL was not recorded. Subsequent exact-byte provenance check found the existing artifact at two pinned GitHub mirror URLs; one is a fork of the other. This does not establish which mirror originally supplied the local file.",
+  "mirror_checks": "data/external/qac_mirror_checks.json",
+  "copyright_notice_copy": "data/external/QAC_COPYRIGHT_NOTICE.txt",
+  "separation": "External annotation source only; not a replacement for Quran_text.txt."
+}

@@ -1,0 +1,19 @@
+{
+  "raw_copy_sha256_matches": true,
+  "all_source_records_conserved": true,
+  "all_verse_offsets_roundtrip": true,
+  "all_token_offsets_roundtrip": true,
+  "all_spans_roundtrip": true,
+  "all_verses_reconstruct_from_spans": true,
+  "nfc_idempotent": true,
+  "nfc_canonical_equivalence": true,
+  "no_duplicate_identifiers": true,
+  "no_internal_numbering_gaps": true,
+  "basmala_reference_valid": true,
+  "basmala_1_1_retained": true,
+  "basmala_9_1_not_removed": true,
+  "basmala_27_30_retained": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "occurrences": 624192
+}

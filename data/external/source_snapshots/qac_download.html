@@ -1,0 +1,179 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Quranic Arabic Corpus - Data Download</title>
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+	<style type="text/css">
+table.k {
+	font: 0.833em Arial;
+	margin: auto;
+	margin-top: 3em;
+}
+
+table.k td {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+tr.kr1 {
+	background: rgb(149, 179, 215);
+	font-weight: bold;
+}
+
+tr.kr2 {
+	background: rgb(197, 217, 241);
+	font-weight: bold;
+}
+
+span.error {
+	font: italic 0.8333em Arial;
+	color: red;
+}
+</style>
+	<script type="text/javascript">
+		function downloadFile(id) {
+			document.downloadForm.downloadID.value = id;
+			document.downloadForm.validEmail.value = "null";
+			document.downloadForm.submit();
+		}
+	</script>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com">Audio</a>
+		| <a href="http://www.waqt.org">Prayer Times</a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tr>
+		<td class="logo1" rowspan="2"><a href="/"><img
+			src="/images/logo.png" /></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="/images/person2.gif" /> <a href="/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="/searchhelp.jsp">Search</a> <input
+			type="text" size="20" id="searchTextBox"
+			onkeypress="if(event.keyCode == 13) { search(); return false; }" />
+		<input type="button" value="Go" onclick="search();" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="/"><img src="/images/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Quranic Arabic Corpus - Data Download</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tr><td class="level1"><a href="/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1"><a href="/documentation">Documentation</a></td></tr><tr><td class="level1"><a href="/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1 selected hideBorder"><a href="/publications.jsp">Resources</a></td></tr><tr><td class="level4"><a href="/publications.jsp">Publications</a></td></tr><tr><td class="level4"><a href="/bibliography.jsp">Bibliography</a></td></tr><tr><td class="level4"><a href="/download">Data download</a></td></tr><tr><td class="level4"><a href="/releasenotes.jsp">Release notes</a></td></tr><tr><td class="level4 lastMenuItem"><a href="http://www.mail-archive.com/comp-quran@comp.leeds.ac.uk">Mailing list</a></td></tr><tr><td class="level1"><a href="/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 hideBorder"><a href="/java">Java API</a></td></tr></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<form name="downloadForm" action="/download/default.jsp" method="post">
+	
+        <p class="first" style="text-align:left">
+			To download <a href="/releasenotes.jsp">version 0.4</a> of the <a href="/">Quranic Arabic Corpus</a> morphological data,
+			please enter a contact e-mail address. This is for verification purposes only, and will not be made public or given to any third parties:
+		</p>
+		<p>
+			<input name="txtEmail" type="text" value=""/>
+			<input type="submit" value="Download"/>
+	        <span class="error"></span>
+		</p>
+	
+	<p class="first">
+		By downloading this data, you agree to the terms and conditions
+		of the <a href="/license.jsp">GNU License</a>.
+	</p>
+<pre>
+#  Quranic Arabic Corpus (Version 0.4)
+#  Copyright (C) 2011 Kais Dukes
+#  License: GNU General Public License
+#
+#  The Quranic Arabic Corpus includes syntactic and morphological
+#  annotation of the Quran, and builds on the verified Arabic text
+#  distributed by the Tanzil project.
+#
+#  TERMS OF USE:
+#
+#  - Permission is granted to copy and distribute verbatim copies
+#    of this file, but CHANGING IT IS NOT ALLOWED.
+#
+#  - This annotation can be used in any website or application,
+#    provided its source (the Quranic Arabic Corpus) is clearly
+#    indicated, and a link is made to http://corpus.quran.com to enable
+#    users to keep track of changes.
+#
+#  - This copyright notice shall be included in all verbatim copies
+#    of the text, and shall be reproduced appropriately in all works
+#    derived from or containing substantial portion of this file.
+#
+#  Please check updates at: http://corpus.quran.com/download
+</pre>
+	
+	<input type="hidden" name="downloadID"/>
+	<input type="hidden" name="validEmail"/>
+	</form>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br/>
+			<a href="http://www.leeds.ac.uk">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright &copy; Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a
+			href="/license.jsp">GNU public license</a> with <a
+			href="/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"64a921327e174c6380302b7d747d1458","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

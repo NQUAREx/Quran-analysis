@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "method_ru": "Сравнение распакованных CSV после независимого полного пересчёта при seed20261007 и B999.",
+  "tables": [
+    {
+      "path": "results/tables/statistical_tests.csv",
+      "baseline_sha256": "0f6f433c334455f1c3c140b51af1abd99587327e50a6bb98801f8d0952832c5d",
+      "rerun_sha256": "0f6f433c334455f1c3c140b51af1abd99587327e50a6bb98801f8d0952832c5d",
+      "match": true
+    },
+    {
+      "path": "results/tables/statistical_null_draws.csv.gz",
+      "baseline_sha256": "c61578e592cc0e3f44ffc68a223628dbed7bdbfa1bdd3ea5b2428bb10643c8bd",
+      "rerun_sha256": "c61578e592cc0e3f44ffc68a223628dbed7bdbfa1bdd3ea5b2428bb10643c8bd",
+      "match": true
+    }
+  ]
+}

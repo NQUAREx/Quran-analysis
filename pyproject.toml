@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quran-analysis-reproducible"
+version = "1.0.0"
+description = "Воспроизводимое исследование пользовательского арабского корпуса"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy==2.3.5",
+  "scipy==1.17.0",
+  "pandas==2.2.3",
+  "matplotlib==3.10.8",
+  "openpyxl==3.1.5",
+  "regex>=2024.0.0"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+browser = ["playwright>=1.50"]
+
+[project.scripts]
+quran-analysis = "quran_analysis.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

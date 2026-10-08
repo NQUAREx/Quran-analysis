@@ -1,0 +1,684 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Java API - Buckwalter Transliteration</title>
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+	<style type="text/css">
+table.u1 {
+	font: 0.833em Arial;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+table.u1 td {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	border-bottom: 1px solid rgb(150, 150, 150);
+	text-align: center;
+}
+
+td.h1,td.h2 {
+	text-align: center;
+	font-weight: bold;
+	height: 2em;
+	letter-spacing: 2px;
+	border-top: 1px solid rgb(150, 150, 150);
+}
+
+td.h1 {
+	background: rgb(191, 191, 191);
+}
+
+td.h2 {
+	background: rgb(172, 199, 116);
+}
+
+td.h3,td.h4,td.h5 {
+	font-weight: bold;
+	height: 2em;
+}
+
+td.h3 {
+	background: rgb(216, 216, 216);
+}
+
+td.h4,td.h5 {
+	background: rgb(194, 214, 154);
+}
+
+td.g4 {
+	font-weight: bold;
+}
+
+td.g4,td.h2,td.h4 {
+	border-left: 1px solid rgb(127, 127, 127);
+}
+
+table.u1 tr.x td.g4,table.u1 tr.x td.g5 {
+	background: rgb(255, 255, 187);
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com">Audio</a>
+		| <a href="http://www.waqt.org">Prayer Times</a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tr>
+		<td class="logo1" rowspan="2"><a href="/"><img
+			src="/images/logo.png" /></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="/images/person2.gif" /> <a href="/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="/searchhelp.jsp">Search</a> <input
+			type="text" size="20" id="searchTextBox"
+			onkeypress="if(event.keyCode == 13) { search(); return false; }" />
+		<input type="button" value="Go" onclick="search();" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="/"><img src="/images/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Java API - Buckwalter Transliteration</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tr><td class="level1"><a href="/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1"><a href="/documentation">Documentation</a></td></tr><tr><td class="level1"><a href="/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1"><a href="/publications.jsp">Resources</a></td></tr><tr><td class="level1"><a href="/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 selected hideBorder"><a href="/java">Java API</a></td></tr><tr><td class="level2 firstSubItem">Developer's Guide</td></tr><tr><td class="level3"><a href="/java/overview.jsp">Overview</a></td></tr><tr><td class="level3"><a href="/java/uthmaniscript.jsp">Uthmani script</a></td></tr><tr><td class="level3"><a href="/java/orthographymodel.jsp">Orthography model</a></td></tr><tr><td class="level3"><a href="/java/simpleencoding.jsp">Simple encoding</a></td></tr><tr><td class="level3"><a href="/java/unicode.jsp">Unicode serialization</a></td></tr><tr><td class="level3"><a href="/java/buckwalter.jsp">Transliteration</a></td></tr><tr><td class="level3"><a href="/java/analysistable.jsp">Analysis table</a></td></tr><tr><td class="level3"><a href="/java/tokensearch.jsp">Search API</a></td></tr><tr><td class="level3"><a href="/java/examples.jsp">Examples</a></td></tr><tr><td class="level2">Project</td></tr><tr><td class="level3"><a href="/java/download.jsp">Download</a></td></tr><tr><td class="level3"><a href="/java/api/index.html">API documentation</a></td></tr><tr><td class="level2">Advanced</td></tr><tr><td class="level3"><a href="/java/orthographyinternals.jsp">Orthography internals</a></td></tr><tr><td class="level3"><a href="/java/build.jsp">Build instructions</a></td></tr><tr><td class="level3 lastMenuItem"><a href="/java/cobertura/index.html">Test coverage</a></td></tr></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first">Buckwalter transliteration uses ASCII characters
+	to represent <a href="orthographymodel.jsp">Arabic orthography</a>. As
+	there is a one-to-one correspondence with Unicode, the encoding scheme
+	is reversible. JQuranTree uses a superset of Buckwalter transliteration
+	to enable reversible transliteration of <a href="uthmaniscript.jsp">Tanzil
+	XML</a>.</p>
+	<h4>Extended Buckwalter Transliteration</h4>
+	<p class="first">There are 4 non-arabic characters in the original
+	encoding scheme with are not found in the Quranic text: P (<i
+		class="ab">peh</i>), J (<i class="ab">tcheh</i>), V (<i class="ab">veh</i>)
+	and G (<i class="ab">gaf</i>). The combination character <i class="ab">alif</i>
+	+ <i class="ab">maddah</i> (|) is also not used in <a
+		href="uthmaniscript.jsp">Tanzil XML</a>. These characters are not
+	implemented by the JQuranTree Buckwalter encoder.</p>
+	<p>Likewise, 14 Quranic symbols do not feature in the original
+	scheme. In the extended scheme used by JQuranTree, these have been
+	assigned to ASCII punctuation marks. This is not ambiguous, since
+	modern punctuation does not occur in the Quran:</p>
+	<p>- <a href="api/org/jqurantree/arabic/DiacriticType.html#Maddah">Maddah</a>
+	(^)<br />
+	- <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a>
+	(#)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallHighSeen">SmallHighSeen</a>
+	(:)<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#SmallHighRoundedZero">SmallHighRoundedZero</a>
+	(@)<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#SmallHighUprightRectangularZero">SmallHighUprightRectangularZero</a>
+	(")<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#SmallHighMeemIsolatedForm">SmallHighMeemIsolatedForm</a>
+	([)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallLowSeen">SmallLowSeen</a>
+	(;)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallWaw">SmallWaw</a>
+	(,)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallYa">SmallYa</a>
+	(.)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallHighNoon">SmallHighNoon</a>
+	(!)<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#EmptyCentreLowStop">EmptyCentreLowStop</a>
+	(-)<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#EmptyCentreHighStop">EmptyCentreHighStop</a>
+	(+)<br />
+	- <a
+		href="api/org/jqurantree/arabic/CharacterType.html#RoundedHighStopWithFilledCentre">RoundedHighStopWithFilledCentre</a>
+	(%)<br />
+	- <a href="api/org/jqurantree/arabic/CharacterType.html#SmallLowMeem">SmallLowMeem</a>
+	(])<br />
+	</p>
+	<p>The extended Buckwalter transliteration scheme is shown in Fig
+	1. below. Sections highlighed in yellow indicate those parts of the
+	scheme which have been extended over the original:</p>
+	<table class="u1" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="3" class="h1">UNICODE</td>
+			<td colspan="2" class="h2">BUCKWALTER</td>
+		</tr>
+		<tr>
+			<td class="h3">Decimal</td>
+			<td class="h3">Hex</td>
+			<td class="h3">Glyph</td>
+			<td class="h4">ASCII</td>
+			<td class="h5">Orthography</td>
+		</tr>
+		<tr>
+			<td>1569</td>
+			<td>U+0621</td>
+			<td><img src="images/unicode/0621.png"></td>
+			<td class="g4">'</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Hamza">Hamza</a></td>
+		</tr>
+		<tr>
+			<td>1571</td>
+			<td>U+0623</td>
+			<td><img src="images/unicode/0623.png"></td>
+			<td class="g4">&gt;</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Alif">Alif</a>
+			+ <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a></td>
+		</tr>
+		<tr>
+			<td>1572</td>
+			<td>U+0624</td>
+			<td><img src="images/unicode/0624.png"></td>
+			<td class="g4">&amp;</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Waw">Waw</a>
+			+ <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a></td>
+		</tr>
+		<tr>
+			<td>1573</td>
+			<td>U+0625</td>
+			<td><img src="images/unicode/0625.png"></td>
+			<td class="g4">&lt;</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Alif">Alif</a>
+			+ <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzaBelow">HamzaBelow</a></td>
+		</tr>
+		<tr>
+			<td>1574</td>
+			<td>U+0626</td>
+			<td><img src="images/unicode/0626.png"></td>
+			<td class="g4">}</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ya">Ya</a>
+			+ <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a></td>
+		</tr>
+		<tr>
+			<td>1575</td>
+			<td>U+0627</td>
+			<td><img src="images/unicode/0627.png"></td>
+			<td class="g4">A</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Alif">Alif</a></td>
+		</tr>
+		<tr>
+			<td>1576</td>
+			<td>U+0628</td>
+			<td><img src="images/unicode/0628.png"></td>
+			<td class="g4">b</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ba">Ba</a></td>
+		</tr>
+		<tr>
+			<td>1577</td>
+			<td>U+0629</td>
+			<td><img src="images/unicode/0629.png"></td>
+			<td class="g4">p</td>
+			<td><a
+				href="api/org/jqurantree/arabic/CharacterType.html#TaMarbuta">TaMarbuta</a></td>
+		</tr>
+		<tr>
+			<td>1578</td>
+			<td>U+062A</td>
+			<td><img src="images/unicode/062A.png"></td>
+			<td class="g4">t</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ta">Ta</a></td>
+		</tr>
+		<tr>
+			<td>1579</td>
+			<td>U+062B</td>
+			<td><img src="images/unicode/062B.png"></td>
+			<td class="g4">v</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Tha">Tha</a></td>
+		</tr>
+		<tr>
+			<td>1580</td>
+			<td>U+062C</td>
+			<td><img src="images/unicode/062C.png"></td>
+			<td class="g4">j</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Jeem">Jeem</a></td>
+		</tr>
+		<tr>
+			<td>1581</td>
+			<td>U+062D</td>
+			<td><img src="images/unicode/062D.png"></td>
+			<td class="g4">H</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#HHa">HHa</a></td>
+		</tr>
+		<tr>
+			<td>1582</td>
+			<td>U+062E</td>
+			<td><img src="images/unicode/062E.png"></td>
+			<td class="g4">x</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Kha">Kha</a></td>
+		</tr>
+		<tr>
+			<td>1583</td>
+			<td>U+062F</td>
+			<td><img src="images/unicode/062F.png"></td>
+			<td class="g4">d</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Dal">Dal</a></td>
+		</tr>
+		<tr>
+			<td>1584</td>
+			<td>U+0630</td>
+			<td><img src="images/unicode/0630.png"></td>
+			<td class="g4">*</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Thal">Thal</a></td>
+		</tr>
+		<tr>
+			<td>1585</td>
+			<td>U+0631</td>
+			<td><img src="images/unicode/0631.png"></td>
+			<td class="g4">r</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ra">Ra</a></td>
+		</tr>
+		<tr>
+			<td>1586</td>
+			<td>U+0632</td>
+			<td><img src="images/unicode/0632.png"></td>
+			<td class="g4">z</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Zain">Zain</a></td>
+		</tr>
+		<tr>
+			<td>1587</td>
+			<td>U+0633</td>
+			<td><img src="images/unicode/0633.png"></td>
+			<td class="g4">s</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Seen">Seen</a></td>
+		</tr>
+		<tr>
+			<td>1588</td>
+			<td>U+0634</td>
+			<td><img src="images/unicode/0634.png"></td>
+			<td class="g4">$</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Sheen">Sheen</a></td>
+		</tr>
+		<tr>
+			<td>1589</td>
+			<td>U+0635</td>
+			<td><img src="images/unicode/0635.png"></td>
+			<td class="g4">S</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Sad">Sad</a></td>
+		</tr>
+		<tr>
+			<td>1590</td>
+			<td>U+0636</td>
+			<td><img src="images/unicode/0636.png"></td>
+			<td class="g4">D</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#DDad">DDad</a></td>
+		</tr>
+		<tr>
+			<td>1591</td>
+			<td>U+0637</td>
+			<td><img src="images/unicode/0637.png"></td>
+			<td class="g4">T</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#TTa">TTa</a></td>
+		</tr>
+		<tr>
+			<td>1592</td>
+			<td>U+0638</td>
+			<td><img src="images/unicode/0638.png"></td>
+			<td class="g4">Z</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#DTha">DTha</a></td>
+		</tr>
+		<tr>
+			<td>1593</td>
+			<td>U+0639</td>
+			<td><img src="images/unicode/0639.png"></td>
+			<td class="g4">E</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ain">Ain</a></td>
+		</tr>
+		<tr>
+			<td>1594</td>
+			<td>U+063A</td>
+			<td><img src="images/unicode/063A.png"></td>
+			<td class="g4">g</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ghain">Ghain</a></td>
+		</tr>
+		<tr>
+			<td>1600</td>
+			<td>U+0640</td>
+			<td><img src="images/unicode/0640.png"></td>
+			<td class="g4">_</td>
+			<td><a
+				href="api/org/jqurantree/arabic/CharacterType.html#Tatweel">Tatweel</a></td>
+		</tr>
+		<tr>
+			<td>1601</td>
+			<td>U+0641</td>
+			<td><img src="images/unicode/0641.png"></td>
+			<td class="g4">f</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Fa">Fa</a></td>
+		</tr>
+		<tr>
+			<td>1602</td>
+			<td>U+0642</td>
+			<td><img src="images/unicode/0642.png"></td>
+			<td class="g4">q</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Qaf">Qaf</a></td>
+		</tr>
+		<tr>
+			<td>1603</td>
+			<td>U+0643</td>
+			<td><img src="images/unicode/0643.png"></td>
+			<td class="g4">k</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Kaf">Kaf</a></td>
+		</tr>
+		<tr>
+			<td>1604</td>
+			<td>U+0644</td>
+			<td><img src="images/unicode/0644.png"></td>
+			<td class="g4">l</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Lam">Lam</a></td>
+		</tr>
+		<tr>
+			<td>1605</td>
+			<td>U+0645</td>
+			<td><img src="images/unicode/0645.png"></td>
+			<td class="g4">m</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Meem">Meem</a></td>
+		</tr>
+		<tr>
+			<td>1606</td>
+			<td>U+0646</td>
+			<td><img src="images/unicode/0646.png"></td>
+			<td class="g4">n</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Noon">Noon</a></td>
+		</tr>
+		<tr>
+			<td>1607</td>
+			<td>U+0647</td>
+			<td><img src="images/unicode/0647.png"></td>
+			<td class="g4">h</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ha">Ha</a></td>
+		</tr>
+		<tr>
+			<td>1608</td>
+			<td>U+0648</td>
+			<td><img src="images/unicode/0648.png"></td>
+			<td class="g4">w</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Waw">Waw</a></td>
+		</tr>
+		<tr>
+			<td>1609</td>
+			<td>U+0649</td>
+			<td><img src="images/unicode/0649.png"></td>
+			<td class="g4">Y</td>
+			<td><a
+				href="api/org/jqurantree/arabic/CharacterType.html#AlifMaksura">AlifMaksura</a></td>
+		</tr>
+		<tr>
+			<td>1610</td>
+			<td>U+064A</td>
+			<td><img src="images/unicode/064A.png"></td>
+			<td class="g4">y</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Ya">Ya</a></td>
+		</tr>
+		<tr>
+			<td>1611</td>
+			<td>U+064B</td>
+			<td><img src="images/unicode/064B.png"></td>
+			<td class="g4">F</td>
+			<td><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#Fathatan">Fathatan</a></td>
+		</tr>
+		<tr>
+			<td>1612</td>
+			<td>U+064C</td>
+			<td><img src="images/unicode/064C.png"></td>
+			<td class="g4">N</td>
+			<td><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#Dammatan">Dammatan</a></td>
+		</tr>
+		<tr>
+			<td>1613</td>
+			<td>U+064D</td>
+			<td><img src="images/unicode/064D.png"></td>
+			<td class="g4">K</td>
+			<td><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#Kasratan">Kasratan</a></td>
+		</tr>
+		<tr>
+			<td>1614</td>
+			<td>U+064E</td>
+			<td><img src="images/unicode/064E.png"></td>
+			<td class="g4">a</td>
+			<td><a href="api/org/jqurantree/arabic/DiacriticType.html#Fatha">Fatha</a></td>
+		</tr>
+		<tr>
+			<td>1615</td>
+			<td>U+064F</td>
+			<td><img src="images/unicode/064F.png"></td>
+			<td class="g4">u</td>
+			<td><a href="api/org/jqurantree/arabic/DiacriticType.html#Damma">Damma</a></td>
+		</tr>
+		<tr>
+			<td>1616</td>
+			<td>U+0650</td>
+			<td><img src="images/unicode/0650.png"></td>
+			<td class="g4">i</td>
+			<td><a href="api/org/jqurantree/arabic/DiacriticType.html#Kasra">Kasra</a></td>
+		</tr>
+		<tr>
+			<td>1617</td>
+			<td>U+0651</td>
+			<td><img src="images/unicode/0651.png"></td>
+			<td class="g4">~</td>
+			<td><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#Shadda">Shadda</a></td>
+		</tr>
+		<tr>
+			<td>1618</td>
+			<td>U+0652</td>
+			<td><img src="images/unicode/0652.png"></td>
+			<td class="g4">o</td>
+			<td><a href="api/org/jqurantree/arabic/DiacriticType.html#Sukun">Sukun</a></td>
+		</tr>
+		<tr class="x">
+			<td>1619</td>
+			<td>U+0653</td>
+			<td><img src="images/unicode/0653.png"></td>
+			<td class="g4">^</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#Maddah">Maddah</a></td>
+		</tr>
+		<tr class="x">
+			<td>1620</td>
+			<td>U+0654</td>
+			<td><img src="images/unicode/0654.png"></td>
+			<td class="g4">#</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a></td>
+		</tr>
+		<tr>
+			<td>1648</td>
+			<td>U+0670</td>
+			<td><img src="images/unicode/0670.png"></td>
+			<td class="g4">`</td>
+			<td><a
+				href="api/org/jqurantree/arabic/DiacriticType.html#AlifKhanjareeya">AlifKhanjareeya</a></td>
+		</tr>
+		<tr>
+			<td>1649</td>
+			<td>U+0671</td>
+			<td><img src="images/unicode/0671.png"></td>
+			<td class="g4">{</td>
+			<td><a href="api/org/jqurantree/arabic/CharacterType.html#Alif">Alif</a>
+			+ <a href="api/org/jqurantree/arabic/DiacriticType.html#HamzatWasl">HamzatWasl</a></td>
+		</tr>
+		<tr class="x">
+			<td>1756</td>
+			<td>U+06DC</td>
+			<td><img src="images/unicode/06DC.png"></td>
+			<td class="g4">:</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallHighSeen">SmallHighSeen</a></td>
+		</tr>
+		<tr class="x">
+			<td>1759</td>
+			<td>U+06DF</td>
+			<td><img src="images/unicode/06DF.png"></td>
+			<td class="g4">@</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallHighRoundedZero">SmallHighRoundedZero</a></td>
+		</tr>
+		<tr class="x">
+			<td>1760</td>
+			<td>U+06E0</td>
+			<td><img src="images/unicode/06E0.png"></td>
+			<td class="g4">"</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallHighUprightRectangularZero">SmallHighUprightRectangularZero</a></td>
+		</tr>
+		<tr class="x">
+			<td>1762</td>
+			<td>U+06E2</td>
+			<td><img src="images/unicode/06E2.png"></td>
+			<td class="g4">[</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallHighMeemIsolatedForm">SmallHighMeemIsolatedForm</a></td>
+		</tr>
+		<tr class="x">
+			<td>1763</td>
+			<td>U+06E3</td>
+			<td><img src="images/unicode/06E3.png"></td>
+			<td class="g4">;</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallLowSeen">SmallLowSeen</a></td>
+		</tr>
+		<tr class="x">
+			<td>1765</td>
+			<td>U+06E5</td>
+			<td><img src="images/unicode/06E5.png"></td>
+			<td class="g4">,</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallWaw">SmallWaw</a></td>
+		</tr>
+		<tr class="x">
+			<td>1766</td>
+			<td>U+06E6</td>
+			<td><img src="images/unicode/06E6.png"></td>
+			<td class="g4">.</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallYa">SmallYa</a></td>
+		</tr>
+		<tr class="x">
+			<td>1768</td>
+			<td>U+06E8</td>
+			<td><img src="images/unicode/06E8.png"></td>
+			<td class="g4">!</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallHighNoon">SmallHighNoon</a></td>
+		</tr>
+		<tr class="x">
+			<td>1770</td>
+			<td>U+06EA</td>
+			<td><img src="images/unicode/06EA.png"></td>
+			<td class="g4">-</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#EmptyCentreLowStop">EmptyCentreLowStop</a></td>
+		</tr>
+		<tr class="x">
+			<td>1771</td>
+			<td>U+06EB</td>
+			<td><img src="images/unicode/06EB.png"></td>
+			<td class="g4">+</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#EmptyCentreHighStop">EmptyCentreHighStop</a></td>
+		</tr>
+		<tr class="x">
+			<td>1772</td>
+			<td>U+06EC</td>
+			<td><img src="images/unicode/06EC.png"></td>
+			<td class="g4">%</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#RoundedHighStopWithFilledCentre">RoundedHighStopWithFilledCentre</a></td>
+		</tr>
+		<tr class="x">
+			<td>1773</td>
+			<td>U+06ED</td>
+			<td><img src="images/unicode/06ED.png"></td>
+			<td class="g4">]</td>
+			<td class="g5"><a
+				href="api/org/jqurantree/arabic/CharacterType.html#SmallLowMeem">SmallLowMeem</a></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 1. Extended Buckwalter transliteration.</p>
+	<br />
+	<h4>See Also</h4>
+	<ul class="also">
+		<li><a href="http://www.qamus.org/transliteration.htm">Arabic
+		Transliteration</a> – Tim Buckwalter's website</li>
+		<li><a
+			href="http://en.wikipedia.org/wiki/Buckwalter_transliteration">Buckwalter
+		Transliteration</a> – Wikipedia article</li>
+		<li><a href="/documentation/phonetic.jsp">Phonetic
+		Transcription</a></li>
+	</ul>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br/>
+			<a href="http://www.leeds.ac.uk">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright &copy; Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a
+			href="/license.jsp">GNU public license</a> with <a
+			href="/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"64a921327e174c6380302b7d747d1458","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

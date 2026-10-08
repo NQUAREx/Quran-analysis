@@ -1,0 +1,82 @@
+{
+  "universals": {
+    "plain": {
+      "file": [
+        "الرحيم",
+        "الله"
+      ],
+      "numbered": []
+    },
+    "search": {
+      "file": [
+        "الرحيم",
+        "الله"
+      ],
+      "numbered": []
+    }
+  },
+  "equality_pairs": {
+    "pairs_file": 41683473,
+    "pairs_numbered": 41684499,
+    "preserved_pairs": 41683470,
+    "lost_pairs": 3,
+    "new_pairs": 1029,
+    "pair_intersection_over_union": 0.9999752425973567
+  },
+  "ending_sensitivity": [
+    {
+      "scope": "file",
+      "profile_id": "plain",
+      "suffix_letters": 2,
+      "surah_id": 0,
+      "all_edges": 6122,
+      "all_agree": 2467,
+      "retained_edges": 5646,
+      "retained_agree": 2288,
+      "all_rate": 0.40297288467820974,
+      "retained_rate": 0.40524264966347856,
+      "repeated_verse_count_corpus": 279
+    },
+    {
+      "scope": "file",
+      "profile_id": "plain",
+      "suffix_letters": 3,
+      "surah_id": 0,
+      "all_edges": 6122,
+      "all_agree": 487,
+      "retained_edges": 5646,
+      "retained_agree": 472,
+      "all_rate": 0.07954916693890886,
+      "retained_rate": 0.08359900814736096,
+      "repeated_verse_count_corpus": 279
+    },
+    {
+      "scope": "numbered",
+      "profile_id": "plain",
+      "suffix_letters": 2,
+      "surah_id": 0,
+      "all_edges": 6122,
+      "all_agree": 2467,
+      "retained_edges": 5645,
+      "retained_agree": 2288,
+      "all_rate": 0.40297288467820974,
+      "retained_rate": 0.40531443755535873,
+      "repeated_verse_count_corpus": 280
+    },
+    {
+      "scope": "numbered",
+      "profile_id": "plain",
+      "suffix_letters": 3,
+      "surah_id": 0,
+      "all_edges": 6122,
+      "all_agree": 487,
+      "retained_edges": 5645,
+      "retained_agree": 472,
+      "all_rate": 0.07954916693890886,
+      "retained_rate": 0.08361381753764394,
+      "repeated_verse_count_corpus": 280
+    }
+  ],
+  "registration": "exploratory",
+  "stop_reason_ru": "Исчерпаны три дополнительные конечные семейства из docs/EXPLORATORY_PLAN.md; иные закономерности не исключаются."
+}

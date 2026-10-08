@@ -1,0 +1,745 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Morphological Features</title>
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+	<style type="text/css">
+table.figure {
+	margin: auto;
+	border-top: 1px solid rgb(127, 127, 127);
+}
+
+table.figure td {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	line-height: 2em;
+	border-bottom: 1px solid rgb(127, 127, 127);
+	text-align: center;
+}
+
+td.hr,td.c1 {
+	font: 0.833em Arial;
+}
+
+td.hr {
+	font-weight: bold;
+	background: rgb(244, 255, 229);
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com">Audio</a>
+		| <a href="http://www.waqt.org">Prayer Times</a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tr>
+		<td class="logo1" rowspan="2"><a href="/"><img
+			src="/images/logo.png" /></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="/images/person2.gif" /> <a href="/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="/searchhelp.jsp">Search</a> <input
+			type="text" size="20" id="searchTextBox"
+			onkeypress="if(event.keyCode == 13) { search(); return false; }" />
+		<input type="button" value="Go" onclick="search();" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="/"><img src="/images/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Morphological Features</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tr><td class="level1"><a href="/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1 selected hideBorder"><a href="/documentation">Documentation</a></td></tr><tr><td class="level2 firstSubItem">Quranic Script</td></tr><tr><td class="level3"><a href="/documentation/phonetic.jsp">Phonetic transcription</a></td></tr><tr><td class="level3"><a href="/documentation/pausemarks.jsp">Pause marks</a></td></tr><tr><td class="level3"><a href="/documentation/versemarks.jsp">Verse marks</a></td></tr><tr><td class="level2">Morphology</td></tr><tr><td class="level3"><a href="/documentation/tagset.jsp">Part-of-speech tags</a></td></tr><tr><td class="level3"><a href="/documentation/morphologicalfeatures.jsp">Morphological features</a></td></tr><tr><td class="level2">Syntax</td></tr><tr><td class="level3"><a href="/documentation/dependencygraph.jsp">Dependency graphs</a></td></tr><tr><td class="level3"><a href="/documentation/syntaxrelation.jsp">Syntactic relations</a></td></tr><tr><td class="level3 lastMenuItem"><a href="/documentation/phrasetags.jsp">Phrase tags</a></td></tr><tr><td class="level1"><a href="/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1"><a href="/publications.jsp">Resources</a></td></tr><tr><td class="level1"><a href="/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 hideBorder"><a href="/java">Java API</a></td></tr></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first">Arabic has a rich morphology and a single word can
+	function as an entire sentence in English. For example the Arabic word
+	<i class="ab">fajaʿalnāhum</i> (<span class="at">فَجَعَلْنَٰهُمُ</span>)
+	found in verse (<a href="/wordbyword.jsp?chapter=23&verse=41#(23:41:1)">23:41</a>) can be
+	translated into the English sentence "and We made them". The reason
+	that such a compact syntax is possible is that the single word can be
+	divided into 4 distinct morphological segments:</p>
+	<p class="inlineToken"><span class="location">(23:41:4)</span><br/><a href="/qurandictionary.jsp?q=jEl#(23:41:4)">fajaʿalnāhum</a><br/>and We made them<br/><a class="tokenLink" href="/wordbyword.jsp?chapter=23&verse=41#(23:41:4)"><img src="/wordimage?id=44246" /></a></p>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0">
+	Fig 1. Morphological segmentation for word (23:41:4).</p>
+	<ul style="margin-top: 2em">
+		<li><i class="ab">fa</i> - a prefixed conjunction ("and")</li>
+		<li><i class="ab">jaʿal</i> - the stem, a
+		perfect past tense verb ("made") inflected as first person masculine
+		plural</li>
+		<li><i class="ab">nā</i> - a suffixed subject
+		pronoun ("We")</li>
+		<li><i class="ab">hum</i> – a suffixed object pronoun ("them")</li>
+	</ul>
+	<p>This single-word sentence has VSO (verb-subject-object) order.
+	In general Arabic is rather flexible with regards to word order since
+	case endings can be used to determine the role of each word in a
+	sentence. Word order is typically used to emphasize different parts of
+	a sentence. In the Quranic Arabic corpus, a part-of-speech tag has been
+	assigned to each morphological segment that makes up a word. For
+	example the word above has 4 part-of-speech tags, with one tag for each
+	of its 4 segments:</p>
+	<ul>
+		<li>CONJ - conjunction</li>
+		<li>V - verb</li>
+		<li>PRON - pronoun (for the attached subject pronoun)</li>
+		<li>PRON - pronoun (a second pronoun segment for the attached
+		object pronoun)</li>
+	</ul>
+	<p>Although multiple segments can be fused together into a single
+	word usually only one segment will be identified as the stem. Any
+	segments preceding the stem are prefixes and any segments following the
+	stem are suffixes. Prefix and suffix segments are optional while the
+	stem segment is the unmodified form of the word. Occasionally a word
+	will have two stems such as the contraction <span class="at">عَن</span>
+	+ <span class="at">مَا</span> = <span class="at">عَمَّ</span>:
+	</p>
+	<p class="inlineToken"><span class="location">(78:1:1)</span><br/><span class="phonetic">ʿamma</span><br/>About what<br/><a class="tokenLink" href="/wordbyword.jsp?chapter=78&verse=1#(78:1:1)"><img src="/wordimage?id=75122" /></a></p>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0">
+	Fig 2. A contraction of two stems in word (78:1:1).</p>
+	<h4>Prefixes</h4>
+	<p class="first">As well as part-of-speech tags, multiple
+	inflection features are assigned to each morphological segment. For
+	example, features for person, gender and number. The features for
+	prefixes end in + and are shown in figures 3 to 7 below. In contrast
+	features for suffixes start with +.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Segment part-of-speech / description</td>
+		</tr>
+		<tr>
+			<td class="c1">Al+</td>
+			<td class="c1">determiner (<i class="ab">al</i>)</td>
+			<td class="c1">DET – determiner prefix ("the")</td>
+		</tr>
+		<tr>
+			<td class="c1">bi+</td>
+			<td class="c1"><a href="prepositionphrase.jsp">preposition</a> (<i
+				class="ab">bi</i>)</td>
+			<td class="c1">P – preposition prefix ("by", "with", "in")</td>
+		</tr>
+		<tr>
+			<td class="c1">ka+</td>
+			<td class="c1"><a href="prepositionphrase.jsp">preposition</a> (<i
+				class="ab">ka</i>)</td>
+			<td class="c1">P – preposition prefix ("like" or "thus")</td>
+		</tr>
+		<tr>
+			<td class="c1">ta+</td>
+			<td class="c1"><a href="prepositionphrase.jsp">preposition</a> (<i
+				class="ab">ta</i>)</td>
+			<td class="c1">P – particle of oath prefix used as a preposition
+			("by Allah")</td>
+		</tr>
+		<tr>
+			<td class="c1">sa+</td>
+			<td class="c1">future particle (<i class="ab">sa</i>)</td>
+			<td class="c1">P – prefixed particle indicating the future
+			("they <u>will</u>")</td>
+		</tr>
+		<tr>
+			<td class="c1">ya+</td>
+			<td class="c1"><a href="vocative.jsp">vocative particle</a> (<i
+				class="ab">yā</i>)</td>
+			<td class="c1">VOC – a vocative prefix usually translated as "O"</td>
+		</tr>
+		<tr>
+			<td class="c1">ha+</td>
+			<td class="c1"><a href="vocative.jsp">vocative particle</a> (<i
+				class="ab">hā</i>)</td>
+			<td class="c1">VOC – a vocative prefix usually translated as
+			"Lo!"</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 3. Features identifying prefixed segments.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Segment part-of-speech / description</td>
+		</tr>
+		<tr>
+			<td class="c1">A:INTG+</td>
+			<td class="c1"><a href="particlealif.jsp">interrogative
+			particle</a> (<i class="ab">alif</i>)</td>
+			<td class="c1">INTG – prefixed interrogative particle ("is?",
+			"did?", "do?")</td>
+		</tr>
+		<tr>
+			<td class="c1">A:EQ+</td>
+			<td class="c1"><a href="particlealif.jsp">equalization
+			particle</a> (<i class="ab">alif</i>)</td>
+			<td class="c1">EQ – prefixed equalization particle ("whether")</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 4. Features identifying the particle <i class="ab">alif</i> as a
+	prefix.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Segment part-of-speech / description</td>
+		</tr>
+		<tr>
+			<td class="c1">w:CONJ+</td>
+			<td class="c1"><a href="conjunction.jsp">conjunction</a> (<i class="ab">wa</i>)</td>
+			<td class="c1">CONJ – conjunction prefix ("and")</td>
+		</tr>
+		<tr>
+			<td class="c1">w:REM+</td>
+			<td class="c1">resumption (<i class="ab">wa</i>)</td>
+			<td class="c1">REM – resumption prefix ("then" or "so")</td>
+		</tr>
+		<tr>
+			<td class="c1">w:CIRC+</td>
+			<td class="c1">circumstantial (<i class="ab">wa</i>)</td>
+			<td class="c1">CIRC – circumstantial prefix ("while")</td>
+		</tr>
+		<tr>
+			<td class="c1">w:SUP+</td>
+			<td class="c1">supplemental (<i class="ab">wa</i>)</td>
+			<td class="c1">SUP – supplemental prefix ("then" or "so")</td>
+		</tr>
+		<tr>
+			<td class="c1">w:P+</td>
+			<td class="c1"><a href="prepositionphrase.jsp">preposition</a> (<i
+				class="ab">wa</i>)</td>
+			<td class="c1">P – particle of oath prefix used as a preposition
+			("by the pen")</td>
+		</tr>
+		<tr>
+			<td class="c1">w:COM+</td>
+			<td class="c1"><a href="comitativeobject.jsp">comitative</a> (<i class="ab">wa</i>)</td>
+			<td class="c1">COM – comitative prefix ("with")</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 5. Features identifying the particle <i class="ab">wāw</i>
+	as a prefix.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Segment part-of-speech / description</td>
+		</tr>
+		<tr>
+			<td class="c1">f:REM+</td>
+			<td class="c1"><a href="particlefa.jsp">resumption</a> (<i
+				class="ab">fa</i>)</td>
+			<td class="c1">REM – resumption prefix ("then" or "so")</td>
+		</tr>
+		<tr>
+			<td class="c1">f:CONJ+</td>
+			<td class="c1"><a href="conjunction.jsp">conjunction</a> (<i
+				class="ab">fa</i>)</td>
+			<td class="c1">CONJ – conjunction prefix ("and")</td>
+		</tr>
+		<tr>
+			<td class="c1">f:RSLT+</td>
+			<td class="c1"><a href="particlefa.jsp">result</a> (<i
+				class="ab">fa</i>)</td>
+			<td class="c1">RSLT – result prefix ("then")</td>
+		</tr>
+		<tr>
+			<td class="c1">f:SUP+</td>
+			<td class="c1"><a href="particlefa.jsp">supplemental</a> (<i class="ab">fa</i>)</td>
+			<td class="c1">SUP – supplemental prefix ("then" or "so")</td>
+		</tr>
+		<tr>
+			<td class="c1">f:CAUS+</td>
+			<td class="c1"><a href="particlefa.jsp">cause</a> (<i class="ab">fa</i>)</td>
+			<td class="c1">CAUS – cause prefix ("then" or "so")</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 6. Features identifying the particle <i class="ab">fa</i> as a
+	prefix.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Segment part-of-speech / description</td>
+		</tr>
+		<tr>
+			<td class="c1">l:P+</td>
+			<td class="c1"><a href="prepositionphrase.jsp">preposition</a> (<i
+				class="ab">lām</i>)</td>
+			<td class="c1">P – the letter <i class="ab">lām</i>
+			as a prefixed preposition</td>
+		</tr>
+		<tr>
+			<td class="c1">l:EMPH+</td>
+			<td class="c1">emphasis (<i class="ab">lām</i>)</td>
+			<td class="c1">P – the letter <i class="ab">lām</i>
+			as a prefixed particle used to give emphasis</td>
+		</tr>
+		<tr>
+			<td class="c1">l:PRP+</td>
+			<td class="c1"><a href="subordinate.jsp">purpose</a> (<i
+				class="ab">lām</i>)</td>
+			<td class="c1">P – the letter <i class="ab">lām</i>
+			as a prefixed particle used to indicate purpose</td>
+		</tr>
+		<tr>
+			<td class="c1">l:IMPV+</td>
+			<td class="c1"><a href="imperative.jsp">imperative</a> (<i
+				class="ab">lām</i>)</td>
+			<td class="c1">P – the letter <i class="ab">lām</i>
+			as a prefixed particle used to form an imperative</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 7. Features identifying the particle <i class="ab">lām</i>
+	as a prefix.</p>
+	<h4>Roots and Lemmas</h4>
+	<p class="first">In Arabic and other Semitic languages such as
+	Hebrew, similar words may be grouped together according to a root. This
+	is a sequence of typically 3 or 4 consonants (known as radicals) which
+	together form a triliteral or quadriliteral root. From a single root a
+	wide variety of words may be formed, with distinct yet related
+	meanings. For example from the triliteral root <i class="ab">kāf tā bā</i>
+	(<span class="at">ك ت ب</span>) the verb "write" may
+	be formed, as well as its derivatives in Arabic including "writing",
+	"book", "author", "library" and "office".</p>
+	<p>The concept of a lemma is also used to group similar words
+	together at a finer level of granularity than a root. The lemma groups
+	word-forms that differ only by inflectional (as opposed to
+	derivational) morphology, and do not vary in meaning. Unlike the root,
+	the lemma is an actual word selected to represent the group and is
+	typically the same word as used in dictionary headings. A third feature
+	used to group words together is the SP (special) feature. Certain
+	groups of <a href="verbkaana.jsp">verbs</a> and <a
+		href="particleinna.jsp">particles</a> have special rules in Arabic
+	grammar with regards to case endings and syntactic roles.</p>
+	<p>Both roots and lemmas are used in the Quranic Arabic corpus so
+	that words may be easily grouped together to form an <a
+		href="/qurandictionary.jsp">electronic lexicon of the Quran</a> in
+	classical Arabic. For verbs, only the root (not lemma) is indicated,
+	since the remaining morphological features are sufficient to determine
+	the final form of the verb. Nouns, proper nouns and adjectives have
+	both a root and a lemma. Other parts of speech such as particles only
+	have lemmas (not roots) indicated, since these fall outside of the root
+	+ template paradigm. The following table lists the morphological
+	features used to group similar words together. These features make use
+	of <a href="/java/buckwalter.jsp">extended Buckwalter
+	transliteration</a>:</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">ROOT:</td>
+			<td class="c1">root</td>
+			<td class="c1">Indicates the (usually triliteral) root of a
+			word, for example ROOT:ktb</td>
+		</tr>
+		<tr>
+			<td class="c1">LEM:</td>
+			<td class="c1">lemma</td>
+			<td class="c1">Specifies the common lemma for a group of words,
+			for example LEM:kitaAb</td>
+		</tr>
+		<tr>
+			<td class="c1">SP:</td>
+			<td class="c1">special</td>
+			<td class="c1">Indicates that the word belongs to a special
+			group, for example SP:&lt;in~</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 8. Root and lemma features.</p>
+	<h4>Person, Gender and Number</h4>
+	<p class="first">In Arabic, words may inflect for person, gender
+	and number. Unlike in English words inflect not only for plural and
+	singular but also for the dual. For example there is a distinct
+	word-form to represent "two books". In the Quranic Arabic corpus, the
+	features for person, gender and number are combined using a
+	concatenative notation. For example 3MS represents third person,
+	masculine, singular. Similarly 2D represents second person, dual. The
+	concept of gender in Arabic grammar may refer to either semantic,
+	morphemic or grammatical gender (see <a href="gender.jsp">the
+	grammar of gender</a>).</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Values</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">person</td>
+			<td><span class="at">الاسناد</span></td>
+			<td class="c1">1, 2, 3</td>
+			<td class="c1">first person, second person, third person</td>
+		</tr>
+		<tr>
+			<td class="c1">gender</td>
+			<td><span class="at">الجنس</span></td>
+			<td class="c1">M, F</td>
+			<td class="c1">masculine, feminine</td>
+		</tr>
+		<tr>
+			<td class="c1">number</td>
+			<td><span class="at">العدد</span></td>
+			<td class="c1">S, D, P</td>
+			<td class="c1">singular, dual, plural</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 9. Features for person, gender and number.</p>
+	<h4>Verb Features</h4>
+	<p class="first">The morphological features discussed in this
+	section apply to verbs as well as to their derivatives: the active
+	participle, passive participle and the verbal noun. An important verb
+	feature is the aspect. This is closely related to but distinct from the
+	concept of tense. In Quranic Arabic the aspect of a verb is either
+	perfect, imperfect, or imperative. The perfect roughly corresponds to
+	the past tense in English although there is a distinction: the perfect
+	refers to actions which have been completed. In addition to aspect,
+	verbs in Quranic Arabic are <a href="mood.jsp">conjugated for mood</a>.
+	Imperfect verbs may be found in the indicative, subjunctive and jussive
+	moods. The indicative mood is the normal "default" mood so that if the
+	mood feature is not tagged then the verb should be considered to be in
+	the indicative mood.</p>
+	<p>The two other features used for verbs and their derivatives are
+	voice (active or passive) and <a href="verbforms.jsp">form</a>. The active voice is the default and
+	if not indicated a verb should be considered to be in the active voice.
+	<a href="verbforms.jsp">Verb forms</a> are indicated using roman numerals, as found in Arabic
+	dictionaries, so that (IV) represents a fourth form verb.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">PERF</td>
+			<td><span class="at">فعل ماض</span></td>
+			<td class="c1">Perfect verb</td>
+		</tr>
+		<tr>
+			<td class="c1">IMPF</td>
+			<td><span class="at">فعل مضارع</span></td>
+			<td class="c1"><a href="mood.jsp">Imperfect verb</a></td>
+		</tr>
+		<tr>
+			<td class="c1">IMPV</td>
+			<td><span class="at">فعل أمر</span></td>
+			<td class="c1"><a href="imperative.jsp">Imperative verb</a></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 10. Aspect features.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">IND</td>
+			<td><span class="at">مرفوع</span></td>
+			<td class="c1">Indicative mood (default)</td>
+		</tr>
+		<tr>
+			<td class="c1">SUBJ</td>
+			<td><span class="at">منصوب</span></td>
+			<td class="c1"><a href="mood.jsp">Subjunctive mood</a></td>
+		</tr>
+		<tr>
+			<td class="c1">JUS</td>
+			<td><span class="at">مجزوم</span></td>
+			<td class="c1"><a href="mood.jsp">Jussive mood</a></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 11. Mood features.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">ACT</td>
+			<td><span class="at">مبني للمعلوم</span></td>
+			<td class="c1">Active voice (default)</td>
+		</tr>
+		<tr>
+			<td class="c1">PASS</td>
+			<td><span class="at">مبني للمجهول</span></td>
+			<td class="c1">Passive voice</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 12. Voice features.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">I</td>
+			<td class="c1">First form (default)</td>
+		</tr>
+		<tr>
+			<td class="c1">II</td>
+			<td class="c1">Second form</td>
+		</tr>
+		<tr>
+			<td class="c1">III</td>
+			<td class="c1">Third form</td>
+		</tr>
+		<tr>
+			<td class="c1">IV</td>
+			<td class="c1">Fourth form</td>
+		</tr>
+		<tr>
+			<td class="c1">V</td>
+			<td class="c1">Fifth form</td>
+		</tr>
+		<tr>
+			<td class="c1">VI</td>
+			<td class="c1">Sixth form</td>
+		</tr>
+		<tr>
+			<td class="c1">VII</td>
+			<td class="c1">Seventh form</td>
+		</tr>
+		<tr>
+			<td class="c1">VIII</td>
+			<td class="c1">Eighth form</td>
+		</tr>
+		<tr>
+			<td class="c1">IX</td>
+			<td class="c1">Ninth form</td>
+		</tr>
+		<tr>
+			<td class="c1">X</td>
+			<td class="c1">Tenth form</td>
+		</tr>
+		<tr>
+			<td class="c1">XI</td>
+			<td class="c1">Eleventh form</td>
+		</tr>
+		<tr>
+			<td class="c1">XII</td>
+			<td class="c1">Twelfth form</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 13. <a href="verbforms.jsp">Verb form</a> features.</p>
+	<h4>Derived Nouns</h4>
+	<p class="first">In Quranic Arabic, the active participle, passive
+	participle and verbal noun are three types of nominals which are
+	derived directly from verbs. In the Quranic Arabic corpus these are
+	tagged with the noun or adjective part-of speech-tag and include one
+	out of three possible <i>derivation</i> features. For example active
+	participles are tagged in the corpus as POS:N ACT PCPL. The verbal
+	features above that apply to verbs also apply to derived nouns (aspect,
+	mood, voice and form) and are used to indicate the morphology of the
+	original verb that the noun was derived from. Figure 14 below shows the
+	derivation features used to indicate the type of a derived noun:</p>
+
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">ACT PCPL</td>
+			<td><span class="at">اسم فاعل</span></td>
+			<td class="c1">Active participle</td>
+		</tr>
+		<tr>
+			<td class="c1">PASS PCPL</td>
+			<td><span class="at">اسم مفعول</span></td>
+			<td class="c1">Passive participle</td>
+		</tr>
+		<tr>
+			<td class="c1">VN</td>
+			<td><span class="at">مصدر</span></td>
+			<td class="c1">Verbal noun</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 14. Derivation features.</p>
+	<h4 id="nominal">Nominal Features</h4>
+	<p class="first">The feature Al+ is used to denote the prefixed
+	determiner <i class="ab">al</i> ("the") attached to nominals (nouns,
+	proper nouns and adjectives). In Arabic there is no indefinite article
+	("a"/"an" in English). Instead <i class="ab">tanwīn</i>
+	is used and diacritics are attached to the end of a word to mark it as
+	indefinite. The features DEF and INDEF are used to indicate the state
+	of a noun as definite or as indefinite respectively (see figure 15
+	below). Nominals may be found in one of three <i>grammatical cases</i>:
+	the nominative case, the accusative case, and the genitive case (see
+	figure 16):</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">DEF</td>
+			<td><span class="at">معرفة</span></td>
+			<td class="c1">Definite state</td>
+		</tr>
+		<tr>
+			<td class="c1">INDEF</td>
+			<td><span class="at">نكرة</span></td>
+			<td class="c1">Indefinite state</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 15. State features.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0"
+		style="margin-top: 2em">
+		<tr>
+			<td class="hr">Feature</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="c1">NOM</td>
+			<td><span class="at">مرفوع</span></td>
+			<td class="c1">Nominative case</td>
+		</tr>
+		<tr>
+			<td class="c1">ACC</td>
+			<td><span class="at">منصوب</span></td>
+			<td class="c1">Accusative case</td>
+		</tr>
+		<tr>
+			<td class="c1">GEN</td>
+			<td><span class="at">مجرور</span></td>
+			<td class="c1">Genitive case</td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 16. Case features.</p>
+	<h4>Suffixes</h4>
+	<p class="first">In the Quranic Arabic Corpus, three features are
+	used to indicate suffixes. These are attached pronouns, the vocative
+	suffix and the <i class="ab">nūn</i> of emphasis.
+	The vocative suffix is denoted by the morphological feature +VOC and is
+	used only with the word <i class="ab">allāh</i> to
+	produce the vocative word-form <i class="ab">allāhumma</i>.
+	The morphological feature +n:EMPH is used to denote the emphatic usage
+	of <i class="ab">nūn</i> as an attached suffix.</p>
+	<p>Attached pronoun suffixes are identified using the PRON:
+	compound morphological feature. Pronouns attached to nouns are
+	possessive pronouns, and when attached to verbs they are either subject
+	or object pronouns. An attached pronoun may inflect for person, gender
+	and number. A concatenative notation is used with the PRON: tag. For
+	example PRON:3MS represents a third person masculine singular suffixed
+	pronoun. Similarly PRON:2D represents a second person dual suffixed
+	pronoun. See figure 9 above for person, gender and number features.</p>
+	<h4>See Also</h4>
+	<ul class="also">
+		<li><a href="tagset.jsp">Part-of-speech Tags</a></li>
+	</ul>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br/>
+			<a href="http://www.leeds.ac.uk">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright &copy; Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a
+			href="/license.jsp">GNU public license</a> with <a
+			href="/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"64a921327e174c6380302b7d747d1458","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

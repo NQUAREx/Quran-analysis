@@ -1,0 +1,5 @@
+{
+  "status": "pass",
+  "log": "[core] кэш проверен; пропуск\n[morphology] кэш проверен; пропуск\n[exploration] кэш проверен; пропуск\n[statistics] кэш проверен; пропуск\n[extension] кэш проверен; пропуск\n[presentation] кэш проверен; пропуск\n[validation] кэш проверен; пропуск\nГотово: /workspace/Quran-analysis/dashboard/index.html\n",
+  "expected_cached_stages": 7
+}

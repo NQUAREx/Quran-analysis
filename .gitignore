@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+*.tmp
+.cache/
+exports/quran-analysis-portable.zip
+# The raw database is inside the portable archive; a compressed copy is tracked.
+data/processed/corpus.sqlite
+

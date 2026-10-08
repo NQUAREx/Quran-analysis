@@ -1,0 +1,527 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Part-of-speech Tagset</title>
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+	<style type="text/css">
+table.figure {
+	margin: auto;
+	border-top: 1px solid rgb(127, 127, 127);
+}
+
+table.figure td {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	line-height: 2em;
+	border-bottom: 1px solid rgb(127, 127, 127);
+	text-align: center;
+}
+
+td.hr,td.c1,td.sc {
+	font: 0.833em Arial;
+}
+
+td.hr {
+	font-weight: bold;
+	background: rgb(244, 255, 229);
+}
+
+td.sc {
+	border-right: 1px solid black;
+	font-weight: bold;
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com">Audio</a>
+		| <a href="http://www.waqt.org">Prayer Times</a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tr>
+		<td class="logo1" rowspan="2"><a href="/"><img
+			src="/images/logo.png" /></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="/images/person2.gif" /> <a href="/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="/searchhelp.jsp">Search</a> <input
+			type="text" size="20" id="searchTextBox"
+			onkeypress="if(event.keyCode == 13) { search(); return false; }" />
+		<input type="button" value="Go" onclick="search();" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="/"><img src="/images/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Part-of-speech Tagset</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tr><td class="level1"><a href="/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1 selected hideBorder"><a href="/documentation">Documentation</a></td></tr><tr><td class="level2 firstSubItem">Quranic Script</td></tr><tr><td class="level3"><a href="/documentation/phonetic.jsp">Phonetic transcription</a></td></tr><tr><td class="level3"><a href="/documentation/pausemarks.jsp">Pause marks</a></td></tr><tr><td class="level3"><a href="/documentation/versemarks.jsp">Verse marks</a></td></tr><tr><td class="level2">Morphology</td></tr><tr><td class="level3"><a href="/documentation/tagset.jsp">Part-of-speech tags</a></td></tr><tr><td class="level3"><a href="/documentation/morphologicalfeatures.jsp">Morphological features</a></td></tr><tr><td class="level2">Syntax</td></tr><tr><td class="level3"><a href="/documentation/dependencygraph.jsp">Dependency graphs</a></td></tr><tr><td class="level3"><a href="/documentation/syntaxrelation.jsp">Syntactic relations</a></td></tr><tr><td class="level3 lastMenuItem"><a href="/documentation/phrasetags.jsp">Phrase tags</a></td></tr><tr><td class="level1"><a href="/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1"><a href="/publications.jsp">Resources</a></td></tr><tr><td class="level1"><a href="/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 hideBorder"><a href="/java">Java API</a></td></tr></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first">Traditional Arabic grammar defines a detailed
+	part-of-speech hierarchy which applies to both words and morphological
+	segments. Fundamentally, a word may be classified as a nominal <i
+		class="ab">ism</i> (<span class="at">اسم</span>),
+	verb <i class="ab">fiʿil</i> (<span class="at">فعل</span>)
+	or a particle <i class="ab">ḥarf</i> (<span
+		class="at">حرف</span>). The set of nominals include
+	nouns, pronouns, adjectives and adverbs. The particles include
+	prepositions, conjunctions and interrogatives, as well as many others.
+	Morphological annotation in the Quranic Arabic corpus divdes words into
+	multiple segments. Each segment is assigned a part-of-speech tag. These
+	tags are detailed in the following sections. In addition to
+	part-of-speech tags, each segment is annotated using a set of multiple
+	<a href="morphologicalfeatures.jsp">morphological features</a>.</p>
+	<h4>Nominals</h4>
+	<p class="first">The first of the three basic parts-of-speech are
+	the nominals <i class="ab">ism</i> (literally "names" in Arabic). The
+	tags for nominals in the Quranic corpus are shown in Figure 1 below:</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">&nbsp;</td>
+			<td class="hr">Tag</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="sc">Nouns</td>
+			<td class="c1">N</td>
+			<td class=""><span class="at">اسم</span></td>
+			<td class="c1"><span class="phonetic">Noun</span></td>
+		</tr>
+		<tr>
+			<td class="c1">PN</td>
+			<td><span class="at">اسم علم</span></td>
+			<td class="c1"><span class="phonetic">Proper noun</span></td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="sc">Derived nominals</td>
+			<td class="c1">ADJ</td>
+			<td><span class="at">صفة</span></td>
+			<td class="c1"><a href="adjective.jsp">Adjective</a></td>
+		</tr>
+		<tr>
+			<td class="c1">IMPN</td>
+			<td><span class="at">اسم فعل أمر</span></td>
+			<td class="c1"><span class="phonetic">Imperative verbal noun</span></td>
+		</tr>
+		<tr>
+			<td rowspan="3" class="sc">Pronouns</td>
+			<td class="c1">PRON</td>
+			<td><span class="at">ضمير</span></td>
+			<td class="c1"><span class="phonetic">Personal pronoun</span></td>
+		</tr>
+		<tr>
+			<td class="c1">DEM</td>
+			<td><span class="at">اسم اشارة</span></td>
+			<td class="c1"><span class="phonetic">Demonstrative pronoun</span></td>
+		</tr>
+		<tr>
+			<td class="c1">REL</td>
+			<td><span class="at">اسم موصول</span></td>
+			<td class="c1"><a href="subordinate.jsp">Relative pronoun</a></td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="sc">Adverbs</td>
+			<td class="c1">T</td>
+			<td><span class="at">ظرف زمان</span></td>
+			<td class="c1"><span class="phonetic">Time adverb</span></td>
+		</tr>
+		<tr>
+			<td class="c1">LOC</td>
+			<td><span class="at">ظرف مكان</span></td>
+			<td class="c1"><span class="phonetic">Location adverb</span></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 1. Part-of-speech tagset for nominals.</p>
+	<h4>Proper Nouns</h4>
+	<p class="first">Proper nouns are annotated using the PN tag in the
+	Quranic corpus. In Arabic orthography, there is no distinction between
+	a proper noun and a noun, whereas in English these are written with the
+	first letter capitalized. Proper nouns in Arabic are known by
+	convention and through the fact that they have the grammatical property
+	of being definite even though they do not carry the <i class="ab">al-</i>
+	determiner prefix. The set of proper nouns includes personal names such
+	as "the prophet <i class="ab">ibrāhīm</i>". In
+	Arabic, proper nouns as known as <span class="at">اسم علم</span>.
+	</p>
+	<h4>Pronouns</h4>
+	<p class="first">Three types of pronoun are identified in the
+	corpus using the tags PRON, DEM and REL. The personal pronouns (PRON)
+	are those which are found in English ("I", "we", "you", "them", "us")
+	together with pronouns found only in Quranic Arabic, such as those
+	inflected for the dual or feminine (for example <i class="ab">antumā</i>,
+	"you two"). When segmenting words for morphological annotation, the
+	PRON tag is also used to identify attached pronoun segments, which are
+	suffixes that appear at the end of words. In the case of nouns these
+	are possessive pronouns. For example "his book" is fused into a single
+	Arabic word-form (<i class="ab">kitābuhu</i>).
+	Suffixed pronouns attached to <a href="verb.jsp">verbs</a> will be
+	either subject pronouns or object pronouns.</p>
+	<p>The DEM tag is used to identify demonstrative pronouns ("this",
+	"that", "these", "those"). In Quranic Arabic, these are termed <i
+		class="ab">ism ishāra</i> (literally, "the names of
+	pointing"). The REL tag is used to identify <a href="subordinate.jsp">relative
+	pronouns</a> which connect a relative clause to its main clause (for
+	example "the book <u>that</u> you bought"). In Arabic grammar, relative
+	pronouns are known as <i class="ab">ism mawṣūl</i>
+	("the names of connection").</p>
+	<h4>Adjectives</h4>
+	<p class="first"><a href="adjective.jsp">Adjectives</a> (<span
+		class="at">صفة</span>) are closely related to
+	nouns in Quranic Arabic, and it is sometimes not straightforward to
+	distinguish between the two as both carry the same morphological
+	features. For example both nouns and adjectives accept the determiner <i
+		class="ab">al-</i> ("the"). The rule followed in the Quranic corpus is
+	to mark a word as an adjective if it is considered to be one according
+	to its syntactic role in the sentence. A nominal tagged as an adjective
+	will directly follow the noun that it describes.</p>
+	<h4>Verbs</h4>
+	<p class="first">The second of the three basic parts-of-speech is
+	the <a href="verb.jsp">verb</a>. All verbs in the Quranic corpus are
+	tagged using the V (verb) tag. Each verb is also annotated using
+	multiple <a href="morphologicalfeatures.jsp">morphological features</a>
+	to specify conjugation. In Quranic Arabic, verbs can be conjugated
+	according to three different grammatical <i>aspects</i> (perfect,
+	imperfect and imperative) as well as <a href="mood.jsp">moods of
+	the imperfect</a> (indicative, subjunctive and jussive). Nouns
+	derived from verbs – such as active and passive participles – are
+	tagged as N (noun) and are annotated using the "derivation" feature.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">&nbsp;</td>
+			<td class="hr">Tag</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="sc">Verbs</td>
+			<td class="c1">V</td>
+			<td><span class="at">فعل</span></td>
+			<td class="c1"><a href="verb.jsp">Verb</a></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 2. Verb part-of-speech tag.</p>
+	<h4>Particles</h4>
+	<p class="first">The third of the three basic parts-of-speech is
+	the particle. Particles include prepositions, <i class="ab">lām</i>
+	prefixes, conjunctions and others. Interrogative particles are tagged
+	using INTG, which includes the independent particle <i class="ab">hal</i>
+	and the prefixed interrogative <i class="ab">alif</i>. Negative
+	particles in the Quranic Arabic corpus are tagged as NEG. Certain
+	negative particles may place a following imperfect verb into the <a
+		href="mood.jsp">subjunctive or jussive mood</a>. The VOC tag is used
+	to identify vocative particles and prefixes such as in <i class="ab">yā-rabbi</i>.
+	In English this would be roughly translated using the archaic vocative
+	particle "O", as in "O my Lord". Part-of-speech tags for particles and
+	Quranic initials are shown in Figure 3 below.</p>
+	<table class="figure" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="hr">&nbsp;</td>
+			<td class="hr">Tag</td>
+			<td class="hr">Arabic Name</td>
+			<td class="hr">Description</td>
+		</tr>
+		<tr>
+			<td class="sc">Prepositions</td>
+			<td class="c1">P</td>
+			<td class=""><span class="at">حرف جر</span></td>
+			<td class="c1"><a href="prepositionphrase.jsp">Preposition</a></td>
+		</tr>
+		<tr>
+			<td class="sc" rowspan="3"><i class="ab">lām</i>
+			Prefixes</td>
+			<td class="c1">EMPH</td>
+			<td><span class="at">لام التوكيد</span></td>
+			<td class="c1"><span class="phonetic">Emphatic</span> <i
+				class="ab">lām</i> <span class="phonetic">prefix</span></td>
+		</tr>
+		<tr>
+			<td class="c1">IMPV</td>
+			<td><span class="at">لام الامر</span></td>
+			<td class="c1"><a href="imperative.jsp">Imperative <i
+				class="ab">lām</i> prefix</a></td>
+		</tr>
+		<tr>
+			<td class="c1">PRP</td>
+			<td><span class="at">لام التعليل</span></td>
+			<td class="c1"><a href="mood.jsp">Purpose <i class="ab">lām</i>
+			prefix</a></td>
+		</tr>
+		<tr>
+			<td class="sc" rowspan="2">Conjunctions</td>
+			<td class="c1">CONJ</td>
+			<td><span class="at">حرف عطف</span></td>
+			<td class="c1"><a href="conjunction.jsp">Coordinating conjunction</a></td>
+		</tr>
+		<tr>
+			<td class="c1">SUB</td>
+			<td><span class="at">حرف مصدري</span></td>
+			<td class="c1"><a href="subordinate.jsp">Subordinating conjunction</a></td>
+		</tr>
+		<tr>
+			<td class="sc" rowspan="27">Particles</td>
+			<td class="c1">ACC</td>
+			<td><span class="at">حرف نصب</span></td>
+			<td class="c1"><a href="particleinna.jsp">Accusative particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">AMD</td>
+			<td><span class="at">حرف استدراك</span></td>
+			<td class="c1"><span class="phonetic">Amendment particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">ANS</td>
+			<td><span class="at">حرف جواب</span></td>
+			<td class="c1"><span class="phonetic">Answer particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">AVR</td>
+			<td><span class="at">حرف ردع</span></td>
+			<td class="c1"><span class="phonetic">Aversion particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">CAUS</td>
+			<td><span class="at">حرف سببية</span></td>
+			<td class="c1"><a href="particlefa.jsp">Particle of cause</a></td>
+		</tr>
+		<tr>
+			<td class="c1">CERT</td>
+			<td><span class="at">حرف تحقيق</span></td>
+			<td class="c1"><span class="phonetic">Particle of certainty</span></td>
+		</tr>
+		<tr>
+			<td class="c1">CIRC</td>
+			<td><span class="at">حرف حال</span></td>
+			<td class="c1"><span class="phonetic">Circumstantial particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">COM</td>
+			<td><span class="at">واو المعية</span></td>
+			<td class="c1"><a href="comitativeobject.jsp">Comitative particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">COND</td>
+			<td><span class="at">حرف شرط</span></td>
+			<td class="c1"><a href="condition.jsp">Conditional particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">EQ</td>
+			<td><span class="at">حرف تسوية</span></td>
+			<td class="c1"><a href="particlealif.jsp">Equalization particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">EXH</td>
+			<td><span class="at">حرف تحضيض</span></td>
+			<td class="c1"><span class="phonetic">Exhortation particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">EXL</td>
+			<td><span class="at">حرف تفصيل</span></td>
+			<td class="c1"><span class="phonetic">Explanation particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">EXP</td>
+			<td><span class="at">أداة استثناء</span></td>
+			<td class="c1"><a href="exceptive.jsp">Exceptive particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">FUT</td>
+			<td><span class="at">حرف استقبال</span></td>
+			<td class="c1"><span class="phonetic">Future particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">INC</td>
+			<td><span class="at">حرف ابتداء</span></td>
+			<td class="c1"><span class="phonetic">Inceptive particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">INT</td>
+			<td><span class="at">حرف تفسير</span></td>
+			<td class="c1"><span class="phonetic">Particle of interpretation</span></td>
+		</tr>
+		<tr>
+			<td class="c1">INTG</td>
+			<td><span class="at">حرف استفهام</span></td>
+			<td class="c1"><a href="particlealif.jsp">Interogative particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">NEG</td>
+			<td><span class="at">حرف نفي</span></td>
+			<td class="c1"><a href="mood.jsp">Negative particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">PREV</td>
+			<td><span class="at">حرف كاف</span></td>
+			<td class="c1"><a href="particleinna.jsp">Preventive particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">PRO</td>
+			<td><span class="at">حرف نهي</span></td>
+			<td class="c1"><a href="imperative.jsp">Prohibition particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">REM</td>
+			<td><span class="at">حرف استئنافية</span></td>
+			<td class="c1"><a href="particlefa.jsp">Resumption particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">RES</td>
+			<td><span class="at">أداة حصر</span></td>
+			<td class="c1"><a href="exceptive.jsp">Restriction particle</a></td>
+		</tr>
+		<tr>
+			<td class="c1">RET</td>
+			<td><span class="at">حرف اضراب</span></td>
+			<td class="c1"><span class="phonetic">Retraction particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">RSLT</td>
+			<td><span class="at">حرف واقع في جواب الشرط</span></td>
+			<td class="c1"><span class="phonetic">Result particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">SUP</td>
+			<td><span class="at">حرف زائد</span></td>
+			<td class="c1"><span class="phonetic">Supplemental particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">SUR</td>
+			<td><span class="at">حرف فجاءة</span></td>
+			<td class="c1"><span class="phonetic">Surprise particle</span></td>
+		</tr>
+		<tr>
+			<td class="c1">VOC</td>
+			<td><span class="at">حرف نداء</span></td>
+			<td class="c1"><a href="vocative.jsp">Vocative particle</a></td>
+		</tr>
+		<tr>
+			<td class="sc">Disconnected Letters</td>
+			<td class="c1">INL</td>
+			<td class=""><span class="at">حروف مقطعة</span></td>
+			<td class="c1"><span class="phonetic">Quranic initials</span></td>
+		</tr>
+	</table>
+	<p
+		style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.5em;">
+	Fig 3. Part-of-speech tagset for particles and the Quranic initials.</p>
+	<h4>Prepositions</h4>
+	<p class="first">In the case of attached prefixes, the <a
+		href="prepositionphrase.jsp">prepositions</a> are straightforward.
+	Certain single letter prepositions may be fused to a word as a prefix.
+	These include <i class="ab">bi</i>, <i class="ab">ka</i>, <i class="ab">ta</i>,
+	<i class="ab">wa</i>, and one of the senses of <i class="ab">lām</i>.
+	The prefixed prepositions <i class="ab">ta</i> and <i class="ab">wa</i>
+	occur in Quranic Arabic but not are not typically found in the modern
+	standard form of the language. They are used in the Quran as particles
+	of oath, for example <i class="ab">ta-allah</i>, "by Allah". In
+	addition independent words may be prepositions. In the Quranic Arabic
+	corpus, prepositions are identified by the P tag. A word is tagged as a
+	preposition if and only if it considered to be a genitive preposition <i
+		class="ab">ḥarf jar</i> (<span class="at">حرف جر</span>).
+	</p>
+	<h4>Quranic Initials (Disconnected Letters)</h4>
+	<p class="first">The Quranic initials (or <i class="ab">muqattaʿāt</i>
+	in Arabic) are sequences of mysterious letters, such as <i class="ab">alif lām mīm</i>
+	(<span class="at">ا ل م</span>), which make up the
+	first verses of several chapters in the Holy Quran but do not combine
+	to form words. These are also known as the disconnected letters (<span
+		class="at">حروف مقطعة</span>). There are numerous
+	suggestions as to the meaning of these letters and so they are given
+	their own part-of-speech tag (INL). This is so as to avoid any
+	assumptions as to their meaning, which would be the case if they were
+	tagged as being proper nouns or as abbreviations (see <a
+		href="http://en.wikipedia.org/wiki/muqatta'at">http://en.wikipedia.org/wiki/muqatta'at</a>).
+	</p>
+	<p>In the Quran, 30 verses in 29 chapters begin with initials. All
+	initials occur at the first verse, except for those in chapter 42. This
+	chapter has a pair of initials at verses (<a
+		href="/wordbyword.jsp?chapter=42">42:1</a>) and at (<a
+		href="/wordbyword.jsp?chapter=42">42:2</a>). The full meaning behind
+	the Quranic initials is still not yet clearly understood, and there are
+	differing opinions as to their interpretation. One observation is that
+	the initials are almost always followed by a description of Quranic
+	revelation itself. The only occurrence of double initials - at the
+	first two verses of chapter 42 - is followed by two mentions of
+	revelation, at verse (<a href="/wordbyword.jsp?chapter=42">42:3</a>).</p>
+	<h4>See Also</h4>
+	<ul class="also">
+		<li><a href="morphologicalfeatures.jsp">Morphological
+		Features</a></li>
+		<li><a href="http://www.islamguiden.com/arabi/m_a_r_58.htm">The
+		Grammar of Particles (in Arabic)</a></li>
+	</ul>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br/>
+			<a href="http://www.leeds.ac.uk">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright &copy; Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a
+			href="/license.jsp">GNU public license</a> with <a
+			href="/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"64a921327e174c6380302b7d747d1458","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

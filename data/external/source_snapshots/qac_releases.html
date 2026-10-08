@@ -1,0 +1,175 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Quranic Arabic Corpus - Version 0.4 Release Notes</title>
+<link href="/css/main.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+
+	<style type="text/css">
+ul.list {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ul.list li {
+	margin-bottom: 0.5em;
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com">Audio</a>
+		| <a href="http://www.waqt.org">Prayer Times</a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tr>
+		<td class="logo1" rowspan="2"><a href="/"><img
+			src="/images/logo.png" /></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="/images/person2.gif" /> <a href="/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="/searchhelp.jsp">Search</a> <input
+			type="text" size="20" id="searchTextBox"
+			onkeypress="if(event.keyCode == 13) { search(); return false; }" />
+		<input type="button" value="Go" onclick="search();" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="/"><img src="/images/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Quranic Arabic Corpus - Version 0.4 Release Notes</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tr><td class="level1"><a href="/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1"><a href="/documentation">Documentation</a></td></tr><tr><td class="level1"><a href="/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1 selected hideBorder"><a href="/publications.jsp">Resources</a></td></tr><tr><td class="level4"><a href="/publications.jsp">Publications</a></td></tr><tr><td class="level4"><a href="/bibliography.jsp">Bibliography</a></td></tr><tr><td class="level4"><a href="/download">Data download</a></td></tr><tr><td class="level4"><a href="/releasenotes.jsp">Release notes</a></td></tr><tr><td class="level4 lastMenuItem"><a href="http://www.mail-archive.com/comp-quran@comp.leeds.ac.uk">Mailing list</a></td></tr><tr><td class="level1"><a href="/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 hideBorder"><a href="/java">Java API</a></td></tr></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first"><i>1st May, 2011. <img src="/images/new.gif"/></i></p>
+	<p>The <b>Quranic Arabic Corpus</b> (<a href="/">http://corpus.quran.com</a>)
+	is an international collaborative linguistic project initiated at the <a
+		href="http://www.comp.leeds.ac.uk/arabic">University of Leeds</a>, that
+	aims to bridge the gap between the traditional Arabic grammar of</i> <i
+		class="ab">iʿrāb</i> and techniques from modern
+	computational linguistics. This open source resource includes <a href="wordbyword.jsp">part-of-speech
+	tagging</a> for the Quran, <a href="wordmorphology.jsp?location=(1:1:1)">morphological
+	segmentation</a> and a formal representation of Quranic syntax using
+	<a href="documentation/dependencygraph.jsp">dependency graphs</a>.
+	Version 0.4 of the corpus provides several improvements over the previous release:</p>
+	<ul class="list">
+
+		<li><b>Increased coverage for the syntactic treebank</b>. Version
+		0.4 of the <a href="treebank.jsp">treebank</a> covers 40% of the Quran
+		by word count (30,895 out of 77,429 words). The treebank provides
+		syntactic annotation using <a href="documentation/dependencygraph.jsp">dependency
+		grammar</a> for chapters 1-8 and 59-114 of the Quran.</li>
+
+		<li><b>Revised morphological analysis.</b>
+		Following <a href="messageboard.jsp">online collaboration by volunteer
+		annotators</a>, over 500 suggestions have cross-checked against <a href="bibliography.jsp">traditional
+		sources</a> of Arabic grammar, resulting in more accurate morphological tagging.</li>
+
+		<li><b>Improved Quran dictionary and lemmatization.</b>
+		The list of roots and lemmas that group related derived words has been made more consistent
+		with traditional Arabic lexicons. The online <a href="qurandictionary.jsp">Quran dictionary</a>
+		now also includes concordance lines from Quranic verses as context.</li>
+
+		<li><b>Readability and navigation improvements.</b> The content
+		of the website has been better organized, with improvements to
+		navigation and layout. Several typing mistakes and omissions have been
+		corrected in the <a href="/wordbyword.jsp">word by word</a>
+		interlinear translation into English.</li>
+
+		<li><b>More accurate tagging of proper nouns.</b> Eight new named entities have been
+		added to the <a href="/ontology.jsp">semantic ontology</a>
+		that were previously tagged only as nouns:
+		<a href="/wordmorphology.jsp?location=(46:21:7)">Al-Ahqaf</a>,
+		<a href="/wordmorphology.jsp?location=(5:50:2)">Al-Jahiliyah</a>,
+		<a href="/wordmorphology.jsp?location=(62:9:9)">Al-Jumu'ah</a>,
+		<a href="/wordmorphology.jsp?location=(37:125:2)">Baal</a>,
+		<a href="/wordmorphology.jsp?location=(22:17:8)">Magians</a>,
+		<a href="/wordmorphology.jsp?location=(76:18:4)">Salsabil</a>,
+		<a href="/wordmorphology.jsp?location=(53:49:4)">Sirius</a>,
+		and <a href="/wordmorphology.jsp?location=(37:62:6)">Zaqqum</a>.</li>
+
+		<li><b>More accurate tagging for particles</b> <i class="ab">wāw</i>
+		and <i class="ab">fa</i>. In accordance with traditional Arabic grammar,
+		for <a href="/wordmorphology.jsp?location=(67:22:1)">certain words</a>,
+		the particle <i class="ab">fa</i> is now tagged as a supplemental particle
+		(<i class="ab">ḥarf zā'id</i>), such as in the combination
+		<i class="ab">a-fa-man</i>.</li>
+
+		<li><b>Version 0.4 of the morphologically annotated corpus</b> is
+		freely available for <a href="/download">download</a> from the Quranic Arabic Corpus website.</li>
+
+	</ul>
+	<p>The <a href="/">Quranic Arabic Corpus</a> is an open source
+	project. Contributions or questions about the research are more than
+	welcome. Please direct any correspondence to
+		Kais Dukes, PhD researcher at the
+	School of Computing, University of Leeds:</p>
+	<p style="margin-left: 2em">
+		<i class="ab">e-mail:</i> <a href="/cdn-cgi/l/email-protection#4330202827032f262627306d22206d3628"><span class="__cf_email__" data-cfemail="a4d7c7cfc0e4c8c1c1c0d78ac5c78ad1cf">[email&#160;protected]</span></a>
+	</p>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br/>
+			<a href="http://www.leeds.ac.uk">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright &copy; Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a
+			href="/license.jsp">GNU public license</a> with <a
+			href="/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</table>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"64a921327e174c6380302b7d747d1458","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

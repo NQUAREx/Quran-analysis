@@ -1,0 +1,119 @@
+[
+  {
+    "hypothesis_id": "EXT-universality-basmala",
+    "family": "exploratory_boundary_sensitivity",
+    "title_ru": "Охват всех сур зависит от вступительных басмал",
+    "status": "Чувствительно к правилам подсчёта",
+    "profile_id": "plain/search",
+    "scope": "file vs numbered",
+    "observed": {
+      "plain": {
+        "file": [
+          "الرحيم",
+          "الله"
+        ],
+        "numbered": []
+      },
+      "search": {
+        "file": [
+          "الرحيم",
+          "الله"
+        ],
+        "numbered": []
+      }
+    },
+    "registration": "exploratory после core",
+    "method_ru": "Пересчитаны частота и охват каждой формы по всем token_id в двух областях; 1:1 и 27:30 остаются.",
+    "limitation_ru": "Это свойство включения вступительных префиксов, а не семантическая универсальность понятий.",
+    "p_value": null,
+    "evidence_path": "results/tables/extension_basmala_lexical_coverage.csv.gz"
+  },
+  {
+    "hypothesis_id": "EXT-refrain-endings",
+    "family": "exploratory_repeat_sensitivity",
+    "title_ru": "Исключение повторённых аятов не устраняет сходство письменных окончаний",
+    "status": "Исследовательский кандидат",
+    "profile_id": "plain",
+    "scope": "file/numbered",
+    "observed": [
+      {
+        "scope": "file",
+        "profile_id": "plain",
+        "suffix_letters": 2,
+        "surah_id": 0,
+        "all_edges": 6122,
+        "all_agree": 2467,
+        "retained_edges": 5646,
+        "retained_agree": 2288,
+        "all_rate": 0.40297288467820974,
+        "retained_rate": 0.40524264966347856,
+        "repeated_verse_count_corpus": 279
+      },
+      {
+        "scope": "file",
+        "profile_id": "plain",
+        "suffix_letters": 3,
+        "surah_id": 0,
+        "all_edges": 6122,
+        "all_agree": 487,
+        "retained_edges": 5646,
+        "retained_agree": 472,
+        "all_rate": 0.07954916693890886,
+        "retained_rate": 0.08359900814736096,
+        "repeated_verse_count_corpus": 279
+      },
+      {
+        "scope": "numbered",
+        "profile_id": "plain",
+        "suffix_letters": 2,
+        "surah_id": 0,
+        "all_edges": 6122,
+        "all_agree": 2467,
+        "retained_edges": 5645,
+        "retained_agree": 2288,
+        "all_rate": 0.40297288467820974,
+        "retained_rate": 0.40531443755535873,
+        "repeated_verse_count_corpus": 280
+      },
+      {
+        "scope": "numbered",
+        "profile_id": "plain",
+        "suffix_letters": 3,
+        "surah_id": 0,
+        "all_edges": 6122,
+        "all_agree": 487,
+        "retained_edges": 5645,
+        "retained_agree": 472,
+        "all_rate": 0.07954916693890886,
+        "retained_rate": 0.08361381753764394,
+        "repeated_verse_count_corpus": 280
+      }
+    ],
+    "registration": "exploratory после просмотра повторов",
+    "method_ru": "Доли исходных соседних пар до/после исключения рёбер с повторённым полным аятом; новое соседство не создаётся.",
+    "limitation_ru": "Меняется состав рёбер; разница долей не является причинным эффектом повторов. Окончания письменные, без фонетической модели.",
+    "p_value": null,
+    "evidence_path": "results/tables/extension_refrain_adjacency_edges.csv.gz"
+  },
+  {
+    "hypothesis_id": "EXT-equality-search-volume",
+    "family": "exploratory_equal_frequency",
+    "title_ru": "Пространство равных частот содержит множество пар",
+    "status": "Точный факт для указанного файла и правил",
+    "profile_id": "plain",
+    "scope": "file/numbered",
+    "observed": {
+      "pairs_file": 41683473,
+      "pairs_numbered": 41684499,
+      "preserved_pairs": 41683470,
+      "lost_pairs": 3,
+      "new_pairs": 1029,
+      "pair_intersection_over_union": 0.9999752425973567
+    },
+    "registration": "exploratory после core",
+    "method_ru": "Полная группировка всех форм по частоте; число пар в группе k(k−1)/2. Пересечение — группировка по паре частот в двух областях.",
+    "limitation_ru": "Совпадение не сообщает о близости значений; p-value отсутствует, поскольку модель случайности не задана.",
+    "p_value": null,
+    "evidence_path": "results/tables/extension_frequency_equality_groups.csv.gz"
+  }
+]

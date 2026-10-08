@@ -1,0 +1,265 @@
+[
+  {
+    "hypothesis_id": "I-morph-negation",
+    "family": "I",
+    "title_ru": "Сегменты отрицания",
+    "status": "описательное",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 2660,
+      "tokens": 2660,
+      "verses": 1873
+    },
+    "method_ru": "Полный перебор выровненных сегментов по явным меткам QAC v0.4; формы и все адреса сохранены.",
+    "limitation_ru": "Это функция сегмента по внешней разметке, а не полное семантическое или синтаксическое толкование аята. Невыровненные токены исключены.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-morph-vocative",
+    "family": "I",
+    "title_ru": "Обращения",
+    "status": "описательное",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 331,
+      "tokens": 651,
+      "verses": 328
+    },
+    "method_ru": "Полный перебор выровненных сегментов по явным меткам QAC v0.4; формы и все адреса сохранены.",
+    "limitation_ru": "Это функция сегмента по внешней разметке, а не полное семантическое или синтаксическое толкование аята. Невыровненные токены исключены.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-morph-interrogative",
+    "family": "I",
+    "title_ru": "Вопросительные сегменты",
+    "status": "описательное",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 812,
+      "tokens": 812,
+      "verses": 727
+    },
+    "method_ru": "Полный перебор выровненных сегментов по явным меткам QAC v0.4; формы и все адреса сохранены.",
+    "limitation_ru": "Это функция сегмента по внешней разметке, а не полное семантическое или синтаксическое толкование аята. Невыровненные токены исключены.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-morph-imperative",
+    "family": "I",
+    "title_ru": "Повелительные глаголы",
+    "status": "описательное",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 1692,
+      "tokens": 1692,
+      "verses": 1183
+    },
+    "method_ru": "Полный перебор выровненных сегментов по явным меткам QAC v0.4; формы и все адреса сохранены.",
+    "limitation_ru": "Это функция сегмента по внешней разметке, а не полное семантическое или синтаксическое толкование аята. Невыровненные токены исключены.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-morph-proper_name",
+    "family": "I",
+    "title_ru": "Имена собственные",
+    "status": "описательное",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 3662,
+      "tokens": 3722,
+      "verses": 2344
+    },
+    "method_ru": "Полный перебор выровненных сегментов по явным меткам QAC v0.4; формы и все адреса сохранены.",
+    "limitation_ru": "Это функция сегмента по внешней разметке, а не полное семантическое или синтаксическое толкование аята. Невыровненные токены исключены.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-numeric-root-candidates",
+    "family": "I",
+    "title_ru": "Кандидаты числовых выражений по 12 корням",
+    "status": "кандидат",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "segments": 264,
+      "root_inventory_bw": [
+        "Alf",
+        "E$r",
+        "mAy",
+        "rbE",
+        "sbE",
+        "sds",
+        "tsE",
+        "vlv",
+        "vmn",
+        "vny",
+        "wHd",
+        "xms"
+      ]
+    },
+    "method_ru": "Фиксированный список 12 корней. Все сегменты сохранены для ручной проверки контекста.",
+    "limitation_ru": "Корень может выражать не число: единство, повторение, долю и другие значения. Сумма значений чисел и полный семантический каталог не заявляются.",
+    "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "I-verb-person-transition",
+    "family": "I",
+    "title_ru": "Смена грамматического лица соседних глаголов внутри аята",
+    "status": "кандидат",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "external_adjacent_verb_pairs": 13805,
+      "verified_pairs": 11288,
+      "pairs_with_person_change": 4017
+    },
+    "method_ru": "Соседние глагольные основы в полной последовательности QAC одного аята; сохраняются только пары с обоими выровненными членами. Смена — различие первого знака признака лица/рода/числа.",
+    "limitation_ru": "Смена может быть обычной сменой субъекта, цитатой или обращением. Это кандидаты для чтения контекста, не автоматическая разметка риторического ильтифата. Пропущенные глаголы не перекрываются.",
+    "evidence_path": "results/tables/morphology_verb_transitions.csv",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "J-month-12",
+    "family": "J",
+    "title_ru": "Публикация: شهر — 12 вхождений",
+    "status": "воспроизведено при заданных правилах",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "expected": 12,
+      "verified_included": 12,
+      "unverified_included": 0,
+      "external_candidates": 21,
+      "external_categories": {
+        "included_singular": 12,
+        "excluded_dual_plural": 9
+      }
+    },
+    "method_ru": "Корень شهر; исключены двойственное и множественное число по QAC.",
+    "limitation_ru": "Правило исключения притяжательных форм относится только к опубликованному тесту, а не ко всем частотам слова «день». Неполное выравнивание не позволяет выдавать внешний итог за итог исходника.",
+    "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+    "source_url": "https://www.masjidtucson.org/submission/youth/verifying_calendar_months_days.html",
+    "source_quote": "In Quran: the word \"month\" occurs 12 times, and \"day\" 365 times",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "J-day-365",
+    "family": "J",
+    "title_ru": "Публикация: يوم — 365 вхождений",
+    "status": "частично: неполное выравнивание",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "expected": 365,
+      "verified_included": 362,
+      "unverified_included": 3,
+      "external_candidates": 405,
+      "external_categories": {
+        "included_singular": 365,
+        "excluded_dual_plural": 30,
+        "excluded_possessive_suffix": 10
+      }
+    },
+    "method_ru": "Корень يوم; исключены двойственное/множественное число и местоименные суффиксы. Все остальные единственные формы включены.",
+    "limitation_ru": "Правило исключения притяжательных форм относится только к опубликованному тесту, а не ко всем частотам слова «день». Неполное выравнивание не позволяет выдавать внешний итог за итог исходника.",
+    "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+    "source_url": "https://www.masjidtucson.org/submission/youth/verifying_calendar_months_days.html",
+    "source_quote": "In Quran: the word \"month\" occurs 12 times, and \"day\" 365 times",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "J-basmala-114",
+    "family": "J",
+    "title_ru": "Публикация: басмала встречается 114 раз",
+    "status": "воспроизведено при заданных правилах",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": {
+      "expected": 114,
+      "observed": {
+        "raw/file": 112,
+        "raw/numbered": 2,
+        "nfc/file": 112,
+        "nfc/numbered": 2,
+        "plain/file": 114,
+        "plain/numbered": 2,
+        "search/file": 114,
+        "search/numbered": 2
+      }
+    },
+    "method_ru": "Точное совпадение четырёх токенов с аятом 1:1 внутри аята, каждый профиль и две области подсчёта.",
+    "limitation_ru": "Результат зависит от области и определения письменной единицы; сам по себе не является статистическим свидетельством необычности.",
+    "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+    "source_url": "https://19.org/blog/prime/",
+    "source_quote": "The Basmalah occurs 114 times",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "J-basmala-19",
+    "family": "J",
+    "title_ru": "Публикация: 19 букв в басмале",
+    "status": "воспроизведено при заданных правилах",
+    "profile_id": "written_letters_v1",
+    "scope": "file",
+    "observed": {
+      "expected": 19,
+      "observed": 19
+    },
+    "method_ru": "Сумма базовых письменных букв четырёх токенов 1:1 по спецификации корпуса; огласовки и татвил не считаются буквами.",
+    "limitation_ru": "Результат зависит от области и определения письменной единицы; сам по себе не является статистическим свидетельством необычности.",
+    "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+    "source_url": "https://qurantalkblog.com/2023/07/16/bismillah-word-count/",
+    "source_quote": "This statement consists of exactly 19 letters",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "J-world-hereafter",
+    "family": "J",
+    "title_ru": "Пара الدنيا / الآخرة: по 115",
+    "status": "недостаточно специфицировано",
+    "profile_id": "qac_v0.4_aligned",
+    "scope": "numbered_aligned",
+    "observed": {
+      "expected": [
+        115,
+        115
+      ],
+      "fixed_lemma_counts": [
+        {
+          "lemma_bw": "d~unoyaA",
+          "lemma": "دُّنْيَا",
+          "external_segments": 115,
+          "verified_segments": 115,
+          "external_feminine_singular": 115,
+          "verified_feminine_singular": 115
+        },
+        {
+          "lemma_bw": "A^xir",
+          "lemma": "آخِر",
+          "external_segments": 155,
+          "verified_segments": 0,
+          "external_feminine_singular": 115,
+          "verified_feminine_singular": 0
+        }
+      ]
+    },
+    "method_ru": "Фиксированные ключи QAC d~unoyaA и A^xir: все формы и отдельно FS (женский род, единственное число). Полная лемма A^xir включает также мужские формы «последний». FS — явная грамматическая чувствительность, а не заявленное семантическое определение автора.",
+    "limitation_ru": "В публикации не дана полная формальная методика включения значений; внешние частоты не являются частотами исходника. Орфографические различия хамзы резко ограничивают выравнивание второй леммы. Это не опровержение всех возможных семантических определений.",
+    "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+    "source_url": "https://19.org/blog/prime/",
+    "source_quote": "The words “this world” (dunya) and “hereafter” (ahirah), each occur 115 times.",
+    "p_value": null
+  }
+]

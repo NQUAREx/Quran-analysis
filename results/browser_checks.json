@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "check": "navigation",
+      "status": "pass",
+      "tabs": 8
+    },
+    {
+      "check": "native_tab_navigation_without_javascript",
+      "status": "pass"
+    },
+    {
+      "check": "dictionary_and_complete_download",
+      "status": "pass",
+      "form": "الله",
+      "scope": "file",
+      "expected_source_count": 2265,
+      "download_rows": 2265
+    },
+    {
+      "check": "surah_and_scope_filters",
+      "status": "pass",
+      "surah": 2,
+      "scope": "numbered",
+      "count": 216
+    },
+    {
+      "check": "lemma_root_search",
+      "status": "pass",
+      "note_ru": "Поиск без огласовок находит внешние нормализованные единицы; контексты исходного файла доступны."
+    },
+    {
+      "check": "hypothesis_filters",
+      "status": "pass"
+    },
+    {
+      "check": "embedded_static_figures",
+      "status": "pass",
+      "images": 6
+    },
+    {
+      "check": "local_links",
+      "status": "pass"
+    },
+    {
+      "check": "mobile_layout",
+      "status": "pass",
+      "viewport": "390×844"
+    },
+    {
+      "check": "offline_embedded_application",
+      "status": "pass",
+      "note_ru": "HTML загружен как сохранённый документ в контекст с отключённой сетью; исходный file:// ограничен политикой браузера среды."
+    }
+  ],
+  "javascript_errors": [],
+  "limitations_ru": "Проверены локальный HTTP и документ без сети. file:// в управляемом Chromium блокируется административной политикой; политика не менялась. XLSX проверен структурно через openpyxl, визуальный просмотр в настольном Excel не выполнялся."
+}

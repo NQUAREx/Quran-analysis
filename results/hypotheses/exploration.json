@@ -1,0 +1,198 @@
+[
+  {
+    "hypothesis_id": "EX-C-001",
+    "family": "C",
+    "title_ru": "Точные повторяющиеся аяты зависят от профиля записи",
+    "status": "descriptive_verified",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": {
+      "raw/file": {
+        "repeated_groups": 92,
+        "verses_in_groups": 267
+      },
+      "raw/numbered": {
+        "repeated_groups": 96,
+        "verses_in_groups": 276
+      },
+      "nfc/file": {
+        "repeated_groups": 96,
+        "verses_in_groups": 275
+      },
+      "nfc/numbered": {
+        "repeated_groups": 96,
+        "verses_in_groups": 276
+      },
+      "plain/file": {
+        "repeated_groups": 98,
+        "verses_in_groups": 279
+      },
+      "plain/numbered": {
+        "repeated_groups": 98,
+        "verses_in_groups": 280
+      },
+      "search/file": {
+        "repeated_groups": 98,
+        "verses_in_groups": 279
+      },
+      "search/numbered": {
+        "repeated_groups": 98,
+        "verses_in_groups": 280
+      }
+    },
+    "method_ru": "Полная группировка аятов по raw/nfc/plain/search и двум правилам вступительной басмалы.",
+    "limitation_ru": "Равенство написания не является самостоятельным свидетельством необычности; для numbered сравнивается последовательность оставшихся токенов.",
+    "evidence_path": "results/tables/exploration_exact_verse_repeats.csv",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "EX-C-002",
+    "family": "C",
+    "title_ru": "Длинные точные повторяющиеся последовательности",
+    "status": "candidate_bounded_search",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": {
+      "groups": 264,
+      "longest": {
+        "sequence": "وإن كنتم مرضى أو على سفر أو جاء أحد منكم من الغائط أو لامستم النساء فلم تجدوا ماء فتيمموا صعيدا طيبا فامسحوا بوجوهكم وأيديكم",
+        "token_length": 24,
+        "frequency": 2,
+        "start_token_ids": "4:43:21|5:6:23",
+        "nonoverlapping_frequency": 2,
+        "end_token_ids": "4:43:44|5:6:46",
+        "profile_id": "plain",
+        "scope": "file"
+      }
+    },
+    "method_ru": "Расширение всех пар 5-токенных затравок с поддержкой 2–40 до несовпадения/границы аята; минимум 8 токенов.",
+    "limitation_ru": "Это ограниченный поиск кандидатов; повторы, состоящие только из более частых затравок, могут быть пропущены. Найденные адреса доступны полностью.",
+    "evidence_path": "results/tables/exploration_long_repeat_pairs.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "EX-F-001",
+    "family": "F",
+    "title_ru": "Совпадения ограниченной целочисленной грамматики",
+    "status": "descriptive_no_significance",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": {
+      "equality_tested": 36024,
+      "equality_matched": 14,
+      "divisibility_tested": 5472,
+      "divisibility_matched": 1208,
+      "primality_tested": 912,
+      "primality_matched": 165
+    },
+    "method_ru": "Все равенства x=y и x+y=z восьми характеристик каждой суры; делимость на 2,3,5,7,11,19 и простота атомов.",
+    "limitation_ru": "Формулы имеют разные естественные зависимости. Совпадение без модели контроля и учёта выбора не является статистическим доказательством.",
+    "evidence_path": "results/tables/exploration_numeric_tests.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "EX-G-001",
+    "family": "G",
+    "title_ru": "Ассоциации частых слов в аятах",
+    "status": "descriptive_verified",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": [
+      {
+        "context": "verse",
+        "word_a": "الرحيم",
+        "word_b": "بسم",
+        "n_contexts": 6236,
+        "count_a": 146,
+        "count_b": 115,
+        "count_ab": 114,
+        "pmi_bits": 5.403980617038134,
+        "lift": 42.340917212626564,
+        "support_pass": 1,
+        "example_context_ids": "1:1|2:1|3:1|4:1|5:1",
+        "profile_id": "plain",
+        "scope": "file"
+      },
+      {
+        "context": "verse",
+        "word_a": "الرحمن",
+        "word_b": "بسم",
+        "n_contexts": 6236,
+        "count_a": 156,
+        "count_b": 115,
+        "count_ab": 114,
+        "pmi_bits": 5.308402957055903,
+        "lift": 39.62675585284281,
+        "support_pass": 1,
+        "example_context_ids": "1:1|2:1|3:1|4:1|5:1",
+        "profile_id": "plain",
+        "scope": "file"
+      },
+      {
+        "context": "verse",
+        "word_a": "الرحمن",
+        "word_b": "الرحيم",
+        "n_contexts": 6236,
+        "count_a": 156,
+        "count_b": 146,
+        "count_ab": 118,
+        "pmi_bits": 5.0138214843173605,
+        "lift": 32.3080435546189,
+        "support_pass": 1,
+        "example_context_ids": "1:1|1:3|2:1|2:163|3:1",
+        "profile_id": "plain",
+        "scope": "file"
+      },
+      {
+        "context": "verse",
+        "word_a": "السماوات",
+        "word_b": "والأرض",
+        "n_contexts": 6236,
+        "count_a": 180,
+        "count_b": 156,
+        "count_ab": 134,
+        "pmi_bits": 4.895239087963634,
+        "lift": 29.75868945868946,
+        "support_pass": 1,
+        "example_context_ids": "2:33|2:107|2:116|2:117|2:164",
+        "profile_id": "plain",
+        "scope": "file"
+      },
+      {
+        "context": "verse",
+        "word_a": "ربنا",
+        "word_b": "لنا",
+        "n_contexts": 6236,
+        "count_a": 93,
+        "count_b": 73,
+        "count_ab": 23,
+        "pmi_bits": 4.400983798766749,
+        "lift": 21.126528207394315,
+        "support_pass": 1,
+        "example_context_ids": "2:286|3:8|3:16|3:147|3:193",
+        "profile_id": "plain",
+        "scope": "file"
+      }
+    ],
+    "method_ru": "Бинарное присутствие top-120 словоформ; PMI/lift, поддержка не менее 5 совместных аятов; все пары сохранены.",
+    "limitation_ru": "Не учитывает грамматическую роль и все различия длины аятов; статистическая значимость и семантическая связь не заявляются.",
+    "evidence_path": "results/tables/exploration_cooccurrence.csv.gz",
+    "p_value": null
+  },
+  {
+    "hypothesis_id": "EX-H-001",
+    "family": "H",
+    "title_ru": "Порядок токенов и степень сжатия",
+    "status": "descriptive_control_comparison",
+    "profile_id": "plain",
+    "scope": "file",
+    "observed": {
+      "observed_ratio": 0.2491743074869509,
+      "shuffle_mean_ratio": 0.28893270288533046
+    },
+    "method_ru": "UTF-8 из plain-токенов, пробел-разделитель, zlib level 9; 19 глобальных перестановок при seed=20261007.",
+    "limitation_ru": "Контроль сохраняет частоты и байтовую длину, но разрушает грамматику и границы. Это свойство порядка данного текста, не тест уникальности Корана.",
+    "evidence_path": "results/tables/exploration_compression_controls.csv",
+    "p_value": null
+  }
+]

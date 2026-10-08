@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "source_sha256": "295faa755008d0a292d2e285368a06dc478bf37cb5f29ed29bb06d7c6ca0bf0a",
+  "module_sha256": "26d59be4550720a247d841fbdfd5adcd18d790298ce0bc3c19685b39849374cd",
+  "tests": [
+    {
+      "name": "all_25_table_row_counts",
+      "passed": true,
+      "details": {
+        "word_ngram_occurrences": 251513,
+        "word_ngrams": 200945,
+        "letter_ngram_occurrences": 540963,
+        "letter_ngrams": 23933,
+        "exact_verse_repeats": 772,
+        "long_repeats": 264,
+        "long_repeat_pairs": 388,
+        "approximate_candidates": 18086,
+        "approximate_high_similarity": 134,
+        "position_windows": 310,
+        "word_occurrence_gaps": 78248,
+        "positions": 14868,
+        "verse_boundaries": 23712,
+        "verse_features": 6236,
+        "surah_features": 114,
+        "mirror_verse_pairs": 3091,
+        "surah_similarity": 6441,
+        "numeric_tests": 42408,
+        "frequency_equivalence": 171,
+        "cooccurrence": 21420,
+        "cooccurrence_vocabulary": 120,
+        "information": 115,
+        "vocabulary_growth": 783,
+        "window_diversity": 110,
+        "compression_controls": 20
+      }
+    },
+    {
+      "name": "word_ngram_expected_occurrences",
+      "passed": true,
+      "details": 251513
+    },
+    {
+      "name": "letter_ngram_expected_occurrences",
+      "passed": true,
+      "details": 540963
+    },
+    {
+      "name": "word_ngram_all_coordinates_and_frequencies",
+      "passed": true,
+      "details": {
+        "occurrences_checked": 251513,
+        "catalogue_groups": 200945
+      }
+    },
+    {
+      "name": "letter_ngram_all_coordinates_and_frequencies",
+      "passed": true,
+      "details": {
+        "occurrences_checked": 540963,
+        "catalogue_groups": 23933
+      }
+    },
+    {
+      "name": "all_found_long_phrases_have_exhaustive_valid_addresses",
+      "passed": true,
+      "details": 264
+    },
+    {
+      "name": "all_numeric_rows_independently_recomputed",
+      "passed": true,
+      "details": {
+        "equality_tested": 36024,
+        "equality_matched": 14,
+        "divisibility_tested": 5472,
+        "divisibility_matched": 1208,
+        "primality_tested": 912,
+        "primality_matched": 165
+      }
+    },
+    {
+      "name": "all_binary_cooccurrence_counts_recomputed",
+      "passed": true,
+      "details": {
+        "pairs": 21420,
+        "contexts": {
+          "verse": 6236,
+          "surah": 114,
+          "nonoverlap_window": 1505
+        }
+      }
+    },
+    {
+      "name": "all_thirds_partition_tokens",
+      "passed": true,
+      "details": 78248
+    },
+    {
+      "name": "corpus_information",
+      "passed": true,
+      "details": {
+        "tokens": 78248,
+        "types": 14868,
+        "entropy_bits": 11.050188491103137
+      }
+    },
+    {
+      "name": "compression_preserves_utf8_length",
+      "passed": true,
+      "details": 20
+    },
+    {
+      "name": "findings_do_not_claim_p_values",
+      "passed": true,
+      "details": 5
+    }
+  ]
+}

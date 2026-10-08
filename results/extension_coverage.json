@@ -1,0 +1,33 @@
+[
+  {
+    "direction": "B",
+    "analysis": "Чувствительность охвата каждой формы к басмале",
+    "status": "complete_bounded",
+    "universe": "Все plain/search формы × file/numbered",
+    "tested": 29559,
+    "limitations": "Словоформа не равна понятию"
+  },
+  {
+    "direction": "E",
+    "analysis": "Окончания с исключением рёбер повторённых аятов",
+    "status": "complete_bounded",
+    "universe": "Все исходные внутрисуровые соседства × 2 области × 2/3 буквы",
+    "tested": 24488,
+    "limitations": "Без новых рёбер; не причинный и не фонетический вывод"
+  },
+  {
+    "direction": "F",
+    "analysis": "Все пары одинаковой частоты и их чувствительность",
+    "status": "complete_bounded",
+    "universe": "Неупорядоченные пары plain-форм; группы эквивалентности",
+    "tested": {
+      "pairs_file": 41683473,
+      "pairs_numbered": 41684499,
+      "preserved_pairs": 41683470,
+      "lost_pairs": 3,
+      "new_pairs": 1029,
+      "pair_intersection_over_union": 0.9999752425973567
+    },
+    "limitations": "Нет статистической интерпретации равенств"
+  }
+]
