@@ -293,5 +293,421 @@
       "sources": []
     }
   ],
+  "plain_findings": [
+    {
+      "id": "core_basmala_sensitivity",
+      "title": "Вступительные басмалы меняют поверхностные частоты",
+      "explanation": "Во всём файле 78248 словоупотреблений; после исключения вступительных басмал — 77800. Разницу в 448 создаёт оформление начала сур.",
+      "scope": "file vs numbered",
+      "profile": "raw",
+      "evidence_path": "results/tables/core_basmala_sensitivity.csv",
+      "family": "corpus_audit"
+    },
+    {
+      "id": "core_normalization_changes_vocabulary",
+      "title": "Нормализация меняет число различаемых письменных форм",
+      "explanation": "Из-за выбранных знаков записи различают 18243 форм; без них — 14868. Это объединение написаний, а не исчезновение фрагментов текста.",
+      "scope": "file",
+      "profile": "raw/nfc/plain/search",
+      "evidence_path": "results/tables/core_normalization_collisions.csv.gz",
+      "family": "normalization"
+    },
+    {
+      "id": "I-morph-negation",
+      "title": "Сегменты отрицания",
+      "explanation": "Во внешней разметке отмечено 2660 подходящих частей слов; они относятся к 2660 письменным токенам и 1873 аятам. Одна часть слова и целое слово — разные единицы.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-morph-vocative",
+      "title": "Обращения",
+      "explanation": "Во внешней разметке отмечено 331 подходящих частей слов; они относятся к 651 письменным токенам и 328 аятам. Одна часть слова и целое слово — разные единицы.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-morph-interrogative",
+      "title": "Вопросительные сегменты",
+      "explanation": "Во внешней разметке отмечено 812 подходящих частей слов; они относятся к 812 письменным токенам и 727 аятам. Одна часть слова и целое слово — разные единицы.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-morph-imperative",
+      "title": "Повелительные глаголы",
+      "explanation": "Во внешней разметке отмечено 1692 подходящих частей слов; они относятся к 1692 письменным токенам и 1183 аятам. Одна часть слова и целое слово — разные единицы.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-morph-proper_name",
+      "title": "Имена собственные",
+      "explanation": "Во внешней разметке отмечено 3662 подходящих частей слов; они относятся к 3722 письменным токенам и 2344 аятам. Одна часть слова и целое слово — разные единицы.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-numeric-root-candidates",
+      "title": "Кандидаты числовых выражений по 12 корням",
+      "explanation": "По 12 выбранным корням числовых слов отмечено 264 сегмента-кандидата. Корень сам по себе не сообщает, какое число и в каком смысле названо в аяте.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_linguistic_occurrences.csv.gz",
+      "family": "I"
+    },
+    {
+      "id": "I-verb-person-transition",
+      "title": "Смена грамматического лица соседних глаголов внутри аята",
+      "explanation": "Из 11288 сверенных пар соседних глаголов в 4017 меняется грамматическое лицо. Это может быть обычная смена говорящего или цитата; для риторического вывода нужен контекст.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_verb_transitions.csv",
+      "family": "I"
+    },
+    {
+      "id": "J-month-12",
+      "title": "Публикация: شهر — 12 вхождений",
+      "explanation": "При отборе единственного числа слова «месяц» подтверждены 12 употреблений; формы двойственного и множественного числа сюда не включены. Сравнение с 12 месяцами года зависит от правила отбора.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "family": "J"
+    },
+    {
+      "id": "J-day-365",
+      "title": "Публикация: يوم — 365 вхождений",
+      "explanation": "Для слова «день» надёжно сверены 362 употребления из 365 выбранных кандидатов, ещё 3 не выверены. Точного утверждения о 365 случаях в исходном файле пока нет.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "family": "J"
+    },
+    {
+      "id": "J-basmala-114",
+      "title": "Публикация: басмала встречается 114 раз",
+      "explanation": "После нормализации полный файл содержит 114 басмал, как и сур; при счёте только нумерованных аятов остаются две. Это зависит от структуры вступлений.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "family": "J"
+    },
+    {
+      "id": "J-basmala-19",
+      "title": "Публикация: 19 букв в басмале",
+      "explanation": "В выбранной записи формула содержит 19 букв. Длина меняется, если считать другие знаки или написания; внешняя физическая связь из этого числа не следует.",
+      "scope": "file",
+      "profile": "written_letters_v1",
+      "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "family": "J"
+    },
+    {
+      "id": "J-world-hereafter",
+      "title": "Пара الدنيا / الآخرة: по 115",
+      "explanation": "Пара 115:115 получена из внешней разметки при специальном отборе форм. Для второй единицы точное сопоставление с исходником недостаточно, поэтому равенство пока не подтверждено.",
+      "scope": "numbered_aligned",
+      "profile": "qac_v0.4_aligned",
+      "evidence_path": "results/tables/morphology_claim_occurrences.csv.gz",
+      "family": "J"
+    },
+    {
+      "id": "EX-C-001",
+      "title": "Точные повторяющиеся аяты зависят от профиля записи",
+      "explanation": "В записи без выбранных огласовок есть 98 групп полностью одинаковых аятов, охватывающих 279 мест. При других правилах записи итог меняется.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/exploration_exact_verse_repeats.csv",
+      "family": "C"
+    },
+    {
+      "id": "EX-C-002",
+      "title": "Длинные точные повторяющиеся последовательности",
+      "explanation": "Найдено 264 групп длинных точных повторов. Это повторяющиеся последовательности слов, а не число разных смыслов.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/exploration_long_repeat_pairs.csv.gz",
+      "family": "C"
+    },
+    {
+      "id": "EX-F-001",
+      "title": "Совпадения ограниченной целочисленной грамматики",
+      "explanation": "Из 36024 проверенных простых числовых равенств совпало 14. Их обнаружили поиском по многим формулам, поэтому совпадение требует осторожной интерпретации.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/exploration_numeric_tests.csv.gz",
+      "family": "F"
+    },
+    {
+      "id": "EX-G-001",
+      "title": "Ассоциации частых слов в аятах",
+      "explanation": "Например, «الرحيم» и «بسم» встретились вместе в 114 аятах. Совместное появление часто связано с устойчивой формулой; высокий балл не доказывает необычное свойство мира.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/exploration_cooccurrence.csv.gz",
+      "family": "G"
+    },
+    {
+      "id": "EX-H-001",
+      "title": "Порядок токенов и степень сжатия",
+      "explanation": "Исходный порядок сжался до 24.9% исходного размера, перемешанные варианты — в среднем до 28.9%. Повторы и обычная языковая структура помогают сжатию.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/exploration_compression_controls.csv",
+      "family": "H"
+    },
+    {
+      "id": "STAT-length_adjacency-file-verse_shuffle_within_surah",
+      "title": "Соседние аяты близки по числу токенов",
+      "explanation": "Соседние аяты отличаются по длине в среднем на 5.98 токена; при выбранном перемешивании получилось 6.59. Меньшая разница означает более плавный переход длин. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_position-file-verse_shuffle_within_surah",
+      "title": "Длина аята связана с положением внутри суры",
+      "explanation": "Сила связи длины с местом аята внутри суры — 0.037 против 0.010 у переставленных аятов. Это небольшая величина, хотя отличие от модели статистически замечено. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_2-file-verse_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 2 письменные буквы",
+      "explanation": "У 40.3% соседних пар совпадают последние 2 письменные буквы; после перемешивания — у 28.9%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_3-file-verse_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 3 письменные буквы",
+      "explanation": "У 8.0% соседних пар совпадают последние 3 письменные буквы; после перемешивания — у 5.6%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_adjacency-file-block_5_shuffle_within_surah",
+      "title": "Соседние аяты близки по числу токенов",
+      "explanation": "Соседние аяты отличаются по длине в среднем на 5.98 токена; при выбранном перемешивании получилось 6.10. Меньшая разница означает более плавный переход длин. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_position-file-block_5_shuffle_within_surah",
+      "title": "Длина аята связана с положением внутри суры",
+      "explanation": "Сила связи длины с местом аята внутри суры — 0.037 против 0.012 у переставленных аятов. Это небольшая величина, хотя отличие от модели статистически замечено. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_2-file-block_5_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 2 письменные буквы",
+      "explanation": "У 40.3% соседних пар совпадают последние 2 письменные буквы; после перемешивания — у 38.1%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_3-file-block_5_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 3 письменные буквы",
+      "explanation": "У 8.0% соседних пар совпадают последние 3 письменные буквы; после перемешивания — у 7.3%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-nfc-file-token_shuffle_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 469.07 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.20. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "nfc",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-nfc-file-cyclic_shift_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 469.07 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.13. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "nfc",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-plain-file-token_shuffle_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 469.07 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.18. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-plain-file-cyclic_shift_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 469.07 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.27. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "file",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_adjacency-numbered-verse_shuffle_within_surah",
+      "title": "Соседние аяты близки по числу токенов",
+      "explanation": "Соседние аяты отличаются по длине в среднем на 5.96 токена; при выбранном перемешивании получилось 6.59. Меньшая разница означает более плавный переход длин. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_position-numbered-verse_shuffle_within_surah",
+      "title": "Длина аята связана с положением внутри суры",
+      "explanation": "Сила связи длины с местом аята внутри суры — 0.053 против 0.010 у переставленных аятов. Это небольшая величина, хотя отличие от модели статистически замечено. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_2-numbered-verse_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 2 письменные буквы",
+      "explanation": "У 40.3% соседних пар совпадают последние 2 письменные буквы; после перемешивания — у 28.9%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_3-numbered-verse_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 3 письменные буквы",
+      "explanation": "У 8.0% соседних пар совпадают последние 3 письменные буквы; после перемешивания — у 5.6%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_adjacency-numbered-block_5_shuffle_within_surah",
+      "title": "Соседние аяты близки по числу токенов",
+      "explanation": "Соседние аяты отличаются по длине в среднем на 5.96 токена; при выбранном перемешивании получилось 6.09. Меньшая разница означает более плавный переход длин. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-length_position-numbered-block_5_shuffle_within_surah",
+      "title": "Длина аята связана с положением внутри суры",
+      "explanation": "Сила связи длины с местом аята внутри суры — 0.053 против 0.013 у переставленных аятов. Это небольшая величина, хотя отличие от модели статистически замечено. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_2-numbered-block_5_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 2 письменные буквы",
+      "explanation": "У 40.3% соседних пар совпадают последние 2 письменные буквы; после перемешивания — у 38.1%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-ending_3-numbered-block_5_shuffle_within_surah",
+      "title": "Соседние аяты имеют одинаковые последние 3 письменные буквы",
+      "explanation": "У 8.0% соседних пар совпадают последние 3 письменные буквы; после перемешивания — у 7.3%. Это наблюдение о звучании и записи концов аятов. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-nfc-numbered-token_shuffle_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 474.36 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.20. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "nfc",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-nfc-numbered-cyclic_shift_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 474.36 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.10. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "nfc",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-plain-numbered-token_shuffle_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 474.36 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.25. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "STAT-lexical_position-plain-numbered-cyclic_shift_within_verse",
+      "title": "Частые словоформы неравномерно распределены внутри аята",
+      "explanation": "Число 474.36 — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл 9.07. Это не количество слов и не процент. Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка.",
+      "scope": "numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/statistical_null_draws.csv.gz",
+      "family": "primary_permutation"
+    },
+    {
+      "id": "EXT-universality-basmala",
+      "title": "Охват всех сур зависит от вступительных басмал",
+      "explanation": "Во всём файле слова вступительной формулы встречаются во всех сурах, а после исключения вступлений такого полного охвата нет. Это эффект способа хранения текста.",
+      "scope": "file vs numbered",
+      "profile": "plain/search",
+      "evidence_path": "results/tables/extension_basmala_lexical_coverage.csv.gz",
+      "family": "exploratory_boundary_sensitivity"
+    },
+    {
+      "id": "EXT-refrain-endings",
+      "title": "Исключение повторённых аятов не устраняет сходство письменных окончаний",
+      "explanation": "Последние две буквы совпадают у 40.3% соседних пар; после исключения повторённых аятов — у 40.5%. Значит, наблюдение нельзя объяснить только одним частым рефреном.",
+      "scope": "file/numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/extension_refrain_adjacency_edges.csv.gz",
+      "family": "exploratory_repeat_sensitivity"
+    },
+    {
+      "id": "EXT-equality-search-volume",
+      "title": "Пространство равных частот содержит множество пар",
+      "explanation": "В полном файле есть 41 683 473 пар форм с одинаковой частотой. Поиск среди десятков миллионов пар создаёт много совпадений; равная частота не означает связь значений.",
+      "scope": "file/numbered",
+      "profile": "plain",
+      "evidence_path": "results/tables/extension_frequency_equality_groups.csv.gz",
+      "family": "exploratory_equal_frequency"
+    }
+  ],
   "reading_rule": "Прямое содержание аята, арифметическая совместимость, условное совпадение частот и неподтверждённое утверждение имеют разную силу. Поиск совпадений задним числом не даёт вероятности случайности без полного набора проверенных вариантов и контрольной модели."
 }

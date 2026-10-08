@@ -12,6 +12,8 @@ def test_calendar_comparisons_trace_to_corpus_and_sources():
     data = run(ROOT)
     cases = {case['id']: case for case in data['cases']}
     assert len(cases) == 10
+    assert len(data['plain_findings']) == 46
+    assert {row['id'] for row in data['plain_findings']} == {row['hypothesis_id'] for row in json.loads((ROOT / 'results/hypotheses/registry.json').read_text())}
     with sqlite3.connect(ROOT / 'data/processed/corpus.sqlite') as db:
         for case_id, verse_id in [('verse_twelve_months', '9:36'), ('solar_lunar_years', '18:25'), ('moon_as_calendar', '2:189'), ('sun_moon_light', '10:5')]:
             source = db.execute('SELECT raw_text FROM verses WHERE verse_id=?', (verse_id,)).fetchone()[0]

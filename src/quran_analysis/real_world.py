@@ -15,6 +15,67 @@ SOURCES = {
 }
 
 
+def _plain_finding(row: dict) -> dict:
+    """Give each registered claim a human-readable unit and interpretation."""
+    key = row["hypothesis_id"]
+    value = row.get("observed")
+    if row.get("family") == "primary_permutation":
+        observed, shuffled = row["observed"], row["null_mean"]
+        if "length_adjacency" in key:
+            explanation = f"Соседние аяты отличаются по длине в среднем на {observed:.2f} токена; при выбранном перемешивании получилось {shuffled:.2f}. Меньшая разница означает более плавный переход длин."
+        elif "length_position" in key:
+            explanation = f"Сила связи длины с местом аята внутри суры — {observed:.3f} против {shuffled:.3f} у переставленных аятов. Это небольшая величина, хотя отличие от модели статистически замечено."
+        elif "ending_" in key:
+            letters = 2 if "ending_2" in key else 3
+            explanation = f"У {100 * observed:.1f}% соседних пар совпадают последние {letters} письменные буквы; после перемешивания — у {100 * shuffled:.1f}%. Это наблюдение о звучании и записи концов аятов."
+        else:
+            explanation = f"Число {observed:.2f} — условный балл неравномерности мест частых слов внутри аята; после перестановки средний балл {shuffled:.2f}. Это не количество слов и не процент."
+        explanation += " Вывод относится только к названной контрольной перестановке; связная речь обычно отличается от случайного порядка."
+    elif key == "core_basmala_sensitivity":
+        explanation = f"Во всём файле {value['file']} словоупотреблений; после исключения вступительных басмал — {value['numbered']}. Разницу в {value['difference_tokens']} создаёт оформление начала сур."
+    elif key == "core_normalization_changes_vocabulary":
+        explanation = f"Из-за выбранных знаков записи различают {value['raw']} форм; без них — {value['plain']}. Это объединение написаний, а не исчезновение фрагментов текста."
+    elif key.startswith("I-morph-") and isinstance(value, dict):
+        explanation = f"Во внешней разметке отмечено {value.get('segments', 0)} подходящих частей слов; они относятся к {value.get('tokens', 'неуказанному числу')} письменным токенам и {value.get('verses', 'неуказанному числу')} аятам. Одна часть слова и целое слово — разные единицы."
+    elif key == "I-numeric-root-candidates":
+        explanation = f"По 12 выбранным корням числовых слов отмечено {value['segments']} сегмента-кандидата. Корень сам по себе не сообщает, какое число и в каком смысле названо в аяте."
+    elif key == "I-verb-person-transition":
+        explanation = f"Из {value['verified_pairs']} сверенных пар соседних глаголов в {value['pairs_with_person_change']} меняется грамматическое лицо. Это может быть обычная смена говорящего или цитата; для риторического вывода нужен контекст."
+    elif key == "J-month-12":
+        explanation = "При отборе единственного числа слова «месяц» подтверждены 12 употреблений; формы двойственного и множественного числа сюда не включены. Сравнение с 12 месяцами года зависит от правила отбора."
+    elif key == "J-day-365":
+        explanation = "Для слова «день» надёжно сверены 362 употребления из 365 выбранных кандидатов, ещё 3 не выверены. Точного утверждения о 365 случаях в исходном файле пока нет."
+    elif key == "J-basmala-114":
+        explanation = "После нормализации полный файл содержит 114 басмал, как и сур; при счёте только нумерованных аятов остаются две. Это зависит от структуры вступлений."
+    elif key == "J-basmala-19":
+        explanation = "В выбранной записи формула содержит 19 букв. Длина меняется, если считать другие знаки или написания; внешняя физическая связь из этого числа не следует."
+    elif key == "J-world-hereafter":
+        explanation = "Пара 115:115 получена из внешней разметки при специальном отборе форм. Для второй единицы точное сопоставление с исходником недостаточно, поэтому равенство пока не подтверждено."
+    elif key == "EX-C-001":
+        one = value.get("plain/file", {})
+        explanation = f"В записи без выбранных огласовок есть {one.get('repeated_groups', 0)} групп полностью одинаковых аятов, охватывающих {one.get('verses_in_groups', 0)} мест. При других правилах записи итог меняется."
+    elif key == "EX-C-002":
+        explanation = f"Найдено {value['groups']} групп длинных точных повторов. Это повторяющиеся последовательности слов, а не число разных смыслов."
+    elif key == "EX-F-001":
+        explanation = f"Из {value['equality_tested']} проверенных простых числовых равенств совпало {value['equality_matched']}. Их обнаружили поиском по многим формулам, поэтому совпадение требует осторожной интерпретации."
+    elif key == "EX-G-001":
+        first = value[0]
+        explanation = f"Например, «{first['word_a']}» и «{first['word_b']}» встретились вместе в {first['count_ab']} аятах. Совместное появление часто связано с устойчивой формулой; высокий балл не доказывает необычное свойство мира."
+    elif key == "EX-H-001":
+        explanation = f"Исходный порядок сжался до {100 * value['observed_ratio']:.1f}% исходного размера, перемешанные варианты — в среднем до {100 * value['shuffle_mean_ratio']:.1f}%. Повторы и обычная языковая структура помогают сжатию."
+    elif key == "EXT-universality-basmala":
+        explanation = "Во всём файле слова вступительной формулы встречаются во всех сурах, а после исключения вступлений такого полного охвата нет. Это эффект способа хранения текста."
+    elif key == "EXT-refrain-endings":
+        first = value[0]
+        explanation = f"Последние две буквы совпадают у {100 * first['all_rate']:.1f}% соседних пар; после исключения повторённых аятов — у {100 * first['retained_rate']:.1f}%. Значит, наблюдение нельзя объяснить только одним частым рефреном."
+    elif key == "EXT-equality-search-volume":
+        explanation = f"В полном файле есть {value['pairs_file']:,} пар форм с одинаковой частотой. Поиск среди десятков миллионов пар создаёт много совпадений; равная частота не означает связь значений.".replace(",", " ")
+    else:
+        raise ValueError(f"Нет простого объяснения для {key}")
+    return {"id": key, "title": row["title_ru"], "explanation": explanation, "scope": row.get("scope", ""),
+            "profile": row.get("profile_id", ""), "evidence_path": row.get("evidence_path", ""), "family": row.get("family", "")}
+
+
 def run(root: Path) -> dict:
     root = Path(root)
     core = json.loads((root / "results/core_summary.json").read_text())
@@ -23,6 +84,7 @@ def run(root: Path) -> dict:
     explore = json.loads((root / "results/exploration_summary.json").read_text())
     extension = json.loads((root / "results/extension_summary.json").read_text())
     claims = {row["hypothesis_id"]: row for row in morph["claims"]}
+    findings = json.loads((root / "results/hypotheses/registry.json").read_text())
     with sqlite3.connect(root / "data/processed/corpus.sqlite") as db:
         verses = {address: db.execute("SELECT raw_text FROM verses WHERE verse_id=?", (address,)).fetchone()[0]
                   for address in ("9:36", "18:25", "2:189", "10:5")}
@@ -113,6 +175,7 @@ def run(root: Path) -> dict:
     ]
     result = {"schema_version": "1.0.0", "scope": "Десять явно перечисленных сопоставлений: календарные числа и циклы, свет Солнца и Луны, доля океана, известные частотные утверждения и внутренние структурные результаты. Это конечный разбор, а не все мыслимые параллели с миром.",
               "source_corpus_sha256": core["sha256"], "sources": SOURCES, "plain_numbers": plain_numbers, "terms": terms, "cases": cases,
+              "plain_findings": [_plain_finding(row) for row in findings],
               "reading_rule": "Прямое содержание аята, арифметическая совместимость, условное совпадение частот и неподтверждённое утверждение имеют разную силу. Поиск совпадений задним числом не даёт вероятности случайности без полного набора проверенных вариантов и контрольной модели."}
     (root / "results/real_world.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = ["# Числа обычным языком и связи с реальным миром", "", result["scope"], "", "## Как читать главные цифры", ""]
@@ -126,6 +189,8 @@ def run(root: Path) -> dict:
         lines += [f"- Внешний источник: [{SOURCES[key]['name']}]({SOURCES[key]['url']}) — {SOURCES[key]['fact']}" for key in case["sources"]]
         lines.append("")
     lines += ["## Правило интерпретации", "", result["reading_rule"], ""]
+    lines += ["## Все зарегистрированные находки простым языком", "", "Одна строка ниже соответствует одной карточке каталога гипотез. Полные значения и методы сохраняются в `results/hypotheses/registry.json`.", ""]
+    lines += [f"- **{row['title']}** (`{row['id']}`): {row['explanation']}" for row in result["plain_findings"]]
     (root / "report/REAL_WORLD.md").write_text("\n".join(lines), encoding="utf-8")
     return result
 

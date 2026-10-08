@@ -37,8 +37,13 @@ def main():
         for tab in ['overview','findings','realworld','dictionary','morphology','surahs','repeats','numerical','methods']:
             page.locator(f'[data-tab="{tab}"]').click();assert page.locator('#'+tab).is_visible()
         assert page.locator('#realworld-list .world-case').count()==10
+        assert page.locator('#realworld-findings .finding').count()==46
         assert '309,21' in page.locator('#realworld-list').inner_text() or '309.21' in page.locator('#realworld-list').inner_text()
         page.locator('[data-tab="realworld"]').click()
+        page.get_by_text('Все 46 находок обычным языком').click()
+        page.locator('#world-finding-query').fill('J-day-365')
+        assert page.locator('#realworld-findings .finding').count()==1
+        page.locator('#world-finding-query').fill('')
         page.screenshot(path=str(root/'report/browser_real_world.png'))
         checks.append({'check':'navigation','status':'pass','tabs':9})
         no_js=browser.new_context(java_script_enabled=False)

@@ -32,8 +32,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 8653,
-      "sha256": "054a6dc6bce1e7fdf78610d3fc32d0854fc348db5394d004b49cf4bf7cf4491d"
+      "bytes": 8752,
+      "sha256": "3e0e99e4340e7afd6bc81929ccf9bfb88f85fe749164042a349ff648a354c77d"
     },
     {
       "path": "Quran_text.txt",
@@ -42,8 +42,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7978,
-      "sha256": "e6660e063101cf7da2069ea880998913f8356e40f12ccc0c8d20787a70741d44"
+      "bytes": 8169,
+      "sha256": "fbb38d316a7f4e4f8fb92f9ea3721ff0b876212d7c03b66847437d4e18e9a0eb"
     },
     {
       "path": "config/analysis.json",
@@ -52,8 +52,8 @@
     },
     {
       "path": "dashboard/index.html",
-      "bytes": 10073498,
-      "sha256": "e8aef1fc71f9385ea27b28520c8e2714a11ce07d608aa0422963de2d6cc500bd"
+      "bytes": 10105342,
+      "sha256": "4e436b2ded0800c541ec2a8e8afd0ad4561a6b015f637477d5a6f2a5a81cc5c4"
     },
     {
       "path": "data/external/QAC_COPYRIGHT_NOTICE.txt",
@@ -458,12 +458,12 @@
     {
       "path": "exports/quran-analysis-portable.zip.sha256",
       "bytes": 94,
-      "sha256": "c6fd4640d5ace52852022ecfe337a75ee63e59a752fb4fa11cdbd3f442388bf1"
+      "sha256": "2f9d5592000c5d277b2010bf3fcf258dbd843b368c48b30043390b51c662d3ac"
     },
     {
       "path": "exports/quran_analysis.xlsx",
       "bytes": 3858907,
-      "sha256": "61bf250753684a65e4b0bec03a4295b525daa24ca8d7e6212d68e9fe8ce82fc6"
+      "sha256": "89f290938f64172ef612b0ef2d61b1c2ed06879f8a1c66e9261dfc9d98cebdba"
     },
     {
       "path": "index.html",
@@ -477,18 +477,18 @@
     },
     {
       "path": "report/BROWSER_CHECKS.md",
-      "bytes": 4059,
-      "sha256": "f0339b01fe5e0f9b7c82357d40e5a9a16b5ea6f1c0a793628e7ee7ffb741ee34"
+      "bytes": 4106,
+      "sha256": "b276431987a3f9f88d89ad44d9414eff0d7492fcc6c2fa79433d41434dd26e29"
     },
     {
       "path": "report/REAL_WORLD.md",
-      "bytes": 19528,
-      "sha256": "5e5777486b3d657561811d6f583f516e5abd073c0376bfc1ef7d34d4f036cac1"
+      "bytes": 43590,
+      "sha256": "ad05210ccd2fc67798a74f44ec66e9a921642006a9ca39a66d03fafcc067ca99"
     },
     {
       "path": "report/REPORT.md",
       "bytes": 53133,
-      "sha256": "989007f64278bc0f0c49564f6d57c4b23b7347ceab90944d4a641a5b11d68618"
+      "sha256": "d8b99a6a8b8b8f238c256be3a283402ac78b2624ef7dd0a4e5217c2f219d4e78"
     },
     {
       "path": "report/browser_arabic_contexts.png",
@@ -507,8 +507,8 @@
     },
     {
       "path": "report/browser_real_world.png",
-      "bytes": 295877,
-      "sha256": "a352d89db80b883af597141208f9e5f8b9f9eada83223abe1c9bc43089a1f178"
+      "bytes": 145678,
+      "sha256": "01043a431173097bb8ed2dc89a89847d2ac8922475037ffba74905d3f4327738"
     },
     {
       "path": "report/browser_real_world_mobile.png",
@@ -593,7 +593,7 @@
     {
       "path": "results/figures/profile_sensitivity.svg",
       "bytes": 10957,
-      "sha256": "608cb95a4e170670050fe6109ad75e251f4418a6b9390f9c3fa87eca69978a1b"
+      "sha256": "764403eedd91f3d9dc4aa3bfbc738d35a4a11b08d5be912338efc9fb01347caa"
     },
     {
       "path": "results/figures/rank_frequency.csv",
@@ -608,7 +608,7 @@
     {
       "path": "results/figures/rank_frequency.svg",
       "bytes": 28963,
-      "sha256": "108d58e2e44dc0f0e0fcae266addeb5590fd3d6a187aca2e79009f3fdd060981"
+      "sha256": "f9f83be64a20426853fe4f0beef7b23c407905d0b7f9795bab4d0bc073927e2f"
     },
     {
       "path": "results/figures/statistic_ending_2.csv",
@@ -623,7 +623,7 @@
     {
       "path": "results/figures/statistic_ending_2.svg",
       "bytes": 16013,
-      "sha256": "cd04042be766bf3063b6894f91c43cfb385f7f335244fe4fa68dbd949bccf5a2"
+      "sha256": "2930ae76adee59cee47db6a74a2d21c015a7f0ea6bfecfcf94e3e01bfa874b56"
     },
     {
       "path": "results/figures/statistic_length_adjacency.csv",
@@ -638,7 +638,7 @@
     {
       "path": "results/figures/statistic_length_adjacency.svg",
       "bytes": 16338,
-      "sha256": "010d77ae26978df7ded12ab46343852835b361089f00c6227e286fac6ec39651"
+      "sha256": "d33f9a240e79d710598742196011e694c50a88b909bcde6819ce6a8b3f8faa91"
     },
     {
       "path": "results/figures/surah_tokens.csv",
@@ -653,7 +653,7 @@
     {
       "path": "results/figures/surah_tokens.svg",
       "bytes": 31326,
-      "sha256": "0ba855aab810c1a1c45b320238b73cca9cefcf4847072007b0600fd4f6392199"
+      "sha256": "2f904f0eb4df0269a6df0f666a8d9bc60073ee1d0ec1ab1d9e98d3ad0677fdcf"
     },
     {
       "path": "results/figures/verse_lengths.csv",
@@ -668,7 +668,7 @@
     {
       "path": "results/figures/verse_lengths.svg",
       "bytes": 23029,
-      "sha256": "658a7a498568f29d0a7ac712ece4e21f140b5c4bc0c1d253bbdc29ef2bd1d945"
+      "sha256": "ce61df75ab1da36b5be7241ad6388d418aa41269a5de7d5d39b941df89202c71"
     },
     {
       "path": "results/figures/vocabulary_growth.csv",
@@ -683,7 +683,7 @@
     {
       "path": "results/figures/vocabulary_growth.svg",
       "bytes": 17234,
-      "sha256": "4b658566c2b26d77aa664f02955329fb694329574e5492d596254da755576d9c"
+      "sha256": "311a203d87f4082597a2dc17b83957d700527bfc98572d2969429d3988df879f"
     },
     {
       "path": "results/hypotheses/core.json",
@@ -728,12 +728,12 @@
     {
       "path": "results/presentation_summary.json",
       "bytes": 5010,
-      "sha256": "8deeece65faf4dc3de11d4a8bc7839f4edd1a868a49f57fe62f8288016427daa"
+      "sha256": "e6d3c980f3834ef18b552e21cffdf7d8d09d3a69a172da890329088cd1481f46"
     },
     {
       "path": "results/real_world.json",
-      "bytes": 21751,
-      "sha256": "80cf48fe0093a6bcb00966faa91097facbf0f3d72676604e8c61f26822c95380"
+      "bytes": 55725,
+      "sha256": "c162fa76ed4156818eda6bf6ededb521611cfe50e7af600ff3d496eedbefcd7c"
     },
     {
       "path": "results/reproducibility_check.json",
@@ -1182,8 +1182,8 @@
     },
     {
       "path": "run_manifest.json",
-      "bytes": 29653,
-      "sha256": "e902f2c05198029086bbc97fff42d3b47c05a2192eed1085b6e7befaa4e32af4"
+      "bytes": 29652,
+      "sha256": "d569c98f49a1c460e2279692e08353a435b80e7d9110843bfe1e13d7226f38df"
     },
     {
       "path": "scripts/assemble_archive.py",
@@ -1192,8 +1192,13 @@
     },
     {
       "path": "scripts/check_browser.py",
-      "bytes": 9153,
-      "sha256": "aeef4e306c32e8b94350412279cffdd0bb38b1094dcf5407e35b48a84298b7ee"
+      "bytes": 9502,
+      "sha256": "9266552b1241a59430d64009809b442a35bb9c0997f167576be7826a8c9e7bf7"
+    },
+    {
+      "path": "scripts/split_archive.py",
+      "bytes": 1314,
+      "sha256": "3afcf1f96dee4bd5a0f77680f813bcd98498d9b1e5e1cff4e4d1110cdbf743a9"
     },
     {
       "path": "skills-lock.json",
@@ -1217,8 +1222,8 @@
     },
     {
       "path": "src/quran_analysis/dashboard.html",
-      "bytes": 60952,
-      "sha256": "1e9a4682c87bdd26a41939d4839d7eb03573fc2cb77a0e4c5f94022bebe4fef6"
+      "bytes": 61865,
+      "sha256": "17b7bd1d2f924376414a3b69f27eb859e96f92f78ce3a3caf55d4722e007a020"
     },
     {
       "path": "src/quran_analysis/exploration.py",
@@ -1257,8 +1262,8 @@
     },
     {
       "path": "src/quran_analysis/real_world.py",
-      "bytes": 22905,
-      "sha256": "c2db41fcb8c6e316cc388c8d188d2c24a18d5ca4987e8ece9527f7b4abcb0611"
+      "bytes": 32662,
+      "sha256": "0e8e4706d8b88c9608b7a2506e3f0f9ba8489775c8ca4a401fdac66880cf424b"
     },
     {
       "path": "src/quran_analysis/statistics.py",
@@ -1292,8 +1297,8 @@
     },
     {
       "path": "tests/test_real_world.py",
-      "bytes": 1226,
-      "sha256": "63168a2d0101335f55407596204f7c78e848ff628dbca3d11b3d31a6b6368bf8"
+      "bytes": 1433,
+      "sha256": "eab9e8953ac7f79ac8af48e448585eb16cf5f7a76ebdc6913e1aa6edbdc7ca63"
     },
     {
       "path": "tests/test_statistics.py",
@@ -1306,6 +1311,6 @@
       "sha256": "46741b9e6f00c674c55d39f16151cc45996aeaa6052e1dc53e0eacc1b212ae07"
     }
   ],
-  "file_count": 261,
-  "total_uncompressed_bytes": 240722595
+  "file_count": 262,
+  "total_uncompressed_bytes": 240675152
 }
