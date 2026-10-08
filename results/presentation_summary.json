@@ -1,6 +1,6 @@
 {
   "dashboard": "dashboard/index.html",
-  "dashboard_bytes": 10049892,
+  "dashboard_bytes": 10073498,
   "report": "report/REPORT.md",
   "workbook": {
     "path": "exports/quran_analysis.xlsx",

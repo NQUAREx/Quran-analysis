@@ -202,6 +202,7 @@ def _inventory(root):
     paths += [p for p in sorted((root / "results").glob("*_summary.json")) if p.name != "presentation_summary.json"]
     paths += sorted((root / "data/processed").glob("*.sqlite.gz"))
     paths += sorted((root / "docs").glob("*.md"))
+    paths += [root / "results/real_world.json", root / "report/REAL_WORLD.md"]
     paths += sorted((root / "results/figures").glob("*"))
     paths += [p for p in (root / "results/core_checks.json", root / "results/validation_checks.json", root / "docs/QUERIES.sql", root / "config/analysis.json") if p.exists()]
     result = []
@@ -407,6 +408,8 @@ def _report(root, data, findings, coverage, summaries, figures, inventory):
 
 def run(root: Path, config: dict) -> dict:
     root = Path(root).resolve()
+    from .real_world import run as build_real_world
+    build_real_world(root)
     (root / "results/tables").mkdir(parents=True, exist_ok=True)
     data, token_index, ranks = _corpus_data(root)
     _write_csv(root / "results/tables/presentation_corpus_metrics.csv", data["metrics"])
@@ -429,7 +432,8 @@ def run(root: Path, config: dict) -> dict:
     for path in sorted((root / "results").glob("*_summary.json")):
         if path.stem != "presentation_summary":
             summaries[path.stem.removesuffix("_summary")] = _read_json(path, {})
-    data.update({"findings": findings, "coverage": coverage, "summaries": summaries, "morphology": _morphology(root, token_index)})
+    data.update({"findings": findings, "coverage": coverage, "summaries": summaries, "morphology": _morphology(root, token_index),
+                 "real_world": _read_json(root / "results/real_world.json", {})})
     previews = []
     for path in sorted((root / "results/tables").glob("*.csv*")):
         if path.name.startswith("presentation_"):

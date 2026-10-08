@@ -766,7 +766,7 @@
       },
       {
         "sheet": "Файлы",
-        "rows": 136,
+        "rows": 138,
         "columns": 3
       },
       {
@@ -780,7 +780,7 @@
         "columns": 3
       }
     ],
-    "numeric_cells": 383429,
+    "numeric_cells": 383431,
     "address_text_cells": 68714,
     "bad_addresses": []
   },

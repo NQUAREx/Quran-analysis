@@ -4,7 +4,7 @@
     {
       "check": "navigation",
       "status": "pass",
-      "tabs": 8
+      "tabs": 9
     },
     {
       "check": "native_tab_navigation_without_javascript",

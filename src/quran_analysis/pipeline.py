@@ -50,6 +50,8 @@ def _files_for_stage(root, stage):
         paths.update((root/"dashboard").rglob("*"))
         paths.update((root/"results/figures").rglob("*"))
         paths.update((root/"exports").glob("*.xlsx"))
+        paths.add(root/"results/real_world.json")
+        paths.add(root/"report/REAL_WORLD.md")
         # Browser QA and handover notes are independent artifacts, not generated
         # by presentation.run; avoid invalidating all exports when QA is saved.
         paths.add(root/"report/REPORT.md")
@@ -118,6 +120,7 @@ def main(argv=None):
         if stage == "presentation":
             auxiliary = {str(p.relative_to(root)):digest(p) for p in sorted((root/"src/quran_analysis").glob("*.html"))}
             auxiliary.update({str(p.relative_to(root)):digest(p) for p in sorted((root/"docs").glob("*.md"))})
+            auxiliary["src/quran_analysis/real_world.py"] = digest(root/"src/quran_analysis/real_world.py")
         dependencies={}
         for d in DEPS[stage]:
             upstream=manifest['stages'].get(d,{})
